@@ -1,0 +1,48 @@
+.tabela {
+  width: 90%;
+  border-collapse: collapse;
+  font-family: 'Arial', sans-serif;
+  margin: 20px 0;
+  margin-left: 2vw;
+  font-size: 14px;
+}
+
+.tabela th,
+.tabela td {
+  border: 1px solid #074c9629;
+  padding: 6px;
+}
+
+.tabela th {
+  background-color: #f8f8ff;
+  text-align: center;
+  color: #074c96;
+}
+
+.pagination {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+}
+
+.pagination button {
+  margin: 2vh 5px;
+  padding: 3px 6px;
+  cursor: pointer;
+  background: #00356e;
+  color: white;
+  width:2vw;
+  height:4vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination button:disabled {
+  cursor: not-allowed;
+}
+
+.pagination button:hover {
+  background: #074c96;
+}

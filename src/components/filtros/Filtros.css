@@ -1,0 +1,81 @@
+.filtros {
+  position: relative;
+  display: flex;
+  width: fit-content;
+}
+
+.input-container {
+  position: relative;
+  bottom: 0.6vh;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  width: 55vw;
+  margin-left: 1vw;
+}
+
+.input-wrapper {
+  position: relative;
+  margin-right: 10px;
+}
+
+.input-label {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #aaa;
+  pointer-events: none;
+  transition: all 0.2s ease;
+  font-size: 16px;
+}
+
+.search-input {
+  padding: 10px;
+  padding-left: 35px; 
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+}
+
+.search-button {
+  display: flex;
+  margin-left: 0.5vw;
+  padding: 10px 20px;
+  background-color: #00346e;
+  color: white;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  align-items: center;
+  height: 2.3vw;
+  align-items: center;
+}
+
+.extra-button {
+  display: flex;
+  padding: 10px 20px;
+  background-color: #00346e;
+  color: white;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  margin-left: 0.5vw;
+  width: 2vw;
+  height: 2.3vw;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-button:hover,
+.extra-button:hover {
+  background-color: #074c96;
+}
+
+.icon {
+  font-size: 10px;
+}

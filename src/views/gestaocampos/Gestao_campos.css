@@ -1,0 +1,56 @@
+.gestao {
+  position: absolute;
+  margin-top: 1vh;
+  width: 85%;
+  height: 100vh;
+  margin-left: 13vw;
+}
+
+.area-superior {
+  display: flex;
+  justify-content: start;
+  margin-top: 1vh;
+  margin-bottom: 2vh;
+  margin-left: 1vw;
+  width: 60%;
+}
+
+.tabs {
+  display: flex;
+  justify-content: start;
+  margin-top: 1vh;
+  margin-bottom: 2vh;
+  margin-left: 1vw;
+}
+
+.tab {
+  width: 6vw;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
+  background-color: #ffffff;
+  margin: 0 5px;
+  border-radius: 2px;
+  transition: background-color 0.3s;
+}
+
+.tab:hover {
+  background-color: #00336e14;
+}
+
+.tab.active {
+  background-color: #00336e;
+  color: white;
+}
+
+.tab.active:hover {
+  background-color: #074c96;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}

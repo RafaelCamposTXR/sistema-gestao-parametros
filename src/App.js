@@ -1,25 +1,34 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Header from './components/header/Header';
+import Sidebar from './components/sidebar/SideBar';
+import GestaoCampos from './views/gestaocampos/GestaoCampos';
+import GestaoFornecedores from './views/gestao-fornecedores/GestaoFornecedores';
+import GestaoUsuarios from './views/gestao-usuarios/GestaoUsuarios';
+import Info from './views/info/Info';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Header />
+        <div className="layout">
+          <Sidebar />
+          <div className="content">
+            <Routes>
+              <Route path="/gestaocampos" element={<GestaoCampos />} />
+              <Route path="/gestaofornecedores" element={<GestaoFornecedores />} />
+              <Route path="/gestaousuarios" element={<GestaoUsuarios />} />
+              <Route path="/info" element={<Info />} />
+            </Routes>
+          </div>
+        </div>
+      </div>
+    </Router>
   );
 }
 
 export default App;
+

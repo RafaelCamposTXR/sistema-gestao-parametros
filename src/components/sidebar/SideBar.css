@@ -1,0 +1,39 @@
+.body {
+  padding: 0;
+}
+
+.sidebar {
+  width: 13vw;
+  height: 100%;
+  position: absolute;
+  background: #f8f8ff;
+  padding: 10px;
+  margin-left: 0;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 10px 0;
+}
+
+.content {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.sidebarContent {
+  color: #00346e;
+  text-decoration: none;
+  align-items: center;
+}
+
+.sidebarContent:hover {
+  color: white;
+  background: #00336e;
+}
+
+
