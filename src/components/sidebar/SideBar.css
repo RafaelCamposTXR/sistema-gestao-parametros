@@ -12,12 +12,12 @@
   justify-content: start;
 }
 
-
 .sidebar ul li {
   width:13vw;
   margin: 10px 0;
+  justify-content: start;
+  text-align: start;
 }
-
 
 .content {
   flex-grow: 1;
@@ -33,12 +33,12 @@
 }
 
 .sidebarContent {
-  width:13vw;
   padding: 0.1vw;
   color: #00346e;
   text-decoration: none;
   justify-content: start;
   border-radius: 3px;
+  width: max-content;
 }
 
 .sidebarContent:hover {

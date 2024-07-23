@@ -13,7 +13,7 @@ function sidebar() {
         <Link to="/gestaofornecedores" className= "sidebarContent">Gestão de Fornecedores </Link>
       </li>
       <li >
-        <Link to="/gestaousuarios" className= "sidebarContent">Gestão de Usuários</Link>
+        <Link to="/gestaousuarios" className= "sidebarContent">Gestão de Usuários </Link>
       </li>
     </ul>
   </div>

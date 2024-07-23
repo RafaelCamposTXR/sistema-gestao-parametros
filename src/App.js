@@ -2,7 +2,7 @@ import './App.css';
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/header/Header';
-import Sidebar from './components/sidebar/SideBar';
+import Sidebar from './components/sidebartailwind/Sidebar';
 import GestaoCampos from './views/gestaocampos/GestaoCampos';
 import GestaoFornecedores from './views/gestao-fornecedores/GestaoFornecedores';
 import GestaoUsuarios from './views/gestao-usuarios/GestaoUsuarios';
@@ -13,7 +13,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Header />
+
         <div className="layout">
           <Sidebar />
           <div className="content">
