@@ -9,26 +9,36 @@
   background: #f8f8ff;
   padding: 10px;
   margin-left: 0;
+  justify-content: start;
 }
 
-.sidebar ul {
-  list-style-type: none;
-  padding: 0;
-}
 
 .sidebar ul li {
+  width:13vw;
   margin: 10px 0;
 }
+
 
 .content {
   flex-grow: 1;
   padding: 20px;
 }
 
+.conteiner-rotas {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+}
+
 .sidebarContent {
+  width:13vw;
+  padding: 0.1vw;
   color: #00346e;
   text-decoration: none;
-  align-items: center;
+  justify-content: start;
+  border-radius: 3px;
 }
 
 .sidebarContent:hover {

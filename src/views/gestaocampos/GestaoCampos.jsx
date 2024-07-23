@@ -11,6 +11,7 @@ function GestaoCampos() {
     </button>
   );
   
+  //desnecessário atualmente, pode vir a ser útil novamente
   const TabContent = ({ isActive, children }) => (
     <div className={`tab-content ${isActive ? 'active' : ''}`}>
       {children}

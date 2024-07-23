@@ -111,8 +111,11 @@ function GestaoServico({ activeTab }) {
   return (
     <div>
       {activeTab === 0 && <Tabela columns={columns} data={data} />}
+      {activeTab === 1 && <Tabela columns={columns} data={data} />}
+      {activeTab === 2 && <Tabela columns={columns} data={data} />}
     </div>
   )
+  //renderiza apenas o componente da tab selecionada
 }
 
 export default GestaoServico

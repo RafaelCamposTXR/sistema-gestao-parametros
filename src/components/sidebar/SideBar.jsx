@@ -5,7 +5,7 @@ import './SideBar.css'
 function sidebar() {
   return (
     <div className="sidebar">
-    <ul >
+    <ul className="conteiner-rotas">
       <li >
         <Link to="/gestaocampos" className= "sidebarContent">Gestao de Campos </Link>
       </li>
