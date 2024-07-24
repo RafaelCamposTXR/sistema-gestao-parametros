@@ -27,9 +27,13 @@
   font-size: 15px;
 }
 
+.indice {
+ margin: 0;
+}
+
 .pagination button {
   margin: 2vh 5px;
-  padding: 3px 6px;
+  padding: 3px 0px;
   cursor: pointer;
   background: #00356e;
   color: white;

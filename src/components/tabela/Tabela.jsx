@@ -55,9 +55,9 @@ function Tabela({ columns, data }) {
         <button onClick={() => previousPage()} disabled={!canPreviousPage}>
           {'<'}
         </button>
-        <span>
+        <span className='indice'>
           {' '}
-          <strong>
+          <strong >
             {pageIndex + 1} de {pageOptions.length}
           </strong>{' '}
         </span>
