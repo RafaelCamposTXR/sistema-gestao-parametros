@@ -20,7 +20,10 @@
 }
 
 .pagination {
-  margin-top: 10px;
+  position: absolute;
+  top: 450px;
+  margin-top: 4vh;
+  margin-left: 45%;
   display: flex;
   justify-content: center;
   align-items: center;
