@@ -27,13 +27,24 @@ function GestaoCampos() {
       { label: 'Status da Ação'},
     ];
 
+    const getSubTitulo = () => {
+      switch (activeTab) {
+        case 0:
+          return 'Serviço';
+        case 1:
+          return 'Ação';
+        case 2:
+          return 'Status da Ação';
+        default:
+          return '';
+      }
+    }
+
   return (
     <div>
       <div className="gestao">
         <div className="area-superior">
-          <div className='titulo'>
-            Gestão de Parâmetros: campos
-          </div>
+        <Titulo nomeSecao="Gestão de parâmetros " nomeSubSecao= {getSubTitulo()} />
           <div className="tabs">
           {tabs.map((tab, index) => (
             <Tab
@@ -45,9 +56,7 @@ function GestaoCampos() {
             />
           ))}
           </div>
-          <div className= "titulo1">
-            <Titulo nomeSecao="Gestão de Serviços " nomeSubSecao="Teste1"/>
-          </div>
+          <Titulo nomeSecao="Gestão de Campos " nomeSubSecao= {getSubTitulo()} />
           <Filtros activeTab={activeTab} />
         </div>
         <GestaoServico activeTab={activeTab}/>

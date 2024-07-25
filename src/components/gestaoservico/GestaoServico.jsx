@@ -1,5 +1,6 @@
 import React from 'react';
 import Tabela from '../tabela/Tabela';
+import './GestaoServico.css';
 
 
 function GestaoServico({ activeTab }) {

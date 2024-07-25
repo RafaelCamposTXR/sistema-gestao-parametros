@@ -1,9 +1,17 @@
-.titulo-principal {
-  width: 20%;
+.conteiner-titulo {
+  display: inline;
+  margin: 0.2vh 2.5vw 2vh 0.6vw;
+}
 
+
+.titulo-principal {
+  font-size: 1.22rem; 
+  font-weight: bold; 
+  margin-right: 0.4vw;
 }
 
 .titulo-secundario {
-
-  width: 50%;
+  font-size: 0.95rem; 
+  color: gray;
+  margin-left: 0;
 }
