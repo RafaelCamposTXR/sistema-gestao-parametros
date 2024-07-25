@@ -1,7 +1,8 @@
 import {React,useState} from 'react';
 import GestaoServico from '../../components/gestaoservico/GestaoServico';
-import './Gestao_campos.css'
-import Filtros from '../../components/filtros/Filtros'
+import './Gestao_campos.css';
+import Filtros from '../../components/filtros/Filtros';
+import Titulo from '../../components/titulo/Titulo';
 
 function GestaoCampos() {
 
@@ -30,6 +31,9 @@ function GestaoCampos() {
     <div>
       <div className="gestao">
         <div className="area-superior">
+          <div className='titulo'>
+            Gestão de Parâmetros: campos
+          </div>
           <div className="tabs">
           {tabs.map((tab, index) => (
             <Tab
@@ -40,6 +44,9 @@ function GestaoCampos() {
               
             />
           ))}
+          </div>
+          <div className= "titulo1">
+            <Titulo nomeSecao="Gestão de Serviços " nomeSubSecao="Teste1"/>
           </div>
           <Filtros activeTab={activeTab} />
         </div>
