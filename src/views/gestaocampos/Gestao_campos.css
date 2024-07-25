@@ -5,17 +5,29 @@
   height: 85%;
   border: 2px solid rgba(171, 167, 167, 0.299);
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
-  padding: 1vh 0 0 1vw;
+  padding: 1vh 0 0 0;
+  border-top: none;
+}
+
+.gestao::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -1vw;
+  width: 1vw; 
+  height: 5vh; 
+  background-color: #ffffff; 
 }
 
 
 .area-superior {
   display: flex;
+  padding: 0 0 0 1vw;
   flex-wrap: wrap;
-  justify-content: start;
+  justify-content: start; 
   margin-top: 1vh;
   margin-bottom: 2vh;
-  width: 92%;
+  width: 100%;
 }
 
 .titulo {
@@ -27,22 +39,27 @@
 }
 
 .tabs {
+  position: relative;
+  top: -1vw;
+  left: -1vw;
   display: flex;
   justify-content: start;
-  margin: 0 0 2vh 2vh;
+  margin: 0 0 2vh 0;
   width: 100%;
-  min-height: 54px;
+  height: 5vh;
+  border-bottom: 2px solid rgba(171, 167, 167, 0.299);
+  
 }
 
 .tab {
-  font-style: bold;
-  width: 6vw;
-  padding: 10px 20px;
+  font-size: 0.8rem;
+  width: 8vw;
+  padding: 10px 10px 20px;
   cursor: pointer;
-  border: none;
+  border: 2px solid rgba(171, 167, 167, 0.299);
   background-color: #ffffff;
-  border-radius: 200px;
   transition: background-color 0.3s;
+  align-items: center;
 }
 
 .tab:hover {
@@ -50,10 +67,11 @@
 }
 
 .tab.active {
-  background-color: #00336e;
+  background-color: var(--blue);
   color: white;
   box-shadow:0 2px 4px rgba(0, 0, 0, 0.208);
   border: 1px outset rgba(171, 167, 167, 0.299);
+  border-bottom: none;
 }
 
 .tab.active:hover {

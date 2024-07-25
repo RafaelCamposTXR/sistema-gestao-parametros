@@ -1,17 +1,19 @@
 .conteiner-titulo {
   display: inline;
-  margin: 0.2vh 2.5vw 2vh 0.6vw;
+  margin: 0.2vh 2.5vw 2vh 1.4vw;
 }
 
 
 .titulo-principal {
   font-size: 1.22rem; 
   font-weight: bold; 
-  margin-right: 0.4vw;
+  margin: 0 0.2vw 0 0.1vw;
 }
 
 .titulo-secundario {
+  position: relative;
   font-size: 0.95rem; 
   color: gray;
-  margin-left: 0;
+  margin-left: 0.2vw;
+  top: 1px;
 }

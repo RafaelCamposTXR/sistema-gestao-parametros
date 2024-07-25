@@ -53,14 +53,14 @@ function Filtros({ activeTab }) {
         )}
         {activeTab === 2 && (
           <div className="input-wrapper">
-            {!input2Focused && !input2Value && <label className="input-label">Status da Ação</label>}
+            {!input1Focused && !input1Value && <label className="input-label">Status da Ação</label>}
             <input
               type="text"
               className="search-input"
-              onFocus={() => setInput2Focused(true)}
-              onBlur={() => setInput2Focused(false)}
+              onFocus={() => setInput1Focused(true)}
+              onBlur={() => setInput1Focused(false)}
               value={input2Value}
-              onChange={(e) => setInput2Value(e.target.value)}
+              onChange={(e) => setInput1Value(e.target.value)}
             />
           </div>
         )}
