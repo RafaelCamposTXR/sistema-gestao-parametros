@@ -44,7 +44,7 @@ function GestaoCampos() {
     <div>
       <div className="gestao">
         <div className="area-superior">
-        <Titulo nomeSecao="Gestão de parâmetros " nomeSubSecao= {getSubTitulo()} />
+        
           <div className="tabs">
           {tabs.map((tab, index) => (
             <Tab
