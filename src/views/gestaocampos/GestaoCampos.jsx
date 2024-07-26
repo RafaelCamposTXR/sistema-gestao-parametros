@@ -10,7 +10,7 @@ import LibraryAddCheckIcon from '@mui/icons-material/LibraryAddCheckSharp';
 function GestaoCampos() {
 
   const Tab = ({ label, Icon, isActive, onClick }) => (
-    <div>
+    <div className={`conteiner ${isActive ? 'active' : ''}`} onClick={onClick}>
       <button className={`tab ${isActive ? 'active' : ''}`} onClick={onClick}>
       {label}
       </button>
