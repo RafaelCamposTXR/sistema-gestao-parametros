@@ -32,13 +32,13 @@ function GestaoCampos() {
 
   const tabs = [
       { label: 'Serviço',
-        icon: <HomeRepairServiceIcon sx={{ fontSize: 20 }}/>
+        icon: <HomeRepairServiceIcon sx={{ fontSize: 20 }} className="icone-tab"/>
       },
       { label: 'Ação',
-        icon: <PendingActionsIcon sx={{ fontSize: 20 }}/>
+        icon: <PendingActionsIcon sx={{ fontSize: 20 }} className="icone-tab"/>
       },
       { label: 'Status da Ação',
-        icon: <LibraryAddCheckIcon sx={{ fontSize: 20 }}/>
+        icon: <LibraryAddCheckIcon sx={{ fontSize: 20 }} className="icone-tab"/>
       },
     ];
 

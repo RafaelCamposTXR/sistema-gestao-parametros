@@ -77,7 +77,8 @@
   height: 5.2vh;
   box-shadow:none;
   transform: scaleX(0.9);
-  width: 4.5vw;
+  width: 5vw;
+  gap: 0;
   cursor: default;
 }
 
@@ -117,4 +118,5 @@
   text-align: start;
   padding-left: 1vw;
 }
+
 
