@@ -22,7 +22,6 @@
 
 .area-superior {
   display: flex;
-  padding: 0 0 0 1vw;
   flex-wrap: wrap;
   justify-content: start; 
   margin-top: 1vh;
@@ -41,41 +40,45 @@
 .tabs {
   position: relative;
   top: -1vw;
-  left: -1vw;
+  left: 0vw;
   display: flex;
   justify-content: start;
-  margin: 0 0 2vh 0;
+  margin: 0 0 0.5vh 0;
   width: 100%;
   height: 5vh;
   border-bottom: 2px solid rgba(171, 167, 167, 0.299);
-  
+  gap:0.05vw;
 }
 
 .tab {
   font-size: 0.8rem;
-  width: 8vw;
-  padding: 10px 10px 20px;
+  width: 7vw;
+  padding: 10px 8px 20px;
   cursor: pointer;
-  border: 2px solid rgba(171, 167, 167, 0.299);
-  background-color: #ffffff;
+  background-color: var(--blue);
+  color: white;
   transition: background-color 0.3s;
   align-items: center;
+  box-shadow:0 2px 4px rgba(0, 0, 0, 0.208);
+  border: 1px outset rgba(255, 255, 255, 0.299);
+  height: 5vh;
 }
 
 .tab:hover {
-  background-color: #00336e14;
+  background-color: var(--light-blue);
 }
 
 .tab.active {
-  background-color: var(--blue);
-  color: white;
-  box-shadow:0 2px 4px rgba(0, 0, 0, 0.208);
-  border: 1px outset rgba(171, 167, 167, 0.299);
+  border: 1px outset rgba(255, 255, 255, 0.299);
+  background-color: white;
+  color: black;
   border-bottom: none;
+  height: 5.2vh;
+  box-shadow:none;
 }
 
 .tab.active:hover {
-  background-color: #074c96;
+  background-color: #ffffff;
 }
 
 .tab-content {
