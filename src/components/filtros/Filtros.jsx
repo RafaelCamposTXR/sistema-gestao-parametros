@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Filtros.css';
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
-import TuneIcon from '@mui/icons-material/Tune';
+import TuneIcon from '@mui/icons-material/TuneSharp';
 
 function Filtros({ activeTab }) { 
   const [input1Focused, setInput1Focused] = useState(false);

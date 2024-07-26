@@ -62,6 +62,7 @@
   box-shadow:0 2px 4px rgba(0, 0, 0, 0.208);
   border: 1px outset rgba(255, 255, 255, 0.299);
   height: 5vh;
+  transition: transform 0.3s ease;
 }
 
 .tab:hover {
@@ -69,17 +70,36 @@
 }
 
 .tab.active {
+  font-size:1px;
   border: 1px outset rgba(255, 255, 255, 0.299);
   background-color: white;
-  color: black;
   border-bottom: none;
   height: 5.2vh;
   box-shadow:none;
+  transform: scaleX(0.9);
+  width: 4.5vw;
 }
 
 .tab.active:hover {
   background-color: #ffffff;
 }
+
+
+.tab .tab-icon {
+  display: none;
+}
+
+.tab .tab-icon.active {
+  position: relative;
+  bottom: 0.4vh;
+  display: block;
+  color: rgb(30, 29, 29);
+}
+
+.tab .tab-icon.active:hover {
+
+}
+
 
 .tab-content {
   display: none;
@@ -96,3 +116,4 @@
   text-align: start;
   padding-left: 1vw;
 }
+
