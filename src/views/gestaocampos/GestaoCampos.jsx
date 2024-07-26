@@ -13,10 +13,10 @@ function GestaoCampos() {
     <div>
       <button className={`tab ${isActive ? 'active' : ''}`} onClick={onClick}>
       {label}
+      </button>
       <div className={`tab-icon ${isActive ? 'active' : ''}`}>
         {Icon}
       </div>
-    </button>
     </div>
     
   );

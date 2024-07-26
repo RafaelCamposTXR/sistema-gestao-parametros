@@ -78,6 +78,7 @@
   box-shadow:none;
   transform: scaleX(0.9);
   width: 4.5vw;
+  cursor: default;
 }
 
 .tab.active:hover {
@@ -85,19 +86,19 @@
 }
 
 
-.tab .tab-icon {
+.tab-icon {
   display: none;
 }
 
-.tab .tab-icon.active {
+.tab-icon.active {
   position: relative;
-  bottom: 0.4vh;
+  bottom: 4vh;
   display: block;
   color: rgb(30, 29, 29);
 }
 
-.tab .tab-icon.active:hover {
-
+.tab-icon:hover {
+  display: block;
 }
 
 
