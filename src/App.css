@@ -1,7 +1,9 @@
 .App {
   width: 100vw;
   height: 100vh;
-  font-family: Arial, sans-serif;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   text-align: center;
 }
 
@@ -27,4 +29,6 @@
   --font-size-small: 1rem;
 }
 
-
+.content {
+  margin-top: 8vh;
+}

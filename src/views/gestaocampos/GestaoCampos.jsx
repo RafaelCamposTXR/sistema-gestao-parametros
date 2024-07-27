@@ -6,6 +6,7 @@ import Titulo from '../../components/titulo/Titulo';
 import HomeRepairServiceIcon from '@mui/icons-material/HomeRepairServiceSharp';
 import PendingActionsIcon from '@mui/icons-material/PendingActionsSharp';
 import LibraryAddCheckIcon from '@mui/icons-material/LibraryAddCheckSharp';
+import ArrowCircleRightSharpIcon from '@mui/icons-material/ArrowCircleRightSharp';
 
 
 function GestaoCampos() {
@@ -17,6 +18,7 @@ function GestaoCampos() {
       </button>
       <div className={`tab-icon ${isActive ? 'active' : ''}`}>
       {!isActive && Icon}
+
       </div>
     </div>
   );
@@ -56,7 +58,8 @@ function GestaoCampos() {
     }
 
   return (
-    <div>
+    <div className="conteiner-gestao">
+      <Titulo nomeSecao="Gestão de Parâmetros " nomeSubSecao= "Campos" />
       <div className="gestao">
         <div className="area-superior">
         

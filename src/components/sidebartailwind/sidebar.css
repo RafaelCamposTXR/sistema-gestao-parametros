@@ -1,7 +1,12 @@
 .navbar {
-  background-color: #08213e;
-  height: 60px;
   display: flex;
+  position: fixed;
+  top: 0;
+  left:0;
+  width: 100%;
+  background-color: #08213e;
+  height: 6.5vh;
+  z-index: 100;
   justify-content: start;
   align-items: center;
 }
@@ -23,7 +28,7 @@
   top: 0;
   left: -100%;
   transition: 850ms;
-  z-index: 100;
+  z-index: 1000;
 }
 
 .nav-menu.active {
