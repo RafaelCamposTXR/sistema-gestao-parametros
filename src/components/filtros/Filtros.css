@@ -39,6 +39,11 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   width: 16vw;
   height: 11px;
+  transition: border 0.3s ;
+}
+
+.search-input:focus {
+  border: 1.8px solid #16171a;
 }
 
 .button-container {

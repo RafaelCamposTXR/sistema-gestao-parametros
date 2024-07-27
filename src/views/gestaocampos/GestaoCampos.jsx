@@ -7,18 +7,18 @@ import HomeRepairServiceIcon from '@mui/icons-material/HomeRepairServiceSharp';
 import PendingActionsIcon from '@mui/icons-material/PendingActionsSharp';
 import LibraryAddCheckIcon from '@mui/icons-material/LibraryAddCheckSharp';
 
+
 function GestaoCampos() {
 
   const Tab = ({ label, Icon, isActive, onClick }) => (
-    <div className={`conteiner ${isActive ? 'active' : ''}`} onClick={onClick}>
+    <div className={`conteiner ${isActive ? 'active' : ''}`} onClick={onClick} data-tooltip={label}>
       <button className={`tab ${isActive ? 'active' : ''}`} onClick={onClick}>
       {label}
       </button>
       <div className={`tab-icon ${isActive ? 'active' : ''}`}>
-        {Icon}
+      {!isActive && Icon}
       </div>
     </div>
-    
   );
   
   //desnecessário atualmente, pode vir a ser útil novamente
