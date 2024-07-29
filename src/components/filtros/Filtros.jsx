@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './Filtros.css';
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import TuneIcon from '@mui/icons-material/TuneSharp';
+import PlaylistAddIcon from '@mui/icons-material/PlaylistAddSharp';
 
 function Filtros({ activeTab }) { 
   const [input1Focused, setInput1Focused] = useState(false);
@@ -81,6 +82,7 @@ function Filtros({ activeTab }) {
           <button className="search-button">Pesquisar</button>
           <button className="extra-button"> <DeleteForeverIcon sx={{ fontSize: 20 }}/> </button>
           <button className="extra-button"> <TuneIcon sx={{ fontSize: 20 }}/> </button>
+          <button className="add-button"> <PlaylistAddIcon sx={{ fontSize: 22 }}/> </button>
         </div>
       </div>
     </div>

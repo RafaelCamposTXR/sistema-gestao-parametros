@@ -158,7 +158,7 @@
   border: 2px inset rgba(255, 255, 255, 0.299);
   border-right: 1px outset rgba(255, 255, 255, 0.299);
   border-bottom: none;
-  animation: expandWidth 0.4s forwards;
+  animation: expandWidth 0.32s forwards;
 }
 
 .tab-icon {

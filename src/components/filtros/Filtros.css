@@ -89,3 +89,40 @@
 .icon {
   font-size: 10px;
 }
+
+/* .add-button {
+  position: absolute;
+  display: flex;
+  padding: 10px 20px;
+  background-color: var(--blue);
+  color: white;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  margin-left: 0.5vw;
+  width: 2vw;
+  height: 2.3vw;
+  align-items: center;
+  justify-content: center;
+  height: 4.2vh;
+  bottom: 5vh;
+  right: 0vw;
+} */
+
+
+.add-button {
+  position: relative;
+  display: flex;
+  padding: 10px 20px;
+  background-color: var(--blue);
+  color: white;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  margin-left: 2vw;
+  width: 2vw;
+  height: 2.3vw;
+  align-items: center;
+  justify-content: center;
+
+}
