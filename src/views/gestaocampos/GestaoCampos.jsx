@@ -3,6 +3,7 @@ import GestaoServico from '../../components/gestaoservico/GestaoServico';
 import './Gestao_campos.css';
 import Filtros from '../../components/filtros/Filtros';
 import Titulo from '../../components/titulo/Titulo';
+import TituloSecao from '../../components/tituloSecao/TituloSecao';
 import HomeRepairServiceIcon from '@mui/icons-material/HomeRepairServiceSharp';
 import PendingActionsIcon from '@mui/icons-material/PendingActionsSharp';
 import LibraryAddCheckIcon from '@mui/icons-material/LibraryAddCheckSharp';
@@ -34,13 +35,13 @@ function GestaoCampos() {
 
   const tabs = [
       { label: 'Serviço',
-        icon: <HomeRepairServiceIcon sx={{ fontSize: 20 }} className="icone-tab"/>
+        icon: <HomeRepairServiceIcon sx={{ fontSize: 18 }} className="icone-tab"/>
       },
       { label: 'Ação',
-        icon: <PendingActionsIcon sx={{ fontSize: 20 }} className="icone-tab"/>
+        icon: <PendingActionsIcon sx={{ fontSize: 18 }} className="icone-tab"/>
       },
       { label: 'Status da Ação',
-        icon: <LibraryAddCheckIcon sx={{ fontSize: 20 }} className="icone-tab"/>
+        icon: <LibraryAddCheckIcon sx={{ fontSize: 18 }} className="icone-tab"/>
       },
     ];
 
@@ -59,7 +60,7 @@ function GestaoCampos() {
 
   return (
     <div className="conteiner-gestao">
-      <Titulo nomeSecao="Gestão de Parâmetros " nomeSubSecao= "Campos" />
+      <TituloSecao nomeSecao="Gestão de Parâmetros " nomeSubSecao= "Campos" />
       <div className="gestao">
         <div className="area-superior">
         

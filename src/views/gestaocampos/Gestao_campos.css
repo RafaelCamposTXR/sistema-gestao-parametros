@@ -1,29 +1,29 @@
 .conteiner-gestao {
+  background: rgb(252, 252, 255);
   align-items: start;
   display: flex;
   flex-direction: column;
-  width: 90%;
+  width: 92%;
   height: max-content;
   justify-content: flex-start;
-  margin: 8vh 0 0 5vw;
-  padding: 1rem 0 0vh 0;
-  border: 3px solid rgba(171, 167, 167, 0.299);
+  margin: 8vh 0 0 4vw;
+  padding: 2vh 0 0vh 0;
+  border: 3px solid rgba(171, 167, 167, 0.174);
+  border-right: 2px solid rgba(171, 167, 167, 0.299);
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
   border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
-  background: rgb(252, 252, 255);
+  border-top-right-radius: 6px;
+  
 }
 
 .gestao {
-  background: white;
+  background: rgb(255, 255, 255);
   position: relative;
-  margin: 0.1vh 0 0vh 0.8vw;
-  width: 99%;
+  margin: 0.5vh 0 0vh 1.2vw;
+  width: 98.6%;
   height: max-content;
   min-height: 71vh;
-  
   padding: 0 0 10vh 0;
-  
   z-index: 1;
   border-top-left-radius: 10px;
   border-top-right-radius: 0px;
@@ -31,7 +31,6 @@
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
   border-top: none;
 }
-
 
 /* 
 .gestao::after {
@@ -44,31 +43,21 @@
   background-color: #ffffff; 
 } */
 
-
-
 .area-superior {
   display: flex;
   flex-wrap: wrap;
   justify-content: start; 
   margin-bottom: 2vh;
-  width: 100%;
-}
-
-.titulo {
-  position: relative;
-  left: 0px;
-  width: 100%;
-  margin: 0;
-  text-align: start;
+  width: 100.1%;
 }
 
 .tabs {
   display: flex;
   position: relative;
   width: 100%;
-  height: 5vh;
-  top: -0.4vw;
-  left: -0.1vw;
+  height: 4vh;
+  top: -1vh;
+  left: -0.08vw;
   font-weight: 500;
   justify-content: start;
   margin: 0 0 1vh 0;
@@ -78,12 +67,12 @@
   background: rgb(252, 252, 255);
 }
 
-
+/* Tooltip para as abas feito com css*/
 .conteiner::before,
 .conteiner::after {
   --scale: 0;
   position: absolute;
-  bottom: 5.5vh;
+  bottom: 5vh;
   transform: scale(var(--scale));
   transition: 0.17s transform ;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
@@ -110,23 +99,38 @@
 .conteiner.active::after {
   display: none;
 }
+/*  */
+
+@keyframes expandWidth {
+  from {
+    width: 6.6vw;
+    color:white;
+    font-size: 0.9rem;
+  }
+  to {
+    width: 8vw;
+    color: black;
+    font-size: 0.9rem;
+  }
+}
+
+
 
 .tab {
   font-size:1px;
-  height: 5vh;
+  height: 4vh;
   width: 4.2vw;
-  transition: width 0.4s, font-size 0.4s, background-color 0.4s;
-
+  transition: width 0.4s, font-size 1s, background-color 0.4s;
   color: white;
   background-color: var(--blue);
   box-shadow:0 2px 4px rgba(0, 0, 0, 0.208) inset;
   border: 2px outset rgba(255, 255, 255, 0.299);
-
-  
   border-top-left-radius: 7px;
   border-top-right-radius: 7px;
   cursor: pointer;
-  
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: clip;
 }
 
 .tab:hover {
@@ -140,41 +144,28 @@
 }
 
 .tab.active {
+  font-weight: 500;
   width: 8vw;
   font-size: 0.9rem;
-  font-weight: 500;
-  height: 5.2vh;
-  
+  height: 4.2vh;
   padding: 10px 8px 20px;
   align-items: center;
-
   color: rgb(52, 51, 51);
   background-color: white;
-
   transition: background-color 0.3s, width 1s;
-
-  
-  
-  
   cursor: default;
-  
-
-
   box-shadow:none;
   border: 2px inset rgba(255, 255, 255, 0.299);
-
+  border-right: 1px outset rgba(255, 255, 255, 0.299);
   border-bottom: none;
-  
+  animation: expandWidth 0.4s forwards;
 }
 
-
 .tab-icon {
-
   width: 4.2vw;
   display: block;
   position: relative;
-  bottom: 3.8vh;
- 
+  bottom: 3.2vh;
   color: rgb(30, 29, 29);
   transition: transform 0.2s;
   cursor: pointer;
@@ -185,9 +176,6 @@
   cursor: default;
 }
 
-.tab-content {
-  display: none;
-}
 
 .tab-content.active {
   display: block;
