@@ -80,8 +80,8 @@ function Filtros({ activeTab }) {
         )}
          <div className="button-container">
           <button className="search-button">Pesquisar</button>
-          <button className="extra-button"> <DeleteForeverIcon sx={{ fontSize: 20 }}/> </button>
-          <button className="extra-button"> <TuneIcon sx={{ fontSize: 20 }}/> </button>
+          <button className="extra-button"> <DeleteForeverIcon sx={{ fontSize: 18 }}/> </button>
+          <button className="extra-button"> <TuneIcon sx={{ fontSize: 18 }}/> </button>
           <button className="add-button"> <PlaylistAddIcon sx={{ fontSize: 22 }}/> </button>
         </div>
       </div>
