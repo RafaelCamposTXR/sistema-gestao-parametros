@@ -4,7 +4,7 @@
   font-family: "Fira Sans", sans-serif;
   font-weight: 400;
   margin: 20px 0;
-  font-size: 14px;
+  font-size: 0.9rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -12,12 +12,26 @@
 .tabela td {
   border: 1px solid #074c9629;
   padding: 6px;
+  cursor: pointer;
+}
+
+.tabela th:hover {
+  background-color: var(--light-blue);
 }
 
 .tabela th {
-  background-color: #f8f8ff;
+  background-color: var(--blue);
+  font-weight: 400;
   text-align: center;
-  color: #074c96;
+  color: white;
+}
+
+.tabela td {
+  height: 0.7vh;
+}
+
+.tabela tr:hover {
+  background-color: #c0c0c530;
 }
 
 .pagination {
@@ -25,10 +39,19 @@
   position: absolute;
   width: 100%;
   bottom: 1vh;
-  justify-content: center;
-  margin-top: 4vh;
+  justify-content: space-between;
+  margin: 4vh 0 2vh 0;
   align-items: center;
   font-size: 15px;
+}
+
+.pagination-page-slider {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(-50%);
+  left: 50%;
 }
 
 .indice {
@@ -48,9 +71,60 @@
 }
 
 .pagination button:disabled {
-  cursor: not-allowed;
+  cursor: no-drop;
 }
 
 .pagination button:hover {
   background: #074c96;
+}
+
+.page-size {
+  margin-left: 4vw;
+  display: flex;
+  align-items: center;
+  width: 13vw;
+}
+
+.page-size label{
+  height: 3vh;
+}
+
+.page-size select {
+  border:0.5px solid white;
+  position: relative;
+  margin-left: 0.4vw;
+  padding: 0.2rem 1rem 0.2rem 0.2rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  background-color: #ffffff11;
+  appearance: none; 
+  -webkit-appearance: none; 
+  -moz-appearance: none; 
+  z-index: 5;
+  height: 3vh;
+}
+
+.page-size select:hover {
+  border:0.5px outset;
+  border-radius: 4px;
+  background-color: rgba(230, 224, 224, 0.062);
+}
+
+.page-info {
+  margin-right: 4.5vw;
+}
+
+.icone-tabela {
+  position: relative;
+  top: 0.1vh;
+  right: 1.1vw;
+  color: rgb(33, 32, 32);
+  z-index: 1;
+}
+
+.page-size select:focus,
+.page-size select:active {
+  border:0.5px outset;
+  border-radius: 4px;
+  outline: none; 
 }

@@ -1,9 +1,13 @@
-import React from 'react';
+import {React, useState, useEffect} from 'react';
 import { useTable, usePagination } from 'react-table';
+import SwapVertIcon from '@mui/icons-material/SwapVertSharp';
 import './Tabela.css'; 
 
 
 function Tabela({ columns, data }) {
+
+  const [pageSize, setPageSize] = useState(10);
+
   const {
     getTableProps,
     getTableBodyProps,
@@ -16,15 +20,26 @@ function Tabela({ columns, data }) {
     gotoPage,
     nextPage,
     previousPage,
+    setPageSize: setTablePageSize,
     state: { pageIndex },
   } = useTable(
     {
       columns,
       data,
-      initialState: { pageIndex: 0}, 
+      initialState: { pageIndex: 0, pageSize },
     },
     usePagination
   );
+
+  useEffect(() => {
+    setTablePageSize(pageSize);
+  }, [pageSize, setTablePageSize]);
+
+  const handlePageSizeChange = (e) => {
+    const newSize = Number(e.target.value);
+    setPageSize(newSize);
+    setTablePageSize(newSize);
+  };
 
   return (
     <>
@@ -52,6 +67,20 @@ function Tabela({ columns, data }) {
         </tbody>
       </table>
       <div className="pagination">
+      <div className="page-size">
+          <label>
+            Linhas por página:
+            <select value={pageSize} onChange={handlePageSizeChange}>
+              {[30, 40, 50, 60, 70].map(size => (
+                <option key={size} value={size}>
+                  {size}
+                </option>
+              ))}
+            </select>
+          </label>
+          <SwapVertIcon sx={{ fontSize: 16 }} className="icone-tabela"/>
+        </div>
+        <div className="pagination-page-slider"> 
         <button onClick={() => previousPage()} disabled={!canPreviousPage}>
           {'<'}
         </button>
@@ -64,6 +93,12 @@ function Tabela({ columns, data }) {
         <button onClick={() => nextPage()} disabled={!canNextPage}>
           {'>'}
         </button>
+        </div>
+        <div className="page-info">
+          <span>
+            Mostrando {page.length} de {data.length} registros
+          </span>
+        </div>
       </div>
     </>
   );
