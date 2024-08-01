@@ -69,7 +69,7 @@ function Tabela({ columns, data }) {
       <div className="pagination">
       <div className="page-size">
           <label>
-            Linhas por página:
+            Registros por página:
             <select value={pageSize} onChange={handlePageSizeChange}>
               {[30, 40, 50, 60, 70].map(size => (
                 <option key={size} value={size}>

@@ -1,10 +1,21 @@
 import React, { useState } from 'react';
 import './Filtros.css';
+import Modal from '../modal/Modal';
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import TuneIcon from '@mui/icons-material/TuneSharp';
 import PlaylistAddIcon from '@mui/icons-material/PlaylistAddSharp';
 
+
+
+
 function Filtros({ activeTab }) { 
+
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const close = () => setModalOpen(false);  
+  const open = () => setModalOpen(true);
+  
+
   const [input1Focused, setInput1Focused] = useState(false);
   const [input2Focused, setInput2Focused] = useState(false);
   const [input1Value, setInput1Value] = useState('');
@@ -82,7 +93,9 @@ function Filtros({ activeTab }) {
           <button className="search-button" data-tooltip="Pesquisar">Pesquisar</button>
           <button className="extra-button" data-tooltip="Limpar Filtros"> <DeleteForeverIcon sx={{ fontSize: 18 }}/> </button>
           <button className="extra-button" data-tooltip="Mais Filtros"> <TuneIcon sx={{ fontSize: 18 }}/> </button>
-          <button className="add-button" data-tooltip="Inserir Novo"> <PlaylistAddIcon sx={{ fontSize: 22 }}/> </button>
+          <button className="add-button" data-tooltip="Inserir Novo" onClick={() => (modalOpen ? close() : open())}> <PlaylistAddIcon sx={{ fontSize: 22 }}/> 
+            {modalOpen && <Modal modalOpen={modalOpen} handleClose={close} />}
+          </button>
         </div>
       </div>
     </div>

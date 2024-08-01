@@ -43,6 +43,7 @@
   margin: 4vh 0 2vh 0;
   align-items: center;
   font-size: 15px;
+  cursor: default;
 }
 
 .pagination-page-slider {
@@ -62,16 +63,21 @@
   margin: 2vh 5px;
   padding: 3px 0px;
   cursor: pointer;
-  background: #00356e;
+  background: var(--blue);
   color: white;
   width:2vw;
   height:4vh;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 .pagination button:disabled {
-  cursor: no-drop;
+  cursor: default;
+}
+
+.pagination button:disabled:hover {
+  background: var(--blue);
 }
 
 .pagination button:hover {
@@ -79,10 +85,10 @@
 }
 
 .page-size {
-  margin-left: 4vw;
+  margin-left: 4.5vw;
   display: flex;
   align-items: center;
-  width: 13vw;
+  width: 15vw;
 }
 
 .page-size label{
@@ -102,6 +108,7 @@
   -moz-appearance: none; 
   z-index: 5;
   height: 3vh;
+  cursor: pointer;
 }
 
 .page-size select:hover {

@@ -7,7 +7,6 @@ import TituloSecao from '../../components/tituloSecao/TituloSecao';
 import HomeRepairServiceIcon from '@mui/icons-material/HomeRepairServiceSharp';
 import PendingActionsIcon from '@mui/icons-material/PendingActionsSharp';
 import LibraryAddCheckIcon from '@mui/icons-material/LibraryAddCheckSharp';
-import ArrowCircleRightSharpIcon from '@mui/icons-material/ArrowCircleRightSharp';
 
 
 function GestaoCampos() {

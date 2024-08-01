@@ -1,6 +1,7 @@
 import React from 'react';
 import Tabela from '../tabela/Tabela';
 import './GestaoServico.css';
+import Modal from '../modal/Modal';
 
 
 function GestaoServico({ activeTab }) {
@@ -112,7 +113,7 @@ function GestaoServico({ activeTab }) {
   return (
     <div className='gestao-servico'>
       {activeTab === 0 && <Tabela columns={columns} data={data} />}
-      
+      {activeTab === 1 && <Modal/>}
       {activeTab === 2 && <Tabela columns={columns} data={data} />}
     </div>
   )

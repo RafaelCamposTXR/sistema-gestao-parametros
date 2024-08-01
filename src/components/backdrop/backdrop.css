@@ -1,0 +1,13 @@
+.backdrop {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: #53596d77;
+  z-index: 100;
+  cursor: default;
+}
