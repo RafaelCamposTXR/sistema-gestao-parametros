@@ -1,3 +1,4 @@
+import { ModalInput } from './ModalInput';
 import React from 'react';
 import './Modal.css';
 import Backdrop from '../backdrop/Backdrop';
@@ -50,15 +51,10 @@ const Modal = ({handleClose}) => {
           <CloseIcon sx={{ fontSize: 16 }}/>
         </button>
       </div>
-      <div className="corpo-modal">
-      <input
-              type="text"
-              className="search-input"
-              value=""
-              onChange={(e) => {}}
-            />
-
       </div>
+      <div className="corpo-modal">
+        <ModalInput label={"Prioridade"} isShort={true}/>
+        <ModalInput label={"Serviço"} isShort={false}/>
       </div>
       </>
     </motion.div>
