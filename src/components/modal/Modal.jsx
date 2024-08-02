@@ -3,6 +3,8 @@ import './Modal.css';
 import Backdrop from '../backdrop/Backdrop';
 import {motion} from 'framer-motion';
 import Titulo from '../titulo/Titulo';
+import SaveIcon from '@mui/icons-material/SaveSharp';
+import CloseIcon from '@mui/icons-material/CloseSharp';
 
 const dropIn = {
   hidden: {
@@ -23,7 +25,7 @@ const dropIn = {
   },
 };
 
-const Modal = ({handleClose, text}) => {
+const Modal = ({handleClose}) => {
   return (
     <Backdrop onClick={handleClose}> 
     <motion.div onClick={(e) => e.stopPropagation()} className="modal" 
@@ -31,7 +33,34 @@ const Modal = ({handleClose, text}) => {
     initial="hidden"
     animate="visible"
     exit="exit">
-      <Titulo nomeSecao="Gestão de Campos " nomeSubSecao= "Criar Novo"/>
+      <>
+      <div className="area-superior-modal">
+      <Titulo 
+      nomeSecao="Gestão de Campos" 
+      nomeSubSecao= "Criar Novo"
+      style={{position: "relative",
+              display: "inline",
+              margin: "0.8vh 0 0 0.3vw",
+              height: "5vh"}}/>
+      <div className="area-botoes">
+        <button className="save-button" data-tooltip="Salvar" onClick={() => {}}> 
+          <SaveIcon sx={{ fontSize: 16 }}/>
+        </button>
+        <button className="save-button" data-tooltip="Fechar" onClick={() => {}}> 
+          <CloseIcon sx={{ fontSize: 16 }}/>
+        </button>
+      </div>
+      <div className="corpo-modal">
+      <input
+              type="text"
+              className="search-input"
+              value=""
+              onChange={(e) => {}}
+            />
+
+      </div>
+      </div>
+      </>
     </motion.div>
     </Backdrop>
   )

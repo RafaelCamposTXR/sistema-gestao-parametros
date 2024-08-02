@@ -74,7 +74,13 @@ function GestaoCampos() {
             />
           ))}
           </div>
-          <Titulo nomeSecao="Gestão de Campos " nomeSubSecao= {getSubTitulo()} />
+          <Titulo
+          nomeSecao="Gestão de Campos" 
+          nomeSubSecao= {getSubTitulo()} 
+          style={{position: "relative",
+                  display: "inline",
+                  margin: "0.5vh 0 0 1.7vw",
+                  height: "5vh"}} />
           <Filtros activeTab={activeTab} />
         </div>
         <GestaoServico activeTab={activeTab}/>

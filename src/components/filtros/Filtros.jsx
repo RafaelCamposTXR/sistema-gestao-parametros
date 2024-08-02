@@ -1,6 +1,8 @@
+
 import React, { useState } from 'react';
 import './Filtros.css';
 import Modal from '../modal/Modal';
+import Botao from '../botao/Botao';
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import TuneIcon from '@mui/icons-material/TuneSharp';
 import PlaylistAddIcon from '@mui/icons-material/PlaylistAddSharp';
@@ -103,5 +105,6 @@ function Filtros({ activeTab }) {
 }
 
 export default Filtros;
+
 
 

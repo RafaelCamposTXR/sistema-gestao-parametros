@@ -3,11 +3,83 @@
   width: clamp(50%, 700px, 90%);
   height: min(50%, 300px);
   margin: auto;
-  padding: 0 2rem;
+  padding: 1.2vh 1.2vw;
   border-radius: 4px;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: rgb(244, 244, 245);
-  
+}
+
+.area-superior-modal {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+  width: 100%;
+
+}
+
+.area-botoes {
+  display: flex;
+  justify-content: center;
+  margin: 0.35vh 0 0 0;
+}
+
+.save-button {
+  position: relative;
+  display: flex;
+  padding: 0;
+  background-color: var(--blue);
+  color: white;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  margin-left: 0.7vw;
+  width: 1.8vw;
+  height: 1.8vw;
+  align-items: center;
+  justify-content: center;
+  z-index: 11;
+
+}
+
+
+.save-button::before,
+.save-button::after {
+  --scale: 0;
+  position: absolute;
+  bottom: 5vh;
+  transform: scale(var(--scale));
+  transition: 0.17s transform ;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+
+.save-button::before {
+  color: rgb(255, 255, 255);
+  font-size: 0.8rem;
+  font-weight: 500;
+  content: attr(data-tooltip);
+  height: 1.7vh;
+  width: max-content; 
+  padding: 0.6rem;
+  background: var(--semisolid-grey);
+  border-radius: 0.2rem;
+}
+
+
+.save-button:hover::before {
+  --scale: 1;
+}
+
+
+.save-button.active::before,
+.save-button.active::after {
+  display: none;
+}
+
+.corpo-modal {
+  flex-direction: row;
 }
