@@ -18,7 +18,6 @@ function GestaoCampos() {
       </button>
       <div className={`tab-icon ${isActive ? 'active' : ''}`}>
       {!isActive && Icon}
-
       </div>
     </div>
   );
@@ -62,7 +61,6 @@ function GestaoCampos() {
       <TituloSecao nomeSecao="Gestão de Parâmetros " nomeSubSecao= "Campos" />
       <div className="gestao">
         <div className="area-superior">
-        
           <div className="tabs">
           {tabs.map((tab, index) => (
             <Tab

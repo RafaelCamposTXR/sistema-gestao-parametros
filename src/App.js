@@ -1,9 +1,8 @@
 import './App.css';
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Header from './components/header/Header';
 import Sidebar from './components/sidebartailwind/Sidebar';
-import GestaoCampos from './views/gestaocampos/GestaoCampos';
+import GestaoCampos from './views/gestao-campos/GestaoCampos';
 import GestaoFornecedores from './views/gestao-fornecedores/GestaoFornecedores';
 import GestaoUsuarios from './views/gestao-usuarios/GestaoUsuarios';
 import Info from './views/info/Info';

@@ -3,9 +3,7 @@ import { Filtro } from './Filtro';
 import React, { useState } from 'react';
 import './Filtros.css';
 import Modal from '../modal/Modal';
-import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
-import TuneIcon from '@mui/icons-material/TuneSharp';
-import PlaylistAddIcon from '@mui/icons-material/PlaylistAddSharp';
+
 
 
 
@@ -69,9 +67,19 @@ function Filtros({ activeTab }) {
           </>
         )}
          <div className="button-container">
-          <Button className="search-button" dataTooltip="Pesquisar">Pesquisar</Button>
-          <Button className="delete-button" dataTooltip="Limpar Filtros">  </Button>
-          <Button className="settings-button" dataTooltip="Mais Filtros">  </Button>
+          <Button 
+          className="search-button" 
+          dataTooltip="Pesquisar">
+            Pesquisar
+          </Button>
+          <Button 
+          className="delete-button" 
+          dataTooltip="Limpar Filtros">
+          </Button>
+          <Button 
+          className="settings-button" 
+          dataTooltip="Mais Filtros">
+          </Button>
           <Button   
           className="add-button"
           dataTooltip="Inserir Novo"
