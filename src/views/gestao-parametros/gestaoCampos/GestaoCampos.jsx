@@ -2,12 +2,12 @@ import {React, useState} from "react";
 import HomeRepairServiceIcon from '@mui/icons-material/HomeRepairServiceSharp';
 import PendingActionsIcon from '@mui/icons-material/PendingActionsSharp';
 import LibraryAddCheckIcon from '@mui/icons-material/LibraryAddCheckSharp';
-import Filtros from '../Filtros';
+import Filtros from './Filtros';
 import Titulo from '../../../components/titulo/Titulo';
 import GestaoServico from '../../../components/gestaoservico/GestaoServico';
+import './GestaoCampos.css';
 
-export function GestaoCampos({
-}) {
+export function GestaoCampos() {
 
   const Tab = ({ label, Icon, isActive, onClick }) => (
     <div className={`conteiner ${isActive ? 'active' : ''}`} onClick={onClick} data-tooltip={label}>
@@ -21,11 +21,11 @@ export function GestaoCampos({
   );
   
   //desnecessário atualmente, pode vir a ser útil novamente
-  const TabContent = ({ isActive, children }) => (
-    <div className={`tab-content ${isActive ? 'active' : ''}`}>
-      {children}
-    </div>
-  );
+  // const TabContent = ({ isActive, children }) => (
+  //   <div className={`tab-content ${isActive ? 'active' : ''}`}>
+  //     {children}
+  //   </div>
+  // );
   
   const [activeTab, setActiveTab] = useState(0);
 

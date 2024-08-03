@@ -1,8 +1,8 @@
-import { Button } from '../../components/botao/Button';
-import { Filtro } from '../../components/filtros/Filtro';
+import { Button } from '../../../components/botao/Button';
+import { Filtro } from '../../../components/filtros/Filtro';
 import React, { useState } from 'react';
-import '../../components/filtros/Filtros.css';
-import Modal from '../../components/modal/Modal';
+import '../../../components/filtros/Filtros.css';
+import Modal from '../../../components/modal/Modal';
 
 
 

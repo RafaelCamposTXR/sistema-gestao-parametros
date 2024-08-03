@@ -2,7 +2,7 @@ import './App.css';
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Sidebar from './components/sidebartailwind/Sidebar';
-import GestaoParametros from './views/gestaocampos/GestaoParametros';
+import GestaoParametros from './views/gestao-parametros/GestaoParametros';
 import GestaoFornecedores from './views/gestao-fornecedores/GestaoFornecedores';
 import GestaoUsuarios from './views/gestao-usuarios/GestaoUsuarios';
 import Info from './views/info/Info';
