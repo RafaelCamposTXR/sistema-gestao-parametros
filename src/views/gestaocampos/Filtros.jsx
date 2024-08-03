@@ -1,8 +1,8 @@
-import { Button } from '../botao/Button';
-import { Filtro } from './Filtro';
+import { Button } from '../../components/botao/Button';
+import { Filtro } from '../../components/filtros/Filtro';
 import React, { useState } from 'react';
-import './Filtros.css';
-import Modal from '../modal/Modal';
+import '../../components/filtros/Filtros.css';
+import Modal from '../../components/modal/Modal';
 
 
 
@@ -52,7 +52,7 @@ function Filtros({ activeTab }) {
         )}
         {activeTab === 2 && ( 
           <>
-          <Filtro   
+          <Filtro
           inputFocused={input1Focused} 
           inputValue={input1Value} 
           label={"Status da Ação"} 

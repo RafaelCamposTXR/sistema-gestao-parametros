@@ -12,7 +12,7 @@ export const SidebarData = [
   },
   {
     title: 'Gestão',
-    path: '/gestaocampos',
+    path: '/gestaoparametros',
     icon: <IoIcons.IoIosPaper />,
     cName: 'nav-text'
   },
