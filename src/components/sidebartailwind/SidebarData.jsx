@@ -11,20 +11,20 @@ export const SidebarData = [
     cName: 'nav-text'
   },
   {
-    title: 'Gestão',
-    path: '/gestaoparametros',
+    title: 'Gestão de Campos',
+    path: '/gestaoparametros/gestaocampos',
     icon: <IoIcons.IoIosPaper />,
     cName: 'nav-text'
   },
   {
-    title: 'Fornecedores',
-    path: '/products',
+    title: 'Gestão de Fornecedores',
+    path: '/gestaoparametros/gestaofornecedores',
     icon: <FaIcons.FaCartPlus />,
     cName: 'nav-text'
   },
   {
-    title: 'Usuários',
-    path: '/team',
+    title: 'Gestão de Usuários',
+    path: '/gestaoparametros/gestaousuarios',
     icon: <IoIcons.IoMdPeople />,
     cName: 'nav-text'
   },
