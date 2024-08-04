@@ -1,14 +1,14 @@
-import { Button } from '../../../components/botao/Button';
-import { Filtro } from '../../../components/filtros/Filtro';
+import { Button } from '../../../components/input/botao/Button';
+import { Filtro } from '../../../components/input/filtros/Filtro';
 import React, { useState } from 'react';
-import '../../../components/filtros/Filtros.css';
+import '../../../components/input/filtros/Filtros.css';
 import Modal from '../../../components/modal/Modal';
 
 
 
 
 
-function Filtros({ activeTab }) { 
+function Filtros({ activeTab, setModoEdicao }) { 
 
   const [modalOpen, setModalOpen] = useState(false);
 
@@ -78,7 +78,9 @@ function Filtros({ activeTab }) {
           </Button>
           <Button 
           className="settings-button" 
-          dataTooltip="Mais Filtros">
+          dataTooltip="Mais Filtros"
+          onClick={setModoEdicao("Inserir novo serviço")}
+          >
           </Button>
           <Button   
           className="add-button"

@@ -1,12 +1,11 @@
 import React from 'react';
-import Tabela from '../tabela/Tabela';
-import './GestaoServico.css';
-import Modal from '../modal/Modal';
+import Tabela from '../../../components/tabela/Tabela';
+import './GestaoConteudo.css';
 
 
-function GestaoServico({ activeTab }) {
+function GestaoConteudo({ view, activeTab }) {
 
-  const columns = React.useMemo(
+  const colunasCampos = React.useMemo(
     () => [
       {
         Header: 'Prioridade',
@@ -24,7 +23,21 @@ function GestaoServico({ activeTab }) {
     []
   );
 
-  const data = React.useMemo(
+  const colunasInfo = React.useMemo(
+    () => [
+      {
+        Header: 'Código',
+        accessor: 'cod',
+      },
+      {
+        Header: 'Tipo de Informação',
+        accessor: 'tipo',
+      },
+    ],
+    []
+  );
+
+  const dataCampos = React.useMemo(
     () => [
       {
         id: 1,
@@ -110,14 +123,58 @@ function GestaoServico({ activeTab }) {
     []
   );
 
+  const dataInfo = React.useMemo(
+    () => [
+      {
+        cod: 1,
+        tipo: 'Imagem',
+      },
+      {
+        cod: 2,
+        tipo: 'Ficha Técnica',
+      },
+      {
+        cod: 3,
+        tipo: 'Conteúdo',
+      },
+      {
+        cod: 4,
+        tipo: 'Vídeo',
+      },
+      {
+        cod: 5,
+        tipo: 'Manual',
+      },
+      {
+        cod: 6,
+        tipo: 'Inmetro',
+      },
+      {
+        cod: 7,
+        tipo: 'Anatel',
+      },
+    ],
+    []
+  );
+
   return (
-    <div className='gestao-servico'>
-      {activeTab === 0 && <Tabela columns={columns} data={data} />}
-      {activeTab === 1 && <Tabela columns={columns} data={data} />}
-      {activeTab === 2 && <Tabela columns={columns} data={data} />}
+    <div className='gestao-conteudo'>
+      {view === "gestao-campos" && (
+    <>
+      {activeTab === 0 && <Tabela columns={colunasCampos} data={dataCampos} />}
+      {activeTab === 1 && <Tabela columns={colunasCampos} data={dataCampos} />}
+      {activeTab === 2 && <Tabela columns={colunasCampos} data={dataCampos} />}
+    </>
+      )}
+      {view === "info" && (
+    <>
+      <Tabela columns={colunasInfo} data={dataInfo} />
+
+    </>
+      )}
     </div>
   )
   //renderiza apenas o componente da tab selecionada
 }
 
-export default GestaoServico
+export default GestaoConteudo

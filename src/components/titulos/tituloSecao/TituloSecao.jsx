@@ -1,6 +1,5 @@
 import React from 'react';
 import './tituloSecao.css';
-import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 function TituloSecao({nomeSecao,nomeSubSecao}) {

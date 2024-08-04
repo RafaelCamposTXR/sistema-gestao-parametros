@@ -1,14 +1,18 @@
-import {React} from 'react';
+import {React, useState} from 'react';
 import './GestaoParametros.css';
-import TituloSecao from '../../components/tituloSecao/TituloSecao';
+import TituloSecao from '../../components/titulos/tituloSecao/TituloSecao';
 import {Link, Outlet} from "react-router-dom";
 
 function GestaoParametros() {  
+
+  const [subSecao, setSubSecao] = useState("")
+  const [modoEdicao, setModoEdicao] = useState("")
+
   return (
     <div className="conteiner-gestao">
-      <TituloSecao nomeSecao="Gestão de Parâmetros" nomeSubSecao= "Campos" />
+      <TituloSecao nomeSecao="Gestão de Parâmetros" nomeSubSecao= {subSecao} />
       <div className="gestao">
-        <Outlet />
+        <Outlet context={[subSecao, setSubSecao, modoEdicao, setModoEdicao]}/>
       </div>
     </div>
   )

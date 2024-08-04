@@ -1,9 +1,9 @@
 import { ModalInput } from './ModalInput';
 import React from 'react';
 import './Modal.css';
-import Backdrop from '../backdrop/Backdrop';
+import Backdrop from './backdrop/Backdrop';
 import {motion} from 'framer-motion';
-import Titulo from '../titulo/Titulo';
+import Titulo from '../titulos/titulo/Titulo';
 import SaveIcon from '@mui/icons-material/SaveSharp';
 import CloseIcon from '@mui/icons-material/CloseSharp';
 

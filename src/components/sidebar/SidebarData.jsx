@@ -28,4 +28,10 @@ export const SidebarData = [
     icon: <IoIcons.IoMdPeople />,
     cName: 'nav-text'
   },
+  {
+    title: 'Info',
+    path: '/gestaoparametros/info',
+    icon: <IoIcons.IoMdPeople />,
+    cName: 'nav-text'
+  },
 ];

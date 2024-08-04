@@ -1,7 +1,9 @@
 import React from "react";
+import './Filtros.css';
+
 export function Filtro({
   inputFocused,
-  inputValue,
+  inputValue, 
   label,
   setInputFocused,
   setInputValue

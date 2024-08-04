@@ -1,13 +1,20 @@
-import {React, useState} from "react";
+import {React, useState, useEffect} from "react";
+import { useOutletContext } from 'react-router-dom';
 import HomeRepairServiceIcon from '@mui/icons-material/HomeRepairServiceSharp';
 import PendingActionsIcon from '@mui/icons-material/PendingActionsSharp';
 import LibraryAddCheckIcon from '@mui/icons-material/LibraryAddCheckSharp';
 import Filtros from './Filtros';
-import Titulo from '../../../components/titulo/Titulo';
-import GestaoServico from '../../../components/gestaoservico/GestaoServico';
+import Titulo from '../../../components/titulos/titulo/Titulo';
+import GestaoConteudo from '../gestao-conteudo/GestaoConteudo';
 import './GestaoCampos.css';
 
 export function GestaoCampos() {
+
+  const [subSecao, setSubSecao, modoEdicao, setModoEdicao] = useOutletContext();
+
+  useEffect(() => {
+    setSubSecao('Campos');
+  }, [setSubSecao]);
 
   const Tab = ({ label, Icon, isActive, onClick }) => (
     <div className={`conteiner ${isActive ? 'active' : ''}`} onClick={onClick} data-tooltip={label}>
@@ -41,32 +48,37 @@ export function GestaoCampos() {
       },
     ];
 
-    const getSubTitulo = () => {
-      switch (activeTab) {
-        case 0:
-          return 'Serviço';
-        case 1:
-          return 'Ação';
-        case 2:
-          return 'Status da Ação';
-        default:
-          return '';
-      }
+  const getSubTitulo = () => {
+    switch (activeTab) {
+      case 0:
+        return 'Serviço';
+      case 1:
+        return 'Ação';
+      case 2:
+        return 'Status da Ação';
+      default:
+        return '';
     }
+  }
+  
 
 
   return <><div className="area-superior">
           <div className="tabs">
           {tabs.map((tab, index) => <Tab key={index} label={tab.label} Icon={tab.icon} isActive={index === activeTab} onClick={() => setActiveTab(index)} />)}
           </div>
-          <Titulo nomeSecao="Gestão de Campos" nomeSubSecao={getSubTitulo()} style={{
-        position: "relative",
-        display: "inline",
-        margin: "0.5vh 0 0 1.7vw",
-        height: "5vh"
-      }} />
-          <Filtros activeTab={activeTab} />
+          <Titulo 
+            nomeSecao="Gestão de Campos" 
+            nomeSubSecao={getSubTitulo()} 
+            style={{
+              position: "relative",
+              display: "inline",
+              margin: "0.5vh 0 0 1.7vw",
+              height: "5vh"
+            }}  
+          />
+          <Filtros activeTab={activeTab} setModoEdicao={setModoEdicao}/>
         </div>
-        <GestaoServico activeTab={activeTab} /></>;
+        <GestaoConteudo view="gestao-campos" activeTab={activeTab} /></>;
 }
   
