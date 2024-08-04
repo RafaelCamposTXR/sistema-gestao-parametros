@@ -3,6 +3,7 @@ import { Filtro } from '../../../components/input/filtros/Filtro';
 import React, { useState } from 'react';
 import '../../../components/input/filtros/Filtros.css';
 import Modal from '../../../components/modal/Modal';
+import { Link } from 'react-router-dom';
 
 
 
@@ -82,14 +83,16 @@ function Filtros({ activeTab, setModoEdicao }) {
           onClick={setModoEdicao("Inserir novo serviço")}
           >
           </Button>
-          <Button   
-          className="add-button"
-          dataTooltip="Inserir Novo"
-          onClick={() => modalOpen ? close() : open()} 
-          children={<>
+          <Link to="/gestaoparametros/edicao">
+            <Button   
+            className="add-button"
+            dataTooltip="Inserir Novo"
+            onClick={() => modalOpen ? close() : open()} 
+            children={<>
             {modalOpen && <Modal modalOpen={modalOpen} handleClose={close} />}
-            </>}
+          </>}
           />
+          </Link>
         </div>
       </div>
     </div>
