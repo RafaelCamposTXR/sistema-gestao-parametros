@@ -1,7 +1,7 @@
 import './App.css';
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Sidebar from './components/sidebartailwind/Sidebar';
+import Sidebar from './components/sidebar/SideBar';
 import GestaoParametros from './views/gestao-parametros/GestaoParametros';
 import {GestaoCampos} from './views/gestao-parametros/gestaoCampos/GestaoCampos'
 import GestaoFornecedores from './views/gestao-fornecedores/GestaoFornecedores';
