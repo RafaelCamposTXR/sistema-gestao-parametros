@@ -1,7 +1,7 @@
 import React from "react";
 import './Filtros.css';
 
-export function Filtro({
+export function Textbox({
   inputFocused,
   inputValue, 
   label,

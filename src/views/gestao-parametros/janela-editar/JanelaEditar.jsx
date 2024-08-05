@@ -12,6 +12,7 @@ function JanelaEditar() {
   const [subSecao, setSubSecao, modoEdicao, setModoEdicao] = useOutletContext();
 
   return (
+    <>
     <div className="area-superior-editar">
       <Button 
         className="back-button"
@@ -28,6 +29,7 @@ function JanelaEditar() {
             }}  
       />
     </div>
+    </>
   )
 }
 

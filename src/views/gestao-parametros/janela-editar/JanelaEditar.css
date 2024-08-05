@@ -4,6 +4,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: start; 
-  margin-bottom: 2vh;
-  width: 100.1%;
+  margin:0 0 2vh 0;
+  width: auto;
 }
+

@@ -1,6 +1,6 @@
 import {React, useState, useEffect} from 'react';
 import {Link,useOutletContext} from 'react-router-dom';
-import { Filtro } from '../../../components/input/filtros/Filtro';
+import { Textbox } from '../../../components/input/text-box/Textbox';
 import { Button } from '../../../components/input/botao/Button';
 import GestaoConteudo from '../gestao-conteudo/GestaoConteudo';
 
@@ -13,15 +13,15 @@ function Info() {
   }, [setSubSecao]);
 
   const [input1Focused, setInput1Focused] = useState(false);
-  const [input1Value, setInput1Value] = useState('');
+  const [input1Value, setInput1Value] = useState('');   
 
-
+   
   return (
     <>
       <div className="area-superior-info">
         <div className="filtros">
           <div className="input-container">
-            <Filtro   
+            <Textbox  
               inputFocused={input1Focused} 
               inputValue={input1Value} 
               label={"Tipo de Informação"} 

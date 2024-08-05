@@ -1,5 +1,5 @@
 import { Button } from '../../../components/input/botao/Button';
-import { Filtro } from '../../../components/input/filtros/Filtro';
+import { Textbox } from '../../../components/input/text-box/Textbox';
 import React, { useState } from 'react';
 import '../../../components/input/filtros/Filtros.css';
 import Modal from '../../../components/modal/Modal';
@@ -27,13 +27,13 @@ function Filtros({ activeTab, setModoEdicao }) {
       <div className="input-container">
         {(activeTab === 0) && (
           <>
-          <Filtro   
+          <Textbox  
             inputFocused={input1Focused} 
             inputValue={input1Value} 
             label={"Serviço"} 
             setInputFocused={setInput1Focused} 
             setInputValue={setInput1Value}  />
-          <Filtro   
+          <Textbox  
             inputFocused={input2Focused} 
             inputValue={input2Value} 
             label={"Status do Serviço"} 
@@ -43,7 +43,7 @@ function Filtros({ activeTab, setModoEdicao }) {
         )}
         {activeTab === 1 && (
           <>
-          <Filtro   
+          <Textbox  
             inputFocused={input1Focused} 
             inputValue={input1Value} 
             label={"Ação"} 
@@ -53,13 +53,13 @@ function Filtros({ activeTab, setModoEdicao }) {
         )}
         {activeTab === 2 && ( 
           <>
-          <Filtro
+          <Textbox
             inputFocused={input1Focused} 
             inputValue={input1Value} 
             label={"Status da Ação"} 
             setInputFocused={setInput1Focused} 
             setInputValue={setInput1Value}  />
-          <Filtro   
+          <Textbox  
             inputFocused={input2Focused} 
             inputValue={input2Value} 
             label={"Rótulo"} 
