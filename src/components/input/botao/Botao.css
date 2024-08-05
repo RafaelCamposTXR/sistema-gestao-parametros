@@ -110,3 +110,10 @@
 .add-button:hover {
   background-color: var(--light-blue);
 }
+
+.back-button {
+  position: relative;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+}

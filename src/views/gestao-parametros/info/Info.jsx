@@ -1,12 +1,12 @@
 import {React, useState, useEffect} from 'react';
-import {useOutletContext} from 'react-router-dom';
+import {Link,useOutletContext} from 'react-router-dom';
 import { Filtro } from '../../../components/input/filtros/Filtro';
 import { Button } from '../../../components/input/botao/Button';
 import GestaoConteudo from '../gestao-conteudo/GestaoConteudo';
 
 function Info() {
 
-  const [subSecao, setSubSecao] = useOutletContext();
+  const [subSecao, setSubSecao, modoEdicao, setModoEdicao] = useOutletContext();
 
   useEffect(() => {
     setSubSecao('Informações de Mercadoria e Obrigatoriedade');
@@ -37,10 +37,14 @@ function Info() {
               className="delete-button" 
               dataTooltip="Limpar Filtro">
             </Button>
-            <Button 
+            <Link to="/gestaoparametros/edicao">
+            <Button
               className="settings-button" 
-              dataTooltip="Mais filtros">
+              dataTooltip="Mais Filtros"
+              onClick={() => setModoEdicao(["Info", "Mais Filtros e Configurações"])}
+            >
             </Button>
+          </Link>
           </div>
         </div>
       </div>

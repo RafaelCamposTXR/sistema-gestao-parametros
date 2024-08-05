@@ -60,8 +60,6 @@ export function GestaoCampos() {
         return '';
     }
   }
-  
-
 
   return <><div className="area-superior">
           <div className="tabs">

@@ -6,7 +6,7 @@ import {Link, Outlet} from "react-router-dom";
 function GestaoParametros() {  
 
   const [subSecao, setSubSecao] = useState("")
-  const [modoEdicao, setModoEdicao] = useState("")
+  const [modoEdicao, setModoEdicao] = useState(["Edição", "Teste"])
 
   return (
     <div className="conteiner-gestao">

@@ -7,7 +7,13 @@ function TituloSecao({nomeSecao,nomeSubSecao}) {
     <div className="conteiner-titulo-secao">
       {/* <FiberManualRecordIcon sx={{ fontSize: 11 }} style={{position:"relative", color: "var(--blue)", top: "-1px", left: "1px"}}/> */}
       <span className="titulo-principal-secao">{nomeSecao}</span>
-      <ArrowForwardIosIcon sx={{ fontSize: 10 }} style={{position:"relative", color: "black", top: "1.3px"}}/>
+      <ArrowForwardIosIcon 
+        sx={{ fontSize: 10 }} 
+        style={{
+          position:"relative", 
+          color: "black", 
+          top: "1.3px"}}
+      />
       <span className="titulo-secundario-secao">{nomeSubSecao}</span>
     </div>
   )
