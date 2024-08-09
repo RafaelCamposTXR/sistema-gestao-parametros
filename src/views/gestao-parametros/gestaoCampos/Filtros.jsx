@@ -89,7 +89,7 @@ function Filtros({ activeTab, setModoEdicao }) {
             <Button   
               className="add-button"
               dataTooltip="Inserir Novo"
-              onClick={() => setModoEdicao(["Gestão de Campos", "Inserir Novo"])} 
+              onClick={() => setModoEdicao(["Gestão de Campos", "Inserir Novo", ""])} 
               children={<>
                 {modalOpen && <Modal modalOpen={modalOpen} handleClose={close} />}
             </>}

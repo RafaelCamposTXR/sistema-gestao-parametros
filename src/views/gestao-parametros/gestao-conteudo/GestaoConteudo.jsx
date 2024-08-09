@@ -157,6 +157,11 @@ function GestaoConteudo({ view, activeTab }) {
     []
   );
 
+  const EditaTabela = () => {
+
+  }
+
+
   return (
     <div className='gestao-conteudo'>
       {view === "gestao-campos" && (
@@ -168,8 +173,7 @@ function GestaoConteudo({ view, activeTab }) {
       )}
       {view === "info" && (
     <>
-      <Tabela columns={colunasInfo} data={dataInfo} />
-
+      <Tabela columns={colunasInfo} data={dataInfo} onclick={EditaTabela()}/>
     </>
       )}
     </div>

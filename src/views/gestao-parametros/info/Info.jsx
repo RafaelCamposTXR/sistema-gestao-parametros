@@ -4,6 +4,7 @@ import { Textbox } from '../../../components/input/text-box/Textbox';
 import { Button } from '../../../components/input/botao/Button';
 import SelectBox from '../../../components/input/select/Select';
 import GestaoConteudo from '../gestao-conteudo/GestaoConteudo';
+import './Info.css';
 
 function Info() {
 
@@ -31,13 +32,7 @@ function Info() {
           <div className="input-container">
             <SelectBox
               options={Options}
-            />
-            <Textbox  
-              inputFocused={input1Focused} 
-              inputValue={input1Value} 
-              label={"Tipo de Informação"} 
-              setInputFocused={setInput1Focused} 
-              setInputValue={setInput1Value}  
+              placeholder={"Tipo de Informação "}
             />
             <Button 
               className="search-button" 
@@ -52,7 +47,7 @@ function Info() {
             <Button
               className="settings-button" 
               dataTooltip="Mais Filtros"
-              onClick={() => setModoEdicao(["Info", "Mais Filtros e Configurações"])}
+              onClick={() => setModoEdicao(["Info", "Mais Filtros e Configurações", ""])}
             >
             </Button>
           </Link>

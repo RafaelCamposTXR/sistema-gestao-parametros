@@ -4,7 +4,7 @@ import SwapVertIcon from '@mui/icons-material/SwapVertSharp';
 import './Tabela.css'; 
 
 
-function Tabela({ columns, data }) {
+function Tabela({ columns, data, setModoEdicao }) {
 
   const [pageSize, setPageSize] = useState(10);
 
@@ -17,7 +17,6 @@ function Tabela({ columns, data }) {
     canPreviousPage,
     canNextPage,
     pageOptions,
-    gotoPage,
     nextPage,
     previousPage,
     setPageSize: setTablePageSize,
@@ -41,6 +40,11 @@ function Tabela({ columns, data }) {
     setTablePageSize(newSize);
   };
 
+  const onClick = (row) => {
+    alert(`row clicada: ${row.index}`);
+    setModoEdicao(["Gestão de Campos", "Mais Filtros e Configurações", row.index]);
+  };
+
   return (
     <>
       <table {...getTableProps()} className="tabela">
@@ -57,7 +61,7 @@ function Tabela({ columns, data }) {
           {page.map(row => {
             prepareRow(row);
             return (
-              <tr {...row.getRowProps()}>
+              <tr {...row.getRowProps({ onClick: () => onClick(row) })}>
                 {row.cells.map(cell => (
                   <td {...cell.getCellProps()}>{cell.render('Cell')}</td>
                 ))}

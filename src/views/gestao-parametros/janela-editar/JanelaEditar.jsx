@@ -4,6 +4,8 @@ import Titulo from '../../../components/titulos/titulo/Titulo';
 import "./JanelaEditar.css";
 import {useNavigate} from 'react-router-dom';
 import { Button } from '../../../components/input/botao/Button';
+import SaveIcon from '@mui/icons-material/SaveSharp';
+import CloseIcon from '@mui/icons-material/CloseSharp';
 
 function JanelaEditar() {
 
@@ -29,6 +31,10 @@ function JanelaEditar() {
             }}  
       />
     </div>
+    {modoEdicao[1] == "Mais Filtros e Configurações" && 
+    <div className="area-botoes">
+        Teste
+  </div>}
     </>
   )
 }

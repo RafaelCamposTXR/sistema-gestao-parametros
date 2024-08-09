@@ -1,10 +1,10 @@
 import React from 'react';
-import Select from 'react-select';
+import Select, {components} from 'react-select';
 
-function SelectBox({options}) {
+function SelectBox({options, placeholder}) {
 
   const Styles = {
-    control: (provided) => ({
+    control: (provided, state) => ({
       ...provided,
       width: "18vw",
       minHeight: "2px",
@@ -17,18 +17,50 @@ function SelectBox({options}) {
       textAlign: "left",
       boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
       transition: "border 0.3s",
+      borderColor: state.isFocused ? "black" : "#aaa",
+      color: "#aaa",
+      ':hover': {
+      borderColor: state.isFocused ? "black" : "#aaa", 
+    },
     }),
-    option: (provided) => ({
+    indicatorSeparator: () => ({
+      display: 'none', 
+    }),
+    dropdownIndicator: (provided) => ({
       ...provided,
+      position: "relative",
+      top: "-1px", 
+      '&:hover': {
+        color: 'black', 
+      },
+    }),
+    option: (provided, state) => ({
+      ...provided,
+      ':hover': {
 
+      },
+      boxShadow: "2px outset grey",
     })
   }
+
+
+
+  const NoOptionsMessage = (props) => {
+    return (
+      <components.NoOptionsMessage {...props}>
+        <span>Sem Correspondências</span>
+      </components.NoOptionsMessage>
+    );
+  };
 
   return (
     <>
       <Select 
         options = {options} 
         styles = {Styles}
+        placeholder = {placeholder}
+        className="input-wrapper"
+        components={{ NoOptionsMessage }}
       />
     </>
   )

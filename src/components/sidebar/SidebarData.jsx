@@ -29,7 +29,7 @@ export const SidebarData = [
     cName: 'nav-text'
   },
   {
-    title: 'Info',
+    title: 'Tipos de Informação',
     path: '/gestaoparametros/info',
     icon: <IoIcons.IoMdPeople />,
     cName: 'nav-text'
