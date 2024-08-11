@@ -11,8 +11,9 @@ function Info() {
   const [subSecao, setSubSecao, modoEdicao, setModoEdicao] = useOutletContext();
 
   useEffect(() => {
-    setSubSecao('Informações de Mercadoria e Obrigatoriedade');
-  }, [setSubSecao]);
+    setSubSecao('Tipos de Informação');
+    setModoEdicao(['Tipos de Informação','',''])
+  }, [setSubSecao, setModoEdicao]);
 
   const [input1Focused, setInput1Focused] = useState(false);
   const [input1Value, setInput1Value] = useState('');   
@@ -47,7 +48,7 @@ function Info() {
             <Button
               className="settings-button" 
               dataTooltip="Mais Filtros"
-              onClick={() => setModoEdicao(["Info", "Mais Filtros e Configurações", ""])}
+              onClick={() => setModoEdicao(["Tipos de Informação", "Mais Filtros e Configurações", ""])}
             >
             </Button>
           </Link>

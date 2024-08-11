@@ -14,7 +14,8 @@ export function GestaoCampos() {
 
   useEffect(() => {
     setSubSecao('Campos');
-  }, [setSubSecao]);
+    setModoEdicao(["Gestão de Campos",'','']);
+  }, [setSubSecao, setModoEdicao]);
 
   const Tab = ({ label, Icon, isActive, onClick }) => (
     <div className={`conteiner ${isActive ? 'active' : ''}`} onClick={onClick} data-tooltip={label}>
@@ -75,8 +76,8 @@ export function GestaoCampos() {
               height: "5vh"
             }}  
           />
-          <Filtros activeTab={activeTab} setModoEdicao={setModoEdicao}/>
+          <Filtros activeTab={activeTab} modoEdicao={modoEdicao} setModoEdicao={setModoEdicao}/>
         </div>
-        <GestaoConteudo view="gestao-campos" activeTab={activeTab} /></>;
+        <GestaoConteudo view="gestao-campos" activeTab={activeTab} modoEdicao={modoEdicao} setModoEdicao={setModoEdicao}/></>;
 }
   

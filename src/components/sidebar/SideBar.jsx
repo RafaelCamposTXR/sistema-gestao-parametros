@@ -5,20 +5,25 @@ import { Link } from 'react-router-dom';
 import { SidebarData } from './SidebarData';
 import './sidebar.css';
 import { IconContext } from 'react-icons';
+import Backdrop from '../modal/backdrop/Backdrop';
 
-function Sidebar() {
+function Sidebar({handleClose}) {
   const [sidebar, setSidebar] = useState(false);
 
   const showSidebar = () => setSidebar(!sidebar);
 
+  const CloseSidebar = () => setSidebar(false);
+
   return (
     <>
+      
       <IconContext.Provider value={{ color: '#fff' }}>
         <div className='navbar'>
           <Link to='#' className='menu-bars'>
             <FaIcons.FaBars onClick={showSidebar} />
           </Link>
         </div>
+        {sidebar && <Backdrop onClick={CloseSidebar}/>}
         <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
           <ul className='nav-menu-items' onClick={showSidebar}>
             <li className='navbar-toggle'>

@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 
 
 
-function Filtros({ activeTab, setModoEdicao }) { 
+function Filtros({ activeTab, modoEdicao, setModoEdicao }) { 
 
   const [modalOpen, setModalOpen] = useState(false);
 
@@ -89,7 +89,7 @@ function Filtros({ activeTab, setModoEdicao }) {
             <Button   
               className="add-button"
               dataTooltip="Inserir Novo"
-              onClick={() => setModoEdicao(["Gestão de Campos", "Inserir Novo", ""])} 
+              onClick={() => setModoEdicao([modoEdicao[0], "Inserir Novo", ""])} 
               children={<>
                 {modalOpen && <Modal modalOpen={modalOpen} handleClose={close} />}
             </>}

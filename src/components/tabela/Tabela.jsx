@@ -2,11 +2,14 @@ import {React, useState, useEffect} from 'react';
 import { useTable, usePagination } from 'react-table';
 import SwapVertIcon from '@mui/icons-material/SwapVertSharp';
 import './Tabela.css'; 
+import { useOutletContext, useNavigate } from 'react-router-dom';
 
 
-function Tabela({ columns, data, setModoEdicao }) {
+function Tabela({ columns, data }) {
 
   const [pageSize, setPageSize] = useState(10);
+
+  const [subSecao, setSubSecao, modoEdicao, setModoEdicao] = useOutletContext();
 
   const {
     getTableProps,
@@ -40,9 +43,17 @@ function Tabela({ columns, data, setModoEdicao }) {
     setTablePageSize(newSize);
   };
 
+  const navigate = useNavigate();
+
+  const handleClick = (cod) => {
+    navigate(`/detalhes/${cod}`);
+  };
+
+
   const onClick = (row) => {
-    alert(`row clicada: ${row.index}`);
-    setModoEdicao(["Gestão de Campos", "Mais Filtros e Configurações", row.index]);
+    setModoEdicao([modoEdicao[0], "Editar valor da tabela", row.index]);
+    navigate(`/gestaoparametros/edicao`);
+
   };
 
   return (
@@ -63,9 +74,11 @@ function Tabela({ columns, data, setModoEdicao }) {
             return (
               <tr {...row.getRowProps({ onClick: () => onClick(row) })}>
                 {row.cells.map(cell => (
-                  <td {...cell.getCellProps()}>{cell.render('Cell')}</td>
+                  <td {...cell.getCellProps()}>{cell.render('Cell')}
+                  </td>
                 ))}
               </tr>
+              
             );
           })}
         </tbody>

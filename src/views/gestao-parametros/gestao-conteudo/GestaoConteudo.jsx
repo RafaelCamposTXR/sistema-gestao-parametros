@@ -3,7 +3,7 @@ import Tabela from '../../../components/tabela/Tabela';
 import './GestaoConteudo.css';
 
 
-function GestaoConteudo({ view, activeTab }) {
+function GestaoConteudo({ view, activeTab, modoEdicao, setModoEdicao }) {
 
   const colunasCampos = React.useMemo(
     () => [
@@ -173,7 +173,7 @@ function GestaoConteudo({ view, activeTab }) {
       )}
       {view === "info" && (
     <>
-      <Tabela columns={colunasInfo} data={dataInfo} onclick={EditaTabela()}/>
+      <Tabela columns={colunasInfo} data={dataInfo} />
     </>
       )}
     </div>
