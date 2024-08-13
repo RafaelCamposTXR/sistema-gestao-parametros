@@ -45,16 +45,17 @@ function Tabela({ columns, data }) {
 
   const navigate = useNavigate();
 
-  const handleClick = (cod) => {
-    navigate(`/detalhes/${cod}`);
+  const setEdicao = (row) => {
+    const tipo = row.original.tipo; 
+    setModoEdicao([modoEdicao[0], "Editar valor da tabela", tipo]); 
   };
-
-
+  
   const onClick = (row) => {
-    setModoEdicao([modoEdicao[0], "Editar valor da tabela", row.index]);
+    setEdicao(row);
     navigate(`/gestaoparametros/edicao`);
-
   };
+
+  
 
   return (
     <>
@@ -72,7 +73,7 @@ function Tabela({ columns, data }) {
           {page.map(row => {
             prepareRow(row);
             return (
-              <tr {...row.getRowProps({ onClick: () => onClick(row) })}>
+              <tr {...row.getRowProps({ onClick: (row) => onClick(row) })}>
                 {row.cells.map(cell => (
                   <td {...cell.getCellProps()}>{cell.render('Cell')}
                   </td>

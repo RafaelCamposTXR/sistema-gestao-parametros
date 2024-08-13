@@ -41,6 +41,26 @@
   transition: border 0.3s ;
 }
 
+.search-input.curto {
+  padding: 10px 10px 10px 14px;
+  border: 1.8px solid #e6e7e9;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 14vw;
+  height: 11px;
+  transition: border 0.3s ;
+}
+
+.search-input.longo {
+  padding: 10px 10px 10px 14px;
+  border: 1.8px solid #e6e7e9;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 60vw;
+  height: 11px;
+  transition: border 0.3s ;
+}
+
 .search-input:focus {
   border: 1.8px solid #16171a;
 }

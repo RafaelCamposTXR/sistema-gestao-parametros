@@ -3,7 +3,7 @@ import Tabela from '../../../components/tabela/Tabela';
 import './GestaoConteudo.css';
 
 
-function GestaoConteudo({ view, activeTab, modoEdicao, setModoEdicao }) {
+function GestaoConteudo({ view, activeTab }) {
 
   const colunasCampos = React.useMemo(
     () => [
@@ -32,6 +32,40 @@ function GestaoConteudo({ view, activeTab, modoEdicao, setModoEdicao }) {
       {
         Header: 'Tipo de Informação',
         accessor: 'tipo',
+      },
+    ],
+    []
+  );
+
+  const colunasFornecedor = React.useMemo(
+    () => [
+      {
+        Header: 'Diretoria',
+        accessor: 'dir',
+      },
+      {
+        Header: 'Fornecedor',
+        accessor: 'fornecedor',
+      },
+      {
+        Header: 'Nome do Contato',
+        accessor: 'contato',
+      },
+      {
+        Header: 'Cargo',
+        accessor: 'cargo',
+      },
+      {
+        Header: 'Site (Download de Conteúdo)',
+        accessor: 'site',
+      },
+      {
+        Header: 'Telefone',
+        accessor: 'telefone',
+      },
+      {
+        Header: 'Email',
+        accessor: 'email',
       },
     ],
     []
@@ -157,9 +191,41 @@ function GestaoConteudo({ view, activeTab, modoEdicao, setModoEdicao }) {
     []
   );
 
-  const EditaTabela = () => {
+  const dataFornecedor = React.useMemo(
+    () => [
+      {
+        cod: 1,
+        tipo: 'Imagem',
+      },
+      {
+        cod: 2,
+        tipo: 'Ficha Técnica',
+      },
+      {
+        cod: 3,
+        tipo: 'Conteúdo',
+      },
+      {
+        cod: 4,
+        tipo: 'Vídeo',
+      },
+      {
+        cod: 5,
+        tipo: 'Manual',
+      },
+      {
+        cod: 6,
+        tipo: 'Inmetro',
+      },
+      {
+        cod: 7,
+        tipo: 'Anatel',
+      },
+    ],
+    []
+  );
 
-  }
+
 
 
   return (
@@ -174,6 +240,11 @@ function GestaoConteudo({ view, activeTab, modoEdicao, setModoEdicao }) {
       {view === "info" && (
     <>
       <Tabela columns={colunasInfo} data={dataInfo} />
+    </>
+      )}
+      {view === "gestao-fornecedores" && (
+    <>
+      <Tabela columns={colunasFornecedor} data={dataFornecedor} />
     </>
       )}
     </div>

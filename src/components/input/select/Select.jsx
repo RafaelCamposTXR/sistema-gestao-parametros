@@ -1,12 +1,24 @@
 import React from 'react';
 import Select, {components} from 'react-select';
 
-function SelectBox({options, placeholder}) {
+function SelectBox({options, placeholder, tamanho}) {
+
+  const getWidth = (tamanho) => {
+    switch (tamanho) {
+      case 'curto':
+        return '14vw';
+      case 'longo':
+        return '18vw';
+      default:
+        return '16vw';
+    }
+  };
 
   const Styles = {
-    control: (provided, state) => ({
+    control: (provided, state) => (
+      {
       ...provided,
-      width: "18vw",
+      width: getWidth(tamanho),
       minHeight: "2px",
       height: "34px",
       padding: "0",

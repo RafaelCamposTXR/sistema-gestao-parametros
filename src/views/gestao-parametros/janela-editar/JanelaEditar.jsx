@@ -14,10 +14,7 @@ function JanelaEditar() {
 
   const [subSecao, setSubSecao, modoEdicao, setModoEdicao] = useOutletContext();
 
-  const [input1Focused, setInput1Focused] = useState(false);
-  const [input2Focused, setInput2Focused] = useState(false);
-  const [input1Value, setInput1Value] = useState('');
-  const [input2Value, setInput2Value] = useState('');
+
 
   return (
     <>
@@ -37,23 +34,19 @@ function JanelaEditar() {
             }}  
       />
     </div>
-    {modoEdicao[1] == ["Editar valor da tabela"] && 
     <div className="corpo-editar">
+    {modoEdicao[1] == ["Editar valor da tabela"] && 
+        <>
         <InputEditar 
-            inputFocused={input1Focused} 
-            inputValue={input1Value} 
             label="Tipo de Informação" 
-            setInputFocused={setInput1Focused} 
-            setInputValue={setInput1Value} 
+            content={'dataInfo[modoEdicao[2]].tipo'}
         />
         <InputEditar 
-            inputFocused={input2Focused} 
-            inputValue={input2Value} 
             label="Script" 
-            setInputFocused={setInput2Focused} 
-            setInputValue={setInput2Value} 
         />
-    </div>}
+        </>
+    }
+    </div>
     </>
   )
 }

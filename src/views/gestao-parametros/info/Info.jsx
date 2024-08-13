@@ -34,6 +34,7 @@ function Info() {
             <SelectBox
               options={Options}
               placeholder={"Tipo de Informação "}
+              tamanho="longo"
             />
             <Button 
               className="search-button" 
@@ -44,14 +45,13 @@ function Info() {
               className="delete-button" 
               dataTooltip="Limpar Filtro">
             </Button>
-            <Link to="/gestaoparametros/edicao">
             <Button
               className="settings-button" 
               dataTooltip="Mais Filtros"
               onClick={() => setModoEdicao(["Tipos de Informação", "Mais Filtros e Configurações", ""])}
+              path="/gestaoparametros/edicao"
             >
             </Button>
-          </Link>
           </div>
         </div>
       </div>

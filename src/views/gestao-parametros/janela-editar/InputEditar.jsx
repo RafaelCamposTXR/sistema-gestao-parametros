@@ -2,7 +2,7 @@ import React from 'react';
 import {Textbox} from '../../../components/input/text-box/Textbox';
 import './JanelaEditar.css';
 
-function InputEditar({inputFocused, inputValue, label, setInputFocused,  setInputValue}) {
+function InputEditar({ label, content}) {
   return (
     <div className="input-editar">
       <div className="texto-input">
@@ -10,11 +10,8 @@ function InputEditar({inputFocused, inputValue, label, setInputFocused,  setInpu
       </div>
       <div className="box-input">
       <Textbox
-        inputFocused={inputFocused}
-        inputValue={inputValue}
-        label=""
-        setInputFocused={setInputFocused}
-        setInputValue={setInputValue}
+        label={content}
+        tamanho="longo"
       />
       </div>
     </div>
