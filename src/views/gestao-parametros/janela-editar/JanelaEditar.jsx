@@ -6,7 +6,7 @@ import {useNavigate} from 'react-router-dom';
 import { Button } from '../../../components/input/botao/Button';
 import SaveIcon from '@mui/icons-material/SaveSharp';
 import CloseIcon from '@mui/icons-material/CloseSharp';
-import InputEditar from './InputEditar.jsx';
+import InputEditar from '../InputEditar.jsx';
 
 function JanelaEditar() {
 

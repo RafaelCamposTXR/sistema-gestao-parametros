@@ -1,4 +1,4 @@
-import {React, useEffect} from 'react'
+import {React, useEffect, useState} from 'react'
 import {useOutletContext} from 'react-router-dom';
 import SelectBox from '../../../components/input/select/Select';
 import {Textbox} from '../../../components/input/text-box/Textbox';
@@ -8,11 +8,12 @@ import './GestaoFornecedores.css';
 
 function GestaoFornecedores() {
 
-  const [subSecao, setSubSecao] = useOutletContext();
+  const [subSecao, setSubSecao, modoEdicao, setModoEdicao] = useOutletContext();
 
   useEffect(() => {
     setSubSecao('Fornecedores');
-  }, [setSubSecao]);
+    setModoEdicao(['Fornecedores','',''])
+  }, [setSubSecao, setModoEdicao]);
 
 
   return (
@@ -46,10 +47,10 @@ function GestaoFornecedores() {
               className="delete-button" 
               dataTooltip="Limpar Filtros"
             />
-            <Button 
+            <Button
               className="settings-button" 
               dataTooltip="Mais Filtros"
-              onCLick={() => setModoEdicao(["Tipos de Informação", "Mais Filtros e Configurações", ""])}
+              onClick={() => setModoEdicao([modoEdicao[0], "Mais Filtros e Configurações",''])}
               path="/gestaoparametros/edicao"
             />
           </div>

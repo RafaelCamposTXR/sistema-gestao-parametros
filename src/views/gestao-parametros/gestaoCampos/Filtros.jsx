@@ -61,7 +61,7 @@ function Filtros({ activeTab, modoEdicao, setModoEdicao }) {
             <Button
               className="settings-button" 
               dataTooltip="Mais Filtros"
-              onClick={() => setModoEdicao(["Gestão de Campos", "Mais Filtros e Configurações"])}
+              onClick={() => setModoEdicao([modoEdicao[0], "Mais Filtros e Configurações"])}
               path="/gestaoparametros/edicao"
             >
             </Button>

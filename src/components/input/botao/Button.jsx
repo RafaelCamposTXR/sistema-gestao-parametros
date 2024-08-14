@@ -15,14 +15,14 @@ export function Button({
 }) {
   return <Link to={path}>
     <button className={className} data-tooltip={dataTooltip} onClick={onClick}> 
-          <>
-          {className === "add-button" && <PlaylistAddIcon sx={{fontSize: 22}}/>}
-          {className === "delete-button" && <DeleteForeverIcon sx={{ fontSize: 18 }}/>}
-          {className === "settings-button" && <TuneIcon sx={{ fontSize: 18 }}/>}
-          {className === "back-button" && <ArrowBackIosIcon/>}
+      <>
+        {className === "add-button" && <PlaylistAddIcon sx={{fontSize: 22}}/>}
+        {className === "delete-button" && <DeleteForeverIcon sx={{ fontSize: 18 }}/>}
+        {className === "settings-button" && <TuneIcon sx={{ fontSize: 18 }}/>}
+        {className === "back-button" && <ArrowBackIosIcon/>}
           {children}
-          </>
-          </button>
+    </>
+  </button>
           </Link>;
 }
   

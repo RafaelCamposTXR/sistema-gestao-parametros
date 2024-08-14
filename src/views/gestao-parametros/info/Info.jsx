@@ -15,8 +15,6 @@ function Info() {
     setModoEdicao(['Tipos de Informação','',''])
   }, [setSubSecao, setModoEdicao]);
 
-  const [input1Focused, setInput1Focused] = useState(false);
-  const [input1Value, setInput1Value] = useState('');   
 
   const Options = [
     {value: "imagem", label: "Imagem"},
