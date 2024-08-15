@@ -19,9 +19,11 @@ function SelectBox({options, placeholder, tamanho}) {
       {
       ...provided,
       width: getWidth(tamanho),
+      fontSize: "0.97rem",
       minHeight: "2px",
       height: "34px",
       padding: "0",
+      cursor: "pointer",
       alignItems: "start",
       border: "1.8px solid #e6e7e9",
       borderRadius: "4px",

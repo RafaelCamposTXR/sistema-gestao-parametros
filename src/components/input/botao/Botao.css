@@ -1,6 +1,8 @@
 /* Tooltip para as abas feito com css*/
 .delete-button::before,
 .delete-button::after,
+.delete-edit-button::before,
+.delete-edit-button::after,
 .settings-button::before,
 .settings-button::after,
 .add-button::before,
@@ -13,7 +15,18 @@
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
 }
 
+/* .delete-edit-button::before,
+.delete-edit-button::after{
+  --scale: 0;
+  position: absolute;
+  bottom: 81.2vh;
+  transform: scale(var(--scale));
+  transition: 0.17s transform ;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+} */
+
 .delete-button::before,
+.delete-edit-button::before,
 .settings-button::before,
 .add-button::before {
   color: rgb(255, 255, 255);
@@ -28,6 +41,7 @@
 }
 
 .delete-button:hover::before,
+.delete-edit-button:hover::before,
 .settings-button:hover::before,
 .add-button:hover::before {
   --scale: 1;
@@ -35,6 +49,8 @@
 
 .delete-button.active::before,
 .delete-button.active::after,
+.delete-edit-button.active::before,
+.delete-edit-button.active::after,
 .settings-button.active::before,
 .settings-button.active::after,
 .add-button.active::before,
@@ -61,6 +77,7 @@
 }
 
 .delete-button,
+.delete-edit-button,
 .settings-button {
   display: flex;
   padding: 10px 20px;
@@ -93,27 +110,55 @@
 .add-button {
   position: relative;
   display: flex;
-  padding: 10px 20px;
+  padding: 1.1vw 1vw 1vw 0.5vw;
   background-color: var(--blue);
   color: white;
   border: none;
   border-radius: 2px;
   cursor: pointer;
   margin-left: 2.2vw;
-  width: 2vw;
+  margin-right: auto;
+  width: 5vw;
   height: 4.2vh;
   align-items: center;
-  justify-content: center;
-
+  align-content: center;
+  justify-content: space-around;
+  text-align: center;
+  gap: 0.5vw;
 }
 
-.add-button:hover {
-  background-color: var(--light-blue);
-}
+
 
 .back-button {
   position: relative;
   border: none;
-  background-color: white;
+  background-color: transparent;
+  box-shadow: none;
   cursor: pointer;
+}
+
+.save-button {
+  padding: 5px 10px;
+  background-color: var(--blue) !important;
+  width: 2vw;
+  height: 2vw;
+}
+
+.delete-edit-button {
+  display: flex;
+  padding: 5px 10px;
+  background-color: white;
+  color: var(--blue);
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  margin-left: 0.5vw;
+  align-items: center;
+  justify-content: center;
+  border: 2px outset red;
+  border-radius: 2px;
+  width: 1.9vw;
+  height: 1.8vw;
+  background-color: red;
+  color: white;
 }

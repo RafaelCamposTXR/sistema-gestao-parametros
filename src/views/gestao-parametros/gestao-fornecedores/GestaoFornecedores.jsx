@@ -53,6 +53,12 @@ function GestaoFornecedores() {
               onClick={() => setModoEdicao([modoEdicao[0], "Mais Filtros e Configurações",''])}
               path="/gestaoparametros/edicao"
             />
+            <Button
+              className="add-button" 
+              dataTooltip="Inserir Novo"
+              onClick={() => setModoEdicao([modoEdicao[0], "Inserir Novo",''])}
+              path="/gestaoparametros/edicao"
+            />
           </div>
         </div>
       </div>

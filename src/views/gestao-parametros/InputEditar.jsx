@@ -1,8 +1,9 @@
 import React from 'react';
 import {Textbox} from '../../components/input/text-box/Textbox';
+import SelectBox from '../../components/input/select/Select';
 import './janela-editar/JanelaEditar.css';
 
-function InputEditar({ label, content, type}) {
+function InputEditar({ label, content, type, tamanho}) {
   return (
     <div className="input-editar">
       <div className="texto-input">
@@ -12,13 +13,13 @@ function InputEditar({ label, content, type}) {
       {type === "textbox" && 
         <Textbox
           label={content}
-          tamanho="longo"
+          tamanho={tamanho}
         />
       }
       {type === "select" && 
-        <Textbox
+        <SelectBox
           label={content}
-          tamanho="longo"
+          tamanho={tamanho}
         />
       }
       
