@@ -28,10 +28,10 @@ export function Button({
         {className === "delete-button" && 
         <DeleteForeverIcon sx={{ fontSize: 18 }}/>}
         {className === "delete-edit-button" && 
-        <DeleteForeverIcon sx={{ fontSize: 21 }}/>}
+        <DeleteForeverIcon sx={{ fontSize: 19 }}/>}
         {className === "settings-button" && <TuneIcon sx={{ fontSize: 18 }}/>}
         {className === "back-button" && <ArrowBackIosIcon/>}
-        {className === "save-button" && <SaveIcon sx={{ fontSize: 21 }}/>}
+        {className === "save-button" && <SaveIcon sx={{ fontSize: 19 }}/>}
           {children}
     </>
   </button>

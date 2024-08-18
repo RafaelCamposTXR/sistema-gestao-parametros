@@ -3,6 +3,7 @@ import './GestaoParametros.css';
 import TituloSecao from '../../components/titulos/tituloSecao/TituloSecao';
 import {Link, Outlet} from "react-router-dom";
 
+
 function GestaoParametros() {  
 
   const [subSecao, setSubSecao] = useState("")

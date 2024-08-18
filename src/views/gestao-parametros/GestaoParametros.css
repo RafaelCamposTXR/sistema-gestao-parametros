@@ -44,5 +44,10 @@
 } */
 
 
+.gestao-conteudo {
+  display: flex;
+  justify-content: center;
+}
+
 
 

@@ -140,25 +140,24 @@
 .save-button {
   padding: 5px 10px;
   background-color: var(--blue) !important;
-  width: 2vw;
-  height: 2vw;
+  width: 2.3vw !important;
+  height: 1.6vw !important;
+  border: 2px outset var(--light-blue) !important;
+  border-radius: 3px !important;
+
 }
 
 .delete-edit-button {
   display: flex;
   padding: 5px 10px;
-  background-color: white;
-  color: var(--blue);
-  border: none;
-  border-radius: 2px;
+  background-color: red;
+  color: white;
+  border-radius: 3px;
   cursor: pointer;
   margin-left: 0.5vw;
   align-items: center;
   justify-content: center;
   border: 2px outset red;
-  border-radius: 2px;
-  width: 1.9vw;
-  height: 1.8vw;
-  background-color: red;
-  color: white;
+  width: 2.3vw;
+  height: 1.6vw;
 }
