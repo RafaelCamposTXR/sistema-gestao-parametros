@@ -1,6 +1,6 @@
 import { ModalInput } from './ModalInput';
 import React from 'react';
-import './Modal.css';
+import './Modal.scss';
 import Backdrop from './backdrop/Backdrop';
 import {motion} from 'framer-motion';
 import Titulo from '../titulos/titulo/Titulo';

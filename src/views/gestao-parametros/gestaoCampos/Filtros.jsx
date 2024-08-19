@@ -1,7 +1,7 @@
 import { Button } from '../../../components/input/botao/Button';
 import { Textbox } from '../../../components/input/text-box/Textbox';
 import React, { useState } from 'react';
-import '../../../components/input/text-box/Filtros.css';
+import '../../../components/input/text-box/Filtros.scss';
 import Modal from '../../../components/modal/Modal';
 import { Link } from 'react-router-dom';
 
@@ -52,7 +52,6 @@ function Filtros({ activeTab, modoEdicao, setModoEdicao }) {
           <Button 
             className="search-button" 
             dataTooltip="Pesquisar">
-              Pesquisar
           </Button>
           <Button 
             className="delete-button" 

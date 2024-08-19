@@ -1,7 +1,7 @@
 import {React, useState, useEffect} from 'react';
 import { useTable, usePagination } from 'react-table';
 import SwapVertIcon from '@mui/icons-material/SwapVertSharp';
-import './Tabela.css'; 
+import './Tabela.scss'; 
 import { useOutletContext, useNavigate } from 'react-router-dom';
 
 

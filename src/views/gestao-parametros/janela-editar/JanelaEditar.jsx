@@ -67,6 +67,13 @@ function JanelaEditar() {
       />
       </div>
       <div className="conteiner-botoes">
+        {modoEdicao[1] == ["Inserir Novo"] && 
+          <Button 
+            className="cancel-button"
+            dataTooltip="Cancelar"
+            onClick={() => {navigate(-1)}}
+          />
+        }
         <Button 
             className="delete-edit-button"
             dataTooltip="Apagar"
@@ -80,7 +87,7 @@ function JanelaEditar() {
       </div>
     </div>
     <div className="corpo-editar">
-    {modoEdicao[1] == ["Editar valor da tabela"] && 
+    {modoEdicao[1] == ["Inserir Novo"] && 
         <>
         {FiltrosFornecedor.map((field, index) => (
           <InputEditar 

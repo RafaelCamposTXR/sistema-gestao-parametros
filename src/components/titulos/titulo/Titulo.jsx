@@ -1,5 +1,5 @@
 import React from 'react'
-import './titulo.css'
+import './titulo.scss'
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
 
 function Titulo({nomeSecao,nomeSubSecao, style}) {

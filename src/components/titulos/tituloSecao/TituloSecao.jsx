@@ -1,5 +1,5 @@
 import React from 'react';
-import './tituloSecao.css';
+import './tituloSecao.scss';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 function TituloSecao({nomeSecao,nomeSubSecao}) {

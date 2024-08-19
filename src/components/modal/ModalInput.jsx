@@ -1,5 +1,5 @@
 import React from "react";
-import "./Modal.css";
+import "./Modal.scss";
 
 export function ModalInput({label, isShort}) {
   return <div className="input-conteiner-modal">

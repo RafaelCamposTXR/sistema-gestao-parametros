@@ -1,6 +1,6 @@
 import React from 'react';
 import {motion} from 'framer-motion';
-import './backdrop.css';
+import './backdrop.scss';
 
 const Backdrop = ({children, onClick}) => {
   return (
