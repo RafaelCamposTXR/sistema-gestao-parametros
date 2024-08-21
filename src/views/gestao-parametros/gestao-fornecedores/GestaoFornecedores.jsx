@@ -39,7 +39,6 @@ function GestaoFornecedores() {
             />
             <Button 
               className="search-button" 
-              children="Pesquisar"
               dataTooltip="Pesquisar"
             />
               

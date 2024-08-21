@@ -28,13 +28,14 @@ export function Button({
             <span style ={{margin: 0, paddingTop: "0.06vh"}}>
             Pesquisar
             </span>
-            
           </>
         }
         {className === "add-button" && 
           <>
             <PlaylistAddIcon sx={{fontSize: 18}}/>
+            <span style ={{margin: 0, paddingTop: "0.06vh"}}>
             Novo
+            </span>
           </>
         }
         {className === "delete-button" && 

@@ -1,6 +1,6 @@
 import { Button } from '../../../components/input/botao/Button';
 import { Textbox } from '../../../components/input/text-box/Textbox';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../../../components/input/text-box/Filtros.scss';
 import Modal from '../../../components/modal/Modal';
 import { Link } from 'react-router-dom';
@@ -9,25 +9,55 @@ import { Link } from 'react-router-dom';
 
 
 
-function Filtros({ activeTab, modoEdicao, setModoEdicao }) { 
-
+function Filtros({ 
+            activeTab, 
+            modoEdicao, 
+            setModoEdicao,
+                }){ 
   const [modalOpen, setModalOpen] = useState(false);
 
   const close = () => setModalOpen(false);  
   const open = () => setModalOpen(true);
-  
 
+  // const [input0Focused, setInput0Focused] = useState(false);
+  // const [input0Value, setInput0Value] = useState('');
+  // const [input1Focused, setInput1Focused] = useState(false);
+  // const [input1Value, setInput1Value] = useState('');
+
+  const [input0Focused, setInput0Focused] = useState(false);
+  const [input0Value, setInput0Value] = useState('');
+  const [input1Focused, setInput1Focused] = useState(false);
+  const [input1Value, setInput1Value] = useState('');
+  
+  const LimpaCampos = () => {
+    setInput0Value("");
+    setInput1Value("");
+  }
+
+
+  useEffect(() => {
+    LimpaCampos();
+  }, [activeTab]);
 
   return (
     <div className="filtros">
       <div className="input-container">
         {(activeTab === 0) && (
           <>
+          {() => LimpaCampos()}
           <Textbox  
             label={"Serviço"} 
+            inputFocused={input0Focused}
+            setInputFocused={setInput0Focused}
+            inputValue={input0Value}
+            setInputValue={setInput0Value}
           />
           <Textbox  
             label={"Status do Serviço"} 
+            inputFocused={input1Focused}
+            setInputFocused={setInput1Focused}
+            inputValue={input1Value}
+            setInputValue={setInput1Value}
           />
           </>
         )}
@@ -35,6 +65,10 @@ function Filtros({ activeTab, modoEdicao, setModoEdicao }) {
           <>
           <Textbox  
             label={"Ação"} 
+            inputFocused={input0Focused}
+            setInputFocused={setInput0Focused}
+            inputValue={input0Value}
+            setInputValue={setInput0Value}
           />
           </>
         )}
@@ -42,9 +76,17 @@ function Filtros({ activeTab, modoEdicao, setModoEdicao }) {
           <>
           <Textbox
             label={"Status da Ação"} 
+            inputFocused={input0Focused}
+            setInputFocused={setInput0Focused}
+            inputValue={input0Value}
+            setInputValue={setInput0Value}
           />
           <Textbox  
             label={"Rótulo"} 
+            inputFocused={input1Focused}
+            setInputFocused={setInput1Focused}
+            inputValue={input1Value}
+            setInputValue={setInput1Value}
           />
           </>
         )}
@@ -55,7 +97,8 @@ function Filtros({ activeTab, modoEdicao, setModoEdicao }) {
           </Button>
           <Button 
             className="delete-button" 
-            dataTooltip="Limpar Filtros">
+            dataTooltip="Limpar Filtros"
+            onClick={() =>LimpaCampos()}>
           </Button>
             <Button
               className="settings-button" 

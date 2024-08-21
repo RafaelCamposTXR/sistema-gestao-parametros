@@ -34,22 +34,20 @@ function Info() {
               placeholder={"Tipo de Informação "}
               tamanho="longo"
             />
-            <Button 
+            <Button
               className="search-button" 
-              dataTooltip="Pesquisar">
-              Pesquisar
-            </Button>
+              dataTooltip="Pesquisar"
+            />
             <Button 
               className="delete-button" 
-              dataTooltip="Limpar Filtro">
-            </Button>
+              dataTooltip="Limpar Filtro"
+            />
             <Button
               className="settings-button" 
               dataTooltip="Mais Filtros"
               onClick={() => setModoEdicao(["Tipos de Informação", "Mais Filtros e Configurações", ""])}
               path="/gestaoparametros/edicao"
-            >
-            </Button>
+            />
           </div>
         </div>
       </div>

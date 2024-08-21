@@ -62,9 +62,23 @@ export function GestaoCampos() {
     }
   }
 
+
+
   return <><div className="area-superior">
           <div className="tabs">
-          {tabs.map((tab, index) => <Tab key={index} label={tab.label} Icon={tab.icon} isActive={index === activeTab} onClick={() => setActiveTab(index)} />)}
+          {tabs.map((tab, index) => 
+            <Tab 
+              key={index} 
+              label={tab.label} 
+              Icon={tab.icon} 
+              isActive={index === activeTab} 
+              onClick={
+                () => {
+                  setActiveTab(index);
+                }
+              } 
+            />)
+          }
           </div>
           <Titulo 
             nomeSecao="Gestão de Campos" 
@@ -76,7 +90,12 @@ export function GestaoCampos() {
               height: "5vh"
             }}  
           />
-          <Filtros activeTab={activeTab} modoEdicao={modoEdicao} setModoEdicao={setModoEdicao}/>
+          <Filtros 
+            // key={activeTab}  maneira alternativa de recarregar filtros com base na tab ativa
+            activeTab={activeTab} 
+            modoEdicao={modoEdicao} 
+            setModoEdicao={setModoEdicao}
+          />
         </div>
         <GestaoConteudo view="gestao-campos" activeTab={activeTab} modoEdicao={modoEdicao} setModoEdicao={setModoEdicao}/></>;
 }
