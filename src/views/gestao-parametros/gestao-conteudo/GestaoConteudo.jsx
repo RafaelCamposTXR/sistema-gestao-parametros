@@ -1,6 +1,6 @@
 import React from 'react';
 import Tabela from '../../../components/tabela/Tabela';
-import './GestaoConteudo.css';
+import './GestaoConteudo.scss';
 
 
 function GestaoConteudo({ view, activeTab }) {

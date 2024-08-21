@@ -1,7 +1,7 @@
 import {React, useState} from 'react';
 import { useOutletContext } from 'react-router-dom';
 import Titulo from '../../../components/titulos/titulo/Titulo';
-import "./JanelaEditar.css";
+import "./JanelaEditar.scss";
 import {useNavigate} from 'react-router-dom';
 import { Button } from '../../../components/input/botao/Button';
 import SaveIcon from '@mui/icons-material/SaveSharp';

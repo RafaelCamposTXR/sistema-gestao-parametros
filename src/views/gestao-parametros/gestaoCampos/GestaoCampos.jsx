@@ -6,7 +6,7 @@ import LibraryAddCheckIcon from '@mui/icons-material/LibraryAddCheckSharp';
 import Filtros from './Filtros';
 import Titulo from '../../../components/titulos/titulo/Titulo';
 import GestaoConteudo from '../gestao-conteudo/GestaoConteudo';
-import './GestaoCampos.css';
+import './GestaoCampos.scss';
 
 export function GestaoCampos() {
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import {Textbox} from '../../components/input/text-box/Textbox';
 import SelectBox from '../../components/input/select/Select';
-import './janela-editar/JanelaEditar.css';
+import './janela-editar/JanelaEditar.scss';
 
 function InputEditar({ label, content, type, tamanho}) {
   return (

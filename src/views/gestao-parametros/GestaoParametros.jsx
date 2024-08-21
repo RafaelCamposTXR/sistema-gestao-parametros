@@ -1,5 +1,5 @@
 import {React, useState} from 'react';
-import './GestaoParametros.css';
+import './GestaoParametros.scss';
 import TituloSecao from '../../components/titulos/tituloSecao/TituloSecao';
 import {Link, Outlet} from "react-router-dom";
 

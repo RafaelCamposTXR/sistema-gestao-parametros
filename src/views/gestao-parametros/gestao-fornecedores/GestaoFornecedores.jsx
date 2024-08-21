@@ -4,7 +4,7 @@ import SelectBox from '../../../components/input/select/Select';
 import {Textbox} from '../../../components/input/text-box/Textbox';
 import {Button} from '../../../components/input/botao/Button';
 import GestaoConteudo from '../gestao-conteudo/GestaoConteudo';
-import './GestaoFornecedores.css';
+import './GestaoFornecedores.scss';
 
 function GestaoFornecedores() {
 
