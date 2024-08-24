@@ -46,7 +46,9 @@ function Tabela({ columns, data }) {
   const navigate = useNavigate();
 
   const setEdicao = (row) => {
-    const tipo = row.original.tipo; 
+    // alert(row.original.data); 
+    console.log(JSON.stringify(row.original, null, 2))
+    const tipo = 1;
     setModoEdicao([modoEdicao[0], "Editar valor da tabela", tipo]); 
   };
   
@@ -73,7 +75,8 @@ function Tabela({ columns, data }) {
           {page.map(row => {
             prepareRow(row);
             return (
-              <tr {...row.getRowProps({ onClick: (row) => onClick(row) })}>
+              <tr {...row.getRowProps()}
+                  onClick= {() => onClick(row)} >
                 {row.cells.map(cell => (
                   <td {...cell.getCellProps()}>{cell.render('Cell')}
                   </td>

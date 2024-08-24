@@ -18,11 +18,12 @@ function SelectBox({options, placeholder, tamanho}) {
     control: (provided, state) => (
       {
       ...provided,
-      width: getWidth(tamanho),
-      fontSize: "0.97rem",
+      // width: getWidth(tamanho),
+      width: 'calc(100% + 3.2vw)',
+      fontSize: "0.96rem",
       minHeight: "2px",
       height: "34px",
-      padding: "0",
+      paddingRight: "0vw ",
       cursor: "pointer",
       alignItems: "start",
       border: "1.8px solid #e6e7e9",
@@ -50,11 +51,19 @@ function SelectBox({options, placeholder, tamanho}) {
     }),
     option: (provided, state) => ({
       ...provided,
+        padding: 0,
+        textAlign: 'center',
       ':hover': {
 
       },
       boxShadow: "2px outset grey",
-    })
+    }),
+    menu: (provided) => ({
+      ...provided,
+      width: 'calc(100% + 3.2vw)', 
+      textAlign: 'center',
+      padding: 0
+    }),
   }
 
 
@@ -68,7 +77,7 @@ function SelectBox({options, placeholder, tamanho}) {
   };
 
   return (
-    <>
+    <div style={{ display: 'flex', flexGrow: 1, paddingRight: "2.1vw", }}>
       <Select 
         options = {options} 
         styles = {Styles}
@@ -76,7 +85,7 @@ function SelectBox({options, placeholder, tamanho}) {
         className="input-wrapper"
         components={{ NoOptionsMessage }}
       />
-    </>
+    </div>
   )
 }
 

@@ -19,29 +19,26 @@ function GestaoFornecedores() {
   return (
     <>
       <div className="area-superior-fornecedor">
-        <div className="filtros">
-          <div className="input-container">
+        <div className="input-container-pai">
+          <div className="input-container-fornecedores">
             <SelectBox
               placeholder="Diretoria"
-              tamanho="curto"
             />
             <SelectBox
               placeholder="Fornecedor"
-              tamanho="curto"
             />
             <Textbox
               label="Nome do Contato"
-              tamanho="curto"
             />
             <Textbox
               label="Site(Download de Conteúdo)"
-              tamanho="curto"
             />
+            
+            <div className="button-container">
             <Button 
               className="search-button" 
               dataTooltip="Pesquisar"
             />
-              
             <Button 
               className="delete-button" 
               dataTooltip="Limpar Filtros"
@@ -58,6 +55,7 @@ function GestaoFornecedores() {
               onClick={() => setModoEdicao([modoEdicao[0], "Inserir Novo",''])}
               path="/gestaoparametros/edicao"
             />
+            </div>  
           </div>
         </div>
       </div>

@@ -1,5 +1,5 @@
 import {React, useState} from "react";
-import './Filtros.scss';
+import './Textbox.scss';
 
 export function Textbox({
   label,

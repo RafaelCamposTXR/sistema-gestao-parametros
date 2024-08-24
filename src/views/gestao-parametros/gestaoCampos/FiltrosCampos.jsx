@@ -1,7 +1,7 @@
 import { Button } from '../../../components/input/botao/Button';
 import { Textbox } from '../../../components/input/text-box/Textbox';
 import React, { useState, useEffect } from 'react';
-import '../../../components/input/text-box/Filtros.scss';
+import '../../../components/input/Filtros.scss';
 import Modal from '../../../components/modal/Modal';
 import { Link } from 'react-router-dom';
 
@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 
 
 
-function Filtros({ 
+function FiltrosCampos({ 
             activeTab, 
             modoEdicao, 
             setModoEdicao,
@@ -40,7 +40,7 @@ function Filtros({
   }, [activeTab]);
 
   return (
-    <div className="filtros">
+    <div className="input-container-pai">
       <div className="input-container">
         {(activeTab === 0) && (
           <>
@@ -123,7 +123,7 @@ function Filtros({
 }
 
 
-export default Filtros;
+export default FiltrosCampos;
 
 
 

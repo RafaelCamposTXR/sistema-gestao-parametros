@@ -7,6 +7,7 @@ import { Button } from '../../../components/input/botao/Button';
 import SaveIcon from '@mui/icons-material/SaveSharp';
 import CloseIcon from '@mui/icons-material/CloseSharp';
 import InputEditar from '../InputEditar.jsx';
+import EdicaoInfo from './EdicaoInfo';
 
 function JanelaEditar() {
 
@@ -22,7 +23,6 @@ function JanelaEditar() {
     { label: "Cargo", content: "", type: "textbox", tamanho: "longo" },
     { label: "Telefone", content: "", type: "textbox", tamanho: "longo" },
     { label: "Diretoria", content: "", type: "textbox", tamanho: "" },
-
   ];
 
   const FiltrosInfo = [
@@ -49,7 +49,7 @@ function JanelaEditar() {
   return (
     <>
     <div className="area-superior-editar">
-      <div classname="titulo-editar">
+      <div>
       <Button 
         className="back-button"
         onClick={() => {navigate(-1)}}
@@ -86,7 +86,12 @@ function JanelaEditar() {
         />
       </div>
     </div>
-    <div className="corpo-editar">
+    <div className="corpo-editar"
+    >
+    {modoEdicao[0] == "Tipos de Informação" && 
+      <EdicaoInfo 
+      />
+    } 
     {modoEdicao[1] == ["Inserir Novo"] && 
         <>
         {FiltrosFornecedor.map((field, index) => (

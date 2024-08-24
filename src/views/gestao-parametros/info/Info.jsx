@@ -10,6 +10,12 @@ function Info() {
 
   const [subSecao, setSubSecao, modoEdicao, setModoEdicao] = useOutletContext();
 
+  const [selectedOption, setSelectedOption] = useState("");
+
+  const handleClear = () => {
+    setSelectedOption(null); 
+  };
+
   useEffect(() => {
     setSubSecao('Tipos de Informação');
     setModoEdicao(['Tipos de Informação','',''])
@@ -27,13 +33,14 @@ function Info() {
   return (
     <>
       <div className="area-superior-info">
-        <div className="filtros">
-          <div className="input-container">
+        <div className="input-container-pai">
+          <div className="input-container-info">
             <SelectBox
+              value={selectedOption}
               options={Options}
               placeholder={"Tipo de Informação "}
-              tamanho="longo"
             />
+            <div className="button-container">
             <Button
               className="search-button" 
               dataTooltip="Pesquisar"
@@ -41,6 +48,7 @@ function Info() {
             <Button 
               className="delete-button" 
               dataTooltip="Limpar Filtro"
+              onClick={handleClear}
             />
             <Button
               className="settings-button" 
@@ -48,6 +56,7 @@ function Info() {
               onClick={() => setModoEdicao(["Tipos de Informação", "Mais Filtros e Configurações", ""])}
               path="/gestaoparametros/edicao"
             />
+            </div>
           </div>
         </div>
       </div>

@@ -6,6 +6,7 @@ import { SidebarData } from './SidebarData';
 import './sidebar.scss';
 import { IconContext } from 'react-icons';
 import Backdrop from '../modal/backdrop/Backdrop';
+import MenuIcon from '@mui/icons-material/MenuSharp';
 
 function Sidebar({handleClose}) {
   const [sidebar, setSidebar] = useState(false);
@@ -20,7 +21,7 @@ function Sidebar({handleClose}) {
       <IconContext.Provider value={{ color: '#fff' }}>
         <div className='navbar'>
           <Link to='#' className='menu-bars'>
-            <FaIcons.FaBars onClick={showSidebar} />
+            <MenuIcon sx={{ fontSize: "1.8rem"}} onClick={showSidebar} />
           </Link>
         </div>
         {sidebar && <Backdrop onClick={CloseSidebar}/>}
@@ -36,7 +37,7 @@ function Sidebar({handleClose}) {
                 <li key={index} className={item.cName}>
                   <Link to={item.path}>
                     {item.icon}
-                    <span>{item.title}</span>
+                    <span style={{marginLeft: "0.7vw", fontSize: "1rem"}}>{item.title}</span>
                   </Link>
                 </li>
               );
