@@ -7,39 +7,65 @@ import InfoIcon from '@mui/icons-material/InfoSharp';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCartSharp';
 import FeedIcon from '@mui/icons-material/FeedSharp';
 import PeopleAltIcon from '@mui/icons-material/PeopleAltSharp';
+import HomeIcon from '@mui/icons-material/Home';
+import LayersIcon from '@mui/icons-material/Layers';
+import TuneIcon from '@mui/icons-material/Tune';
 
 export const SidebarData = [
   {
-    title: 'Produtos com Erro',
-    path: '/sistemagestao/produtoserro',
-    icon: <ErrorOutlineIcon sx={{fontSize:"16px"}}/>,
-    cName: 'nav-text'
-  },
-  {
-    title: 'Gestão de Campos',
-    path: '/gestaoparametros/gestaocampos',
-    // icon: <IoIcons.IoIosPaper />,
-    icon: <FeedIcon sx={{fontSize: "16px"}}/>,
-    cName: 'nav-text'
-  },
-  {
-    title: 'Gestão de Fornecedores',
-    path: '/gestaoparametros/gestaofornecedores',
-    // icon: <FaIcons.FaCartPlus />,
-    icon: <ShoppingCartIcon sx={{fontSize:"16px"}}/>,
-    cName: 'nav-text'
-  },
-  {
-    title: 'Gestão de Usuários',
-    path: '/gestaoparametros/gestaousuarios',
-    // icon: <IoIcons.IoMdPeople />,
-    icon: <PeopleAltIcon sx={{fontSize:"16px"}}/>,
-    cName: 'nav-text'
-  },
-  {
-    title: 'Tipos de Informação',
+    title: 'DashBoard',
     path: '/gestaoparametros/info',
-    icon: <InfoIcon sx={{fontSize:"16px"}}/>,
-    cName: 'nav-text'
+    icon: <HomeIcon sx={{fontSize:"16px", color: "white"}}/>,
+    cName: 'nav-text',
   },
+  {
+    title: 'Sistema de Gestão',
+    path: '/gestaoparametros/info',
+    icon: <LayersIcon sx={{fontSize:"16px", color: "white"}}/>,
+    cName: 'nav-text',
+    subMenu: [
+      {
+        title: 'Produtos com Erro',
+        path: '/sistemagestao/produtoserro',
+        icon: <ErrorOutlineIcon sx={{fontSize:"16px"}}/>,
+        cName: 'nav-text'
+      },
+      
+    ]
+  },
+  {
+    title: 'Gestão de Parâmetros',
+    path: '/sistemagestao/produtoserro',
+    icon: <TuneIcon sx={{fontSize:"16px", color: "white"}}/>,
+    cName: 'nav-text',
+    subMenu: [
+
+      {
+        title: 'Gestão de Campos',
+        path: '/gestaoparametros/gestaocampos',
+        icon: <FeedIcon sx={{fontSize: "16px"}}/>,
+        cName: 'nav-text'
+      },
+      {
+        title: 'Gestão de Fornecedores',
+        path: '/gestaoparametros/gestaofornecedores',
+        icon: <ShoppingCartIcon sx={{fontSize:"16px"}}/>,
+        cName: 'nav-text'
+      },
+      {
+        title: 'Gestão de Usuários',
+        path: '/gestaoparametros/gestaousuarios',
+        icon: <PeopleAltIcon sx={{fontSize:"16px"}}/>,
+        cName: 'nav-text'
+      },
+      {
+        title: 'Tipos de Informação',
+        path: '/gestaoparametros/info',
+        icon: <InfoIcon sx={{fontSize:"16px"}}/>,
+        cName: 'nav-text',
+      }
+    ]
+  },
+
+  
 ];
