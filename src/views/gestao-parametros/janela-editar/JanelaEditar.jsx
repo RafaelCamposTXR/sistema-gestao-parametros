@@ -67,18 +67,20 @@ function JanelaEditar() {
       />
       </div>
       <div className="conteiner-botoes">
-        {modoEdicao[1] == ["Inserir Novo"] && 
+        
           <Button 
             className="cancel-button"
             dataTooltip="Cancelar"
             onClick={() => {navigate(-1)}}
           />
-        }
+        
+        {modoEdicao[1] == ["Editar valor da tabela"] && 
         <Button 
             className="delete-edit-button"
             dataTooltip="Apagar"
             onClick={() => {navigate(-1)}}
         />
+      }
         <Button 
           className="save-button"
           dataTooltip="Salvar"

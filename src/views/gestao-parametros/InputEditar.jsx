@@ -17,14 +17,14 @@ function InputEditar({ label, content, type, tamanho}) {
       <div className="box-input">
       {type === "textbox" && 
         <div style={{width:"16.5vw"}}>
-        <Textbox
-          label={content}
-          tamanho={tamanho}
-          inputFocused={input0Focused}
-          setInputFocused={setInput0Focused}
-          inputValue={input0Value}
-          setInputValue={setInput0Value}
-        />
+          <Textbox
+            label={content}
+            inputFocused={input0Focused}
+            setInputFocused={setInput0Focused}
+            inputValue={input0Value}
+            setInputValue={setInput0Value}
+            tamanho={tamanho}
+          />
         </div>
       }
       {type === "select" && 

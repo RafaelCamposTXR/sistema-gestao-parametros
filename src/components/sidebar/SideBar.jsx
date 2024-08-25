@@ -13,7 +13,12 @@ function Sidebar({handleClose}) {
 
   const showSidebar = () => setSidebar(!sidebar);
 
-  const CloseSidebar = () => setSidebar(false);
+  const CloseSidebar = () => {
+    setSidebar(false);
+  
+  }
+
+
 
   return (
     <>

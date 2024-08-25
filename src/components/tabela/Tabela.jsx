@@ -48,7 +48,7 @@ function Tabela({ columns, data }) {
   const setEdicao = (row) => {
     // alert(row.original.data); 
     console.log(JSON.stringify(row.original, null, 2))
-    const tipo = 1;
+    const tipo = row.original.tipo;
     setModoEdicao([modoEdicao[0], "Editar valor da tabela", tipo]); 
   };
   

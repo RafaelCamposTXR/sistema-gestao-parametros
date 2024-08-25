@@ -1,28 +1,31 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import InputEditar from '../InputEditar.jsx';
 import { useOutletContext } from 'react-router-dom';
 
 function EdicaoInfo(
 ) {
 
+  const [subSecao, setSubSecao, modoEdicao, setModoEdicao] = useOutletContext();
+
   const FiltrosInfo = [
-    { label: "Tipo de Informação", content: "" },
-    { label: "Script", content: "" }
+    { label: "Tipo de Informação", content: modoEdicao[2], type: "textbox", tamanho:"longo" },
+    { label: "Script", content: "", type: "textbox", tamanho:"longo" }
   ];
 
-  const [subSecao, setSubSecao, modoEdicao, setModoEdicao] = useOutletContext();
+
+
 
   return (
     <>
       {modoEdicao[1] == ["Editar valor da tabela"] && 
         <>
-        
+        {console.log(modoEdicao, modoEdicao[2])}
         {FiltrosInfo.map((field, index) => (
           <InputEditar 
             key={index}
+            type={field.type}
             label={field.label}
             content={field.content}
-            type={field.type}
             tamanho={field.tamanho}
       />
     ))}
