@@ -13,6 +13,12 @@ function ProdutosErro() {
     setModoEdicao(["Produtos com erro",'','']);
   }, [setSubSecao, setModoEdicao]);
 
+  const LimpaCampos = () => {
+    setInput0Value("");
+    setInput1Value("");
+    setInput2Value("");
+  }
+
   const [input0Focused, setInput0Focused] = useState(false);
   const [input0Value, setInput0Value] = useState('');
   const [input1Focused, setInput1Focused] = useState(false);
@@ -25,6 +31,7 @@ function ProdutosErro() {
       tipo: 'textbox',
       label: 'Código Cliente',
       tamanho: '',
+      tipoInput: "numero",
       inputFocused: input0Focused,
       setInputFocused: setInput0Focused,
       inputValue: input0Value,
@@ -36,6 +43,7 @@ function ProdutosErro() {
       tipo: 'textbox',
       label: 'Código Produto',
       tamanho: '',
+      tipoInput: "numero",
       inputFocused: input1Focused,
       setInputFocused: setInput1Focused,
       inputValue: input1Value,
@@ -69,7 +77,7 @@ function ProdutosErro() {
       tipo: 'button',
       className: 'delete-button',
       dataTooltip: 'Limpar Filtros',
-      onClick: () => {},
+      onClick: () => {LimpaCampos()},
 
     }
   ]

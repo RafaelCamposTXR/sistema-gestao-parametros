@@ -5,7 +5,7 @@ import './Tabela.scss';
 import { useOutletContext, useNavigate } from 'react-router-dom';
 
 
-function Tabela({ columns, data }) {
+function Tabela({ columns, data, area }) {
 
   const [pageSize, setPageSize] = useState(10);
 
@@ -61,7 +61,7 @@ function Tabela({ columns, data }) {
 
   return (
     <>
-      <table {...getTableProps()} className="tabela">
+      <table {...getTableProps()} className={area == "sistema" ? "tabela-sistema" : "tabela"}>
         <thead>
           {headerGroups.map(headerGroup => (
             <tr {...headerGroup.getHeaderGroupProps()}>

@@ -328,7 +328,7 @@ function GestaoConteudo({ view, activeTab }) {
       )}
       {view === "sistema-erro" && (
         <>
-          <Tabela columns={colunasErro} data={dataErro} />
+          <Tabela columns={colunasErro} data={dataErro} area="sistema"/>
         </>
       )}
     </div>

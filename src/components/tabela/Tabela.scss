@@ -24,6 +24,7 @@
   font-weight: 400;
   text-align: center;
   color: white;
+  height: 2.3vh;
 }
 
 .tabela td {
@@ -134,4 +135,43 @@
   border:0.5px outset;
   border-radius: 4px;
   outline: none; 
+}
+
+
+.tabela-sistema {
+  width: 91%;
+  border-collapse: collapse;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 400;
+  margin: 20px 0;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tabela-sistema th,
+.tabela-sistema td {
+  border: 1px solid #074c9629;
+  padding: 6px;
+  height: 3vh;
+  cursor: pointer;
+}
+
+.tabela-sistema th:hover {
+  background-color: var(--light-blue);
+}
+
+.tabela-sistema th {
+  background-color: var(--blue);
+  font-weight: 400;
+  text-align: center;
+  color: white;
+  height: 4.5vh;
+}
+
+.tabela-sistema td {
+  height: 3vh;
+}
+
+.tabela-sistema tr:hover {
+  background-color: #c0c0c530;
 }

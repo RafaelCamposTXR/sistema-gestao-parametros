@@ -25,10 +25,11 @@ function Filtros({ ListaComponentes }) {
                 key = {index}
                 label = {item.label}
                 tamanho = {item.tamanho}
+                tipoInput = {item.tipoInput}
                 inputFocused = {item.inputFocused}
                 setInputFocused = {item.setInputFocused}
                 inputValue = {item.inputValue}
-                setInputValue = {item.setInputvalue}
+                setInputValue = {item.setInputValue}
               />
             );
           case 'button':

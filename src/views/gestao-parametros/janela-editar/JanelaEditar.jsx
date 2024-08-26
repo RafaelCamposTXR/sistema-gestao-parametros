@@ -109,7 +109,7 @@ function JanelaEditar() {
     }
     {modoEdicao[1] == ["Mais Filtros e Configurações"] && 
       <>
-        {FiltrosFornecedor.map((field, index) => (
+        {/* {FiltrosFornecedor.map((field, index) => (
           <InputEditar 
             key={index}
             label={field.label}
@@ -117,7 +117,7 @@ function JanelaEditar() {
             type={field.type}
             tamanho={field.tamanho}
       />
-    ))}
+    ))} */}
         </>
     }
     </div>
