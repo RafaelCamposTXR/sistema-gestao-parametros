@@ -28,15 +28,15 @@ export const SidebarData = [
     cName: 'nav-text',
     subMenu: [
       {
-        title: 'Validação de Conteúdo',
-        path: '/sistemagestao/validacaoconteudo',
-        icon: <RuleIcon sx={{fontSize:"16px"}}/>,
-        cName: 'nav-text'
-      },
-      {
         title: 'Fila de Demandas',
         path: '/sistemagestao/filademandas',
         icon: <AddTaskIcon sx={{fontSize:"16px"}}/>,
+        cName: 'nav-text'
+      },
+      {
+        title: 'Validação de Conteúdo',
+        path: '/sistemagestao/validacaoconteudo',
+        icon: <RuleIcon sx={{fontSize:"16px"}}/>,
         cName: 'nav-text'
       },
       {
