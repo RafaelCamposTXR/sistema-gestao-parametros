@@ -2,7 +2,8 @@ import React, {useState, useEffect} from 'react';
 import './ProdutosErro.scss';
 import Filtros from '../../../components/input/Filtros';
 import { useOutletContext } from 'react-router-dom';
-import GestaoConteudo from '../../gestao-parametros/gestao-conteudo/GestaoConteudo';
+import GestaoConteudo from '../../gestao-conteudo/GestaoConteudo';
+
 
 function ProdutosErro() {
 

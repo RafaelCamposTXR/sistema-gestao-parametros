@@ -5,7 +5,7 @@ import PendingActionsIcon from '@mui/icons-material/PendingActionsSharp';
 import LibraryAddCheckIcon from '@mui/icons-material/LibraryAddCheckSharp';
 import Filtros from './FiltrosCampos';
 import Titulo from '../../../components/titulos/titulo/Titulo';
-import GestaoConteudo from '../gestao-conteudo/GestaoConteudo';
+import GestaoConteudo from '../../gestao-conteudo/GestaoConteudo';
 import './GestaoCampos.scss';
 
 export function GestaoCampos() {

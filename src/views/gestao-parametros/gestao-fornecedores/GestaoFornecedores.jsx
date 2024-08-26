@@ -3,7 +3,7 @@ import {useOutletContext} from 'react-router-dom';
 import SelectBox from '../../../components/input/select/Select';
 import {Textbox} from '../../../components/input/text-box/Textbox';
 import {Button} from '../../../components/input/botao/Button';
-import GestaoConteudo from '../gestao-conteudo/GestaoConteudo';
+import GestaoConteudo from '../../gestao-conteudo/GestaoConteudo';
 import './GestaoFornecedores.scss';
 
 function GestaoFornecedores() {

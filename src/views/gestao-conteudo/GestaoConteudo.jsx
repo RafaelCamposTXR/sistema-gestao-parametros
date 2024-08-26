@@ -1,5 +1,5 @@
 import React from 'react';
-import Tabela from '../../../components/tabela/Tabela';
+import Tabela from '../../components/tabela/Tabela';
 import './GestaoConteudo.scss';
 
 
