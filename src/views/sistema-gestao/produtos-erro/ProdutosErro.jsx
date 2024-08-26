@@ -64,6 +64,13 @@ function ProdutosErro() {
       dataTooltip: '',
       onClick: () => {},
       path: '/gestaoparametros/gestaocampos',
+    },
+    {
+      tipo: 'button',
+      className: 'delete-button',
+      dataTooltip: 'Limpar Filtros',
+      onClick: () => {},
+
     }
   ]
 
@@ -73,7 +80,7 @@ function ProdutosErro() {
       <div className="area-superior-produtos-erro">
         <Filtros ListaComponentes={ListaFiltros}/>
       </div>
-      <GestaoConteudo/>
+      <GestaoConteudo view="sistema-erro"/>
 
     </>
   )

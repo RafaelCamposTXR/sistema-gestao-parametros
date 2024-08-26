@@ -10,6 +10,9 @@ import PeopleAltIcon from '@mui/icons-material/PeopleAltSharp';
 import HomeIcon from '@mui/icons-material/Home';
 import LayersIcon from '@mui/icons-material/Layers';
 import TuneIcon from '@mui/icons-material/Tune';
+import ChecklistIcon from '@mui/icons-material/ChecklistSharp';
+import RuleIcon from '@mui/icons-material/RuleSharp';
+import AddTaskIcon from '@mui/icons-material/AddTaskSharp';
 
 export const SidebarData = [
   {
@@ -24,6 +27,18 @@ export const SidebarData = [
     icon: <LayersIcon sx={{fontSize:"16px", color: "white"}}/>,
     cName: 'nav-text',
     subMenu: [
+      {
+        title: 'Validação de Conteúdo',
+        path: '/sistemagestao/validacaoconteudo',
+        icon: <RuleIcon sx={{fontSize:"16px"}}/>,
+        cName: 'nav-text'
+      },
+      {
+        title: 'Fila de Demandas',
+        path: '/sistemagestao/filademandas',
+        icon: <AddTaskIcon sx={{fontSize:"16px"}}/>,
+        cName: 'nav-text'
+      },
       {
         title: 'Produtos com Erro',
         path: '/sistemagestao/produtoserro',

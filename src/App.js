@@ -10,6 +10,8 @@ import GestaoUsuarios from './views/gestao-parametros/gestao-usuarios/GestaoUsua
 import JanelaEditar from './views/gestao-parametros/janela-editar/JanelaEditar';
 import Info from './views/gestao-parametros/info/Info';
 import ProdutosErro from './views/sistema-gestao/produtos-erro/ProdutosErro';
+import ValidacaoConteudo from './views/sistema-gestao/validacao-conteudo/ValidacaoConteudo'
+import FilaDemandas from './views/sistema-gestao/fila-demandas/FilaDemandas'
 
 
 function App() {
@@ -29,6 +31,8 @@ function App() {
                 <Route path="edicao" element={<JanelaEditar />} />
               </Route>
               <Route path="sistemagestao" element={<SistemaGestao />}> 
+                <Route path="validacaoconteudo" element={<ValidacaoConteudo />} />
+                <Route path="filademandas" element={<FilaDemandas />} />
                 <Route path="produtoserro" element={<ProdutosErro />} />
               </Route>
             </Routes>

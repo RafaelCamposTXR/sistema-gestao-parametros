@@ -191,7 +191,86 @@ function GestaoConteudo({ view, activeTab }) {
     []
   );
 
+
+  
+
   const dataFornecedor = React.useMemo(
+    () => [
+      {
+        cod: 1,
+        tipo: 'Imagem',
+      },
+      {
+        cod: 2,
+        tipo: 'Ficha Técnica',
+      },
+      {
+        cod: 3,
+        tipo: 'Conteúdo',
+      },
+      {
+        cod: 4,
+        tipo: 'Vídeo',
+      },
+      {
+        cod: 5,
+        tipo: 'Manual',
+      },
+      {
+        cod: 6,
+        tipo: 'Inmetro',
+      },
+      {
+        cod: 7,
+        tipo: 'Anatel',
+      },
+    ],
+    []
+  );
+
+  const colunasErro = React.useMemo(
+    () => [
+      {
+        Header: 'Código Produto',
+        accessor: 'cod-prod',
+      },
+      {
+        Header: 'Código Loja',
+        accessor: 'cod-loja',
+      },
+      {
+        Header: 'Produto',
+        accessor: 'prod',
+      },
+      {
+        Header: 'Erro',
+        accessor: 'erro',
+      },
+      {
+        Header: 'Imagem',
+        accessor: 'imagem',
+      },
+      {
+        Header: 'Título',
+        accessor: 'titulo',
+      },
+      {
+        Header: 'Descrição',
+        accessor: 'descricao',
+      },
+      {
+        Header: 'Categoria',
+        accessor: 'categoria',
+      },
+      {
+        Header: 'Seller',
+        accessor: 'seller',
+      },
+    ],
+    []
+  );
+
+  const dataErro = React.useMemo(
     () => [
       {
         cod: 1,
@@ -243,9 +322,14 @@ function GestaoConteudo({ view, activeTab }) {
     </>
       )}
       {view === "gestao-fornecedores" && (
-    <>
-      <Tabela columns={colunasFornecedor} data={dataFornecedor} />
-    </>
+        <>
+          <Tabela columns={colunasFornecedor} data={dataFornecedor} />
+        </>
+      )}
+      {view === "sistema-erro" && (
+        <>
+          <Tabela columns={colunasErro} data={dataErro} />
+        </>
       )}
     </div>
   )
