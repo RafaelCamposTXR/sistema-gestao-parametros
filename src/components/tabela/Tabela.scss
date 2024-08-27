@@ -1,5 +1,5 @@
 .tabela {
-  width: 91%;
+  width: 100%;
   border-collapse: collapse;
   font-family: "Fira Sans", sans-serif;
   font-weight: 400;
@@ -138,8 +138,29 @@
 }
 
 
+.table-container {
+  display: flex;
+  justify-content: center;
+  width: 90.5%;
+  overflow-x: scroll;  
+  margin: 0;
+}
+
+.table-container::-webkit-scrollbar {
+  height: 7px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+}
+
+.table-container::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.2);
+}
+
 .tabela-sistema {
-  width: 91%;
+  width: 100% !important;
   border-collapse: collapse;
   font-family: "Fira Sans", sans-serif;
   font-weight: 400;
@@ -154,6 +175,7 @@
   padding: 6px;
   height: 3vh;
   cursor: pointer;
+  min-width: 7vw;
 }
 
 .tabela-sistema th:hover {

@@ -13,6 +13,7 @@ import TuneIcon from '@mui/icons-material/Tune';
 import ChecklistIcon from '@mui/icons-material/ChecklistSharp';
 import RuleIcon from '@mui/icons-material/RuleSharp';
 import AddTaskIcon from '@mui/icons-material/AddTaskSharp';
+import WarehouseIcon from '@mui/icons-material/Warehouse';
 
 export const SidebarData = [
   {

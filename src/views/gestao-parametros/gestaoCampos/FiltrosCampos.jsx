@@ -47,6 +47,7 @@ function FiltrosCampos({
           {() => LimpaCampos()}
           <Textbox  
             label={"Serviço"} 
+            tipoInput={"texto"}
             inputFocused={input0Focused}
             setInputFocused={setInput0Focused}
             inputValue={input0Value}
@@ -54,6 +55,7 @@ function FiltrosCampos({
           />
           <Textbox  
             label={"Status do Serviço"} 
+            tipoInput={"texto"}
             inputFocused={input1Focused}
             setInputFocused={setInput1Focused}
             inputValue={input1Value}
@@ -65,6 +67,7 @@ function FiltrosCampos({
           <>
           <Textbox  
             label={"Ação"} 
+            tipoInput={"texto"}
             inputFocused={input0Focused}
             setInputFocused={setInput0Focused}
             inputValue={input0Value}
@@ -76,6 +79,7 @@ function FiltrosCampos({
           <>
           <Textbox
             label={"Status da Ação"} 
+            tipoInput={"texto"}
             inputFocused={input0Focused}
             setInputFocused={setInput0Focused}
             inputValue={input0Value}
@@ -83,6 +87,7 @@ function FiltrosCampos({
           />
           <Textbox  
             label={"Rótulo"} 
+            tipoInput={"numero"}
             inputFocused={input1Focused}
             setInputFocused={setInput1Focused}
             inputValue={input1Value}

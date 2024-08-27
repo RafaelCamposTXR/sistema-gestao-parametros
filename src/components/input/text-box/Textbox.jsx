@@ -1,6 +1,7 @@
 import {React, useState} from "react";
 import './Textbox.scss';
 import NumbersIcon from '@mui/icons-material/Numbers';
+import DescriptionIcon from '@mui/icons-material/Description';
 
 export function Textbox({
   label,
@@ -16,7 +17,8 @@ export function Textbox({
   return <div className="input-wrapper">
             {!inputFocused && !inputValue && 
               <label className="input-label">
-                {tipoInput == "numero" && <NumbersIcon sx={{fontSize: "15px", position: "relative", top: "0.34vh", marginRight: "0.12vw"}}/>}
+                {tipoInput == "numero" && <NumbersIcon sx={{fontSize: "16px", position: "relative", top: "0.35vh", marginRight: "0.16vw"}}/>}
+                {tipoInput == "texto" && <DescriptionIcon sx={{fontSize: "15px", position: "relative", top: "0.27vh", marginRight: "0.18vw"}}/>}
                 {label}
               </label>
             }

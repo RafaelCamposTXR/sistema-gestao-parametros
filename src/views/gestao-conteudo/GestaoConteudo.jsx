@@ -304,6 +304,94 @@ function GestaoConteudo({ view, activeTab }) {
     []
   );
 
+  const colunasDemanda = React.useMemo(
+    () => [
+      {
+        Header: 'ID',
+        accessor: 'id',
+      },
+      {
+        Header: 'Código Martins',
+        accessor: 'codigo-martins',
+      },
+      {
+        Header: 'EAN',
+        accessor: 'ean',
+      },
+      {
+        Header: 'Título Cadastral',
+        accessor: 'titulo-cadastral',
+      },
+      {
+        Header: 'Serviço',
+        accessor: 'servico',
+      },
+      {
+        Header: 'Ação',
+        accessor: 'acao',
+      },
+      {
+        Header: 'Status da Ação',
+        accessor: 'status-da-acao',
+      },
+      {
+        Header: 'Atendente',
+        accessor: 'atendente',
+      },
+      {
+        Header: 'Data Atendimento',
+        accessor: 'data-atendimento',
+      },
+      {
+        Header: 'Data Conclusão',
+        accessor: 'data-conclusao',
+      },
+      {
+        Header: 'Autor',
+        accessor: 'autor',
+      },
+      {
+        Header: 'Data Solicitação',
+        accessor: 'data-solicitacao',
+      },
+    ],
+    []
+  );
+  
+
+  const dataDemanda = React.useMemo(
+    () => [
+      {
+        cod: 1,
+        tipo: 'Imagem',
+      },
+      {
+        cod: 2,
+        tipo: 'Ficha Técnica',
+      },
+      {
+        cod: 3,
+        tipo: 'Conteúdo',
+      },
+      {
+        cod: 4,
+        tipo: 'Vídeo',
+      },
+      {
+        cod: 5,
+        tipo: 'Manual',
+      },
+      {
+        cod: 6,
+        tipo: 'Inmetro',
+      },
+      {
+        cod: 7,
+        tipo: 'Anatel',
+      },
+    ],
+    []
+  );
 
 
 
@@ -329,6 +417,11 @@ function GestaoConteudo({ view, activeTab }) {
       {view === "sistema-erro" && (
         <>
           <Tabela columns={colunasErro} data={dataErro} area="sistema"/>
+        </>
+      )}
+      {view === "sistema-demanda" && (
+        <>
+          <Tabela columns={colunasDemanda} data={dataDemanda} area="sistema"/>
         </>
       )}
     </div>

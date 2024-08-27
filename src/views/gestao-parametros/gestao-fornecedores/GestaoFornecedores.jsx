@@ -29,9 +29,11 @@ function GestaoFornecedores() {
             />
             <Textbox
               label="Nome do Contato"
+              tipoInput={"texto"}
             />
             <Textbox
-              label="Site(Download de Conteúdo)"
+              label="Site (Download Conteúdo)"
+              tipoInput={"texto"}
             />
             
             <div className="button-container">

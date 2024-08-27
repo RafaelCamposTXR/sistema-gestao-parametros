@@ -11,6 +11,8 @@
   align-items: center;
   justify-content: end;
   width: 100%;
+  flex-wrap: wrap;
+  margin: 0 0 3vh 0;
 }
 
 .input-container {
@@ -52,5 +54,15 @@
 .button-container {
   display: flex;
   align-items: center;
+  gap: 0.55vw;
 }
 
+.extra-buttons-container {
+  position: relative;
+  left: -4.4vw;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  padding: 0.9vh 0vw 1vh 0;
+  gap: 0.5vw;
+}

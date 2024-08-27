@@ -1,5 +1,5 @@
 import React from "react";
-import './Botao.scss';
+import './Button.scss';
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import TuneIcon from '@mui/icons-material/TuneSharp';
 import PlaylistAddIcon from '@mui/icons-material/PlaylistAddSharp';
@@ -8,6 +8,8 @@ import {Link} from 'react-router-dom';
 import SaveIcon from '@mui/icons-material/SaveSharp';
 import CloseIcon from '@mui/icons-material/CloseSharp';
 import SearchIcon from '@mui/icons-material/SearchSharp';
+import FileDownloadIcon from '@mui/icons-material/FileDownload';
+import PersonIcon from '@mui/icons-material/Person';
 
 export function Button({
   className,
@@ -50,6 +52,10 @@ export function Button({
           <CloseIcon sx={{ fontSize: 16 }}/>}
         {className === "save-button" && 
           <SaveIcon sx={{ fontSize: 16 }}/>}
+        {className === "export-button" && 
+          <FileDownloadIcon sx={{ fontSize: 13 }}/>}
+        {className === "demand-button" && 
+          <PersonIcon sx={{ fontSize: 13 }}/>}
         {children}
     </>
   </button>

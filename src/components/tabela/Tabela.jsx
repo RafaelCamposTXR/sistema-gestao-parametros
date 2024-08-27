@@ -61,7 +61,8 @@ function Tabela({ columns, data, area }) {
 
   return (
     <>
-      <table {...getTableProps()} className={area == "sistema" ? "tabela-sistema" : "tabela"}>
+    <div div className="table-container">
+      <table {...getTableProps()} className={"tabela"}>
         <thead>
           {headerGroups.map(headerGroup => (
             <tr {...headerGroup.getHeaderGroupProps()}>
@@ -87,6 +88,7 @@ function Tabela({ columns, data, area }) {
           })}
         </tbody>
       </table>
+      </div>
       <div className="pagination">
       <div className="page-size">
           <label>

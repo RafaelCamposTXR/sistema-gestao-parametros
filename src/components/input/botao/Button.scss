@@ -57,8 +57,8 @@
     --scale: 0;
     content: attr(data-tooltip);
     color: rgb(255, 255, 255);
-    font-size: 0.8rem;
-    font-weight: 500;
+    font-size: 0.9rem;
+    font-weight: 550;
     height: 1.7vh;
     width: max-content;
     padding: 0.6rem;
@@ -104,11 +104,11 @@
   display: flex;
   padding: 10px 20px;
   background-color: white;
-  color: var(--blue);
+  color: var(--dark-blue);
   border: none;
   border-radius: 2px;
   cursor: pointer;
-  margin-left: 0.5vw;
+  // margin-left: 0.5vw;
   width: 2vw;
   align-items: center;
   justify-content: center;
@@ -118,13 +118,22 @@
   @include tooltip(5.5vh);
 }
 
+.delete-button {
+  color: rgb(168, 11, 11);
+  border: 2px outset rgba(157, 10, 10);
+}
+
+.delete-button:hover {
+  color: rgb(236, 20, 20);
+}
+
 .search-button:hover,
 .add-button:hover {
   background-color: var(--light-blue);
 }
-.delete-button:hover
+
 .settings-button:hover {
-  background-color: #dbe9f638;
+  color: #0d3cbefa;
 }
 
 .icon {
@@ -199,6 +208,33 @@
   width: 2.3vw !important;
   height: 1.6vw !important;
   border: 2.1px outset var(--blue) !important;
+  border-radius: 3px !important;
+  @include tooltip(4.9vh);
+}
+
+.export-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 0;
+  background-color: white !important;
+  width: 2vw !important;
+  height: 1.5vw !important;
+  border: 2.1px outset black !important;
+  border-radius: 3px !important;
+  @include tooltip(4.9vh);
+}
+
+.demand-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: white !important;
+  width: 2vw !important;
+  height: 1.5vw !important;
+  border: 2.1px outset black !important;
   border-radius: 3px !important;
   @include tooltip(4.9vh);
 }

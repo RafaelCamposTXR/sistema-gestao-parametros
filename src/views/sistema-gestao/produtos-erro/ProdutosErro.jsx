@@ -80,7 +80,21 @@ function ProdutosErro() {
       dataTooltip: 'Limpar Filtros',
       onClick: () => {LimpaCampos()},
 
-    }
+    },
+    {
+      tipo: 'extra-button',
+      className: 'demand-button',
+      dataTooltip: 'Exportar Tabelas',
+      onClick: () => {LimpaCampos()},
+
+    },
+    {
+      tipo: 'extra-button',
+      className: 'export-button',
+      dataTooltip: 'Exportar Tabelas',
+      onClick: () => {LimpaCampos()},
+
+    },
   ]
 
 
