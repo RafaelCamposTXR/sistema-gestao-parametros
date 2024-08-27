@@ -101,7 +101,9 @@ function ProdutosErro() {
   return (
     <>
       <div className="area-superior-produtos-erro">
-        <Filtros ListaComponentes={ListaFiltros}/>
+        <Filtros 
+          ListaComponentes={ListaFiltros}
+          tamanho="total"/>
       </div>
       <GestaoConteudo view="sistema-erro"/>
 

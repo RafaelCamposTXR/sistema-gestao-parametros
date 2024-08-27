@@ -37,6 +37,17 @@
   gap: 2.2vw;
 }
 
+.input-container-sistema {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  width: 90.5%;
+  left: -4.4vw;
+  height: 35px;
+  gap: 2.2vw;
+}
+
 .input-container-info {
   position: relative;
   display: flex;
@@ -63,6 +74,6 @@
   width: 100%;
   display: flex;
   justify-content: end;
-  padding: 0.9vh 0vw 1vh 0;
+  padding: 1vh 0vw 1vh 0;
   gap: 0.5vw;
 }

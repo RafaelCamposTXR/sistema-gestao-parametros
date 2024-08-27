@@ -4,10 +4,10 @@ import SelectBox from './select/Select';
 import {Textbox} from './text-box/Textbox'; 
 import {Button} from './botao/Button'; 
 
-function Filtros({ ListaComponentes }) {
+function Filtros({ ListaComponentes, tamanho}) {
   return (
     <div className="input-container-pai">
-      <div className="input-container">
+      <div className={tamanho == "total" ? "input-container-sistema" : "input-container"}>
         {ListaComponentes.map((item, index) => {
           switch (item.tipo) {
             case 'selectbox':

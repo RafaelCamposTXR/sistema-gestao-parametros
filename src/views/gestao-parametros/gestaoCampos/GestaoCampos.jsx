@@ -3,10 +3,10 @@ import { useOutletContext } from 'react-router-dom';
 import HomeRepairServiceIcon from '@mui/icons-material/HomeRepairServiceSharp';
 import PendingActionsIcon from '@mui/icons-material/PendingActionsSharp';
 import LibraryAddCheckIcon from '@mui/icons-material/LibraryAddCheckSharp';
-// import Filtros from './FiltrosCampos';
+import FiltrosCampos from './FiltrosCampos';
 import Titulo from '../../../components/titulos/titulo/Titulo';
 import GestaoConteudo from '../../gestao-conteudo/GestaoConteudo';
-import Filtros from '../../../components/input/Filtros';
+// import Filtros from '../../../components/input/Filtros';
 import './GestaoCampos.scss';
 
 export function GestaoCampos() {
@@ -91,12 +91,15 @@ export function GestaoCampos() {
               height: "5vh"
             }}  
           />
-          <Filtros 
+          <FiltrosCampos 
             // key={activeTab}  maneira alternativa de recarregar filtros com base na tab ativa
             activeTab={activeTab} 
             modoEdicao={modoEdicao} 
             setModoEdicao={setModoEdicao}
           />
+          {/* <Filtros 
+            ListaComponentes={ListaFiltros}
+          /> */}
         </div>
         <GestaoConteudo view="gestao-campos" activeTab={activeTab} modoEdicao={modoEdicao} setModoEdicao={setModoEdicao}/></>;
 }

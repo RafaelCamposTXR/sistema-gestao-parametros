@@ -141,21 +141,32 @@
 .table-container {
   display: flex;
   justify-content: center;
+  width: 91%;
+  overflow-x: scroll;  
+  margin: 0;
+}
+
+.table-container-sistema {
+  display: flex;
+  justify-content: center;
   width: 90.5%;
   overflow-x: scroll;  
   margin: 0;
 }
 
-.table-container::-webkit-scrollbar {
+.table-container::-webkit-scrollbar,
+.table-container-sistema::-webkit-scrollbar {
   height: 7px;
 }
 
-.table-container::-webkit-scrollbar-thumb {
+.table-container::-webkit-scrollbar-thumb,
+.table-container-sistema::-webkit-scrollbar-thumb {
   background: rgba(0, 0, 0, 0.5);
   border-radius: 4px;
 }
 
-.table-container::-webkit-scrollbar-track {
+.table-container::-webkit-scrollbar-track,
+.table-container-sistema::-webkit-scrollbar-track {
   background: rgba(255, 255, 255, 0.2);
 }
 
@@ -187,7 +198,7 @@
   font-weight: 400;
   text-align: center;
   color: white;
-  height: 2.9vh;
+  height: 2.3vh;
 }
 
 .tabela-sistema td {

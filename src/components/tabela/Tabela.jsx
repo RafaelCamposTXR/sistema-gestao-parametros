@@ -61,8 +61,8 @@ function Tabela({ columns, data, area }) {
 
   return (
     <>
-    <div div className="table-container">
-      <table {...getTableProps()} className={"tabela"}>
+    <div div className={area == "sistema" ? "table-container-sistema" : "table-container"}>
+      <table {...getTableProps()} className={area == "sistema" ? "tabela-sistema" : "tabela"}>
         <thead>
           {headerGroups.map(headerGroup => (
             <tr {...headerGroup.getHeaderGroupProps()}>

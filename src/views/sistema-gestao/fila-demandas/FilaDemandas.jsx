@@ -100,7 +100,10 @@ function FilaDemandas() {
   return (
     <>
       <div className="area-superior-demanda">
-        <Filtros ListaComponentes={ListaFiltros}/>
+        <Filtros 
+          ListaComponentes={ListaFiltros}
+          tamanho="total"
+        />
       </div>
       <GestaoConteudo view="sistema-demanda"/>
     </>
