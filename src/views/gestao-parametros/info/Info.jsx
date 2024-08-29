@@ -5,6 +5,7 @@ import { Button } from '../../../components/input/botao/Button';
 import SelectBox from '../../../components/input/select/Select';
 import GestaoConteudo from '../../gestao-conteudo/GestaoConteudo';
 import './Info.scss';
+import Filtros from '../../../components/input/Filtros'
 
 function Info() {
 
@@ -30,37 +31,56 @@ function Info() {
     {value: "imagem", label: "Imagem"},
   ];
 
+  const ListaFiltros = [
+    { 
+      tipo: 'selectbox',
+      options: ["teste","teste1"],
+      placeholder: 'Tipo de Informação',
+      tamanho: '',
+    },
+    {
+      tipo: 'button',
+      className: 'search-button',
+      dataTooltip: '',
+      onClick: () => {},
+      path: '/gestaoparametros/gestaocampos',
+    },
+    {
+      tipo: 'button',
+      className: 'delete-button',
+      dataTooltip: 'Limpar Filtros',
+      onClick: () => {},
+
+    },
+    {
+      tipo: 'button',
+      className: 'settings-button',
+      dataTooltip: 'mais Filtros',
+      onClick: () => {},
+
+    },
+    {
+      tipo: 'extra-button',
+      className: 'demand-button',
+      dataTooltip: 'Exportar Tabelas',
+      onClick: () => {},
+
+    },
+    {
+      tipo: 'extra-button',
+      className: 'export-button',
+      dataTooltip: 'Exportar Tabelas',
+      onClick: () => {},
+
+    },
+  ]
+
   return (
     <>
       <div className="area-superior-info">
-        <div className="input-container-pai">
-          <div className="input-container-info">
-            <SelectBox
-              value={selectedOption}
-              options={Options}
-              placeholder={"Tipo de Informação "}
-            />
-            <div className="button-container">
-            <Button
-              className="search-button" 
-              dataTooltip="Pesquisar"
-            />
-            <Button 
-              className="delete-button" 
-              dataTooltip="Limpar Filtro"
-              onClick={handleClear}
-            />
-            <Button
-              className="settings-button" 
-              dataTooltip="Mais Filtros"
-              onClick={() => setModoEdicao(["Tipos de Informação", "Mais Filtros e Configurações", ""])}
-              path="/gestaoparametros/edicao"
-            />
-            </div>
-          </div>
-        </div>
+        <Filtros ListaComponentes={ListaFiltros}/>
       </div>
-      <GestaoConteudo view="info" />
+      <GestaoConteudo view="info"/>
     </>
   )
 }

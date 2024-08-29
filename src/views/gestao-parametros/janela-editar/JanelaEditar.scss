@@ -36,9 +36,8 @@
 .corpo-editar {
   padding: 6.4vh 2vw 2vw 4.5vw;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
-  gap: 5vh;
   height: 50vh;
   display: flex;
   font-size: 1.2rem;
@@ -49,19 +48,20 @@
   display: flex;
   flex-direction: column;
   align-items: start;
-  width: 20vw;
+  width: max-content;
   height: 22%;
 }
 
 .texto-input {
-  width: 80%;
+  padding: 0 0 0 0.2vw;
   text-align: start;
   font-size: 1.05rem;
   margin: 0 0 0.85vh 0.1vw;
   color: var(--blue);
+  width: 98%;
+  text-wrap: nowrap;
 }
 
 .box-input {
-  width: 10%;
   margin: 0.6vh 0 0 0;
 }

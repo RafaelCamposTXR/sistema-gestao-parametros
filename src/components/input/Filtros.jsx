@@ -66,6 +66,7 @@ function Filtros({ ListaComponentes, tamanho}) {
                     dataTooltip={item.dataTooltip}
                     onClick={item.onClick}
                     path={item.path}
+                    children={item.children}
                   />
                 );
               default:

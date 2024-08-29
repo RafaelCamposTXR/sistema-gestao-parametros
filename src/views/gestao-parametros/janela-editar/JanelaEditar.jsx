@@ -6,8 +6,9 @@ import {useNavigate} from 'react-router-dom';
 import { Button } from '../../../components/input/botao/Button';
 import SaveIcon from '@mui/icons-material/SaveSharp';
 import CloseIcon from '@mui/icons-material/CloseSharp';
-import InputEditar from '../InputEditar.jsx';
-import EdicaoInfo from './EdicaoInfo';
+import InputEditar from './InputEditar.jsx';
+import EdicaoInfo from './edicao-views/EdicaoInfo.jsx';
+import EdicaoFornecedores from './edicao-views/EdicaoFornecedores.jsx';
 
 function JanelaEditar() {
 
@@ -94,19 +95,18 @@ function JanelaEditar() {
       <EdicaoInfo 
       />
     } 
-    {modoEdicao[1] == ["Inserir Novo"] && 
-        <>
-        {FiltrosFornecedor.map((field, index) => (
-          <InputEditar 
-            key={index}
-            label={field.label}
-            content={field.content}
-            type={field.type}
-            tamanho={field.tamanho}
+    {modoEdicao[0] == "Fornecedores" && 
+      <EdicaoFornecedores
       />
-    ))}
-        </>
-    }
+    } 
+    {modoEdicao[0] == "Gestão de Campos" && 
+      <EdicaoFornecedores
+      />
+    } 
+    {modoEdicao[0] == "Erro" && 
+      <EdicaoFornecedores
+      />
+    } 
     {modoEdicao[1] == ["Mais Filtros e Configurações"] && 
       <>
         {/* {FiltrosFornecedor.map((field, index) => (

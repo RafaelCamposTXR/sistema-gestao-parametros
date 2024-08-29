@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react'
 import { useOutletContext } from 'react-router-dom';
 import GestaoConteudo from '../../gestao-conteudo/GestaoConteudo';
 import Filtros from '../../../components/input/Filtros';
+import Modal from '../../../components/modal/Modal';
 import './FilaDemandas.scss';
 
 function FilaDemandas() {
@@ -12,6 +13,8 @@ function FilaDemandas() {
     setSubSecao('Fila de Demandas');
     setModoEdicao(["Fila de Demandas",'','']);
   }, [setSubSecao, setModoEdicao]);
+
+  
 
   const [input0Focused, setInput0Focused] = useState(false);
   const [input0Value, setInput0Value] = useState('');
@@ -86,7 +89,6 @@ function FilaDemandas() {
       className: 'demand-button',
       dataTooltip: 'Exportar Tabelas',
       onClick: () => {LimpaCampos()},
-
     },
     {
       tipo: 'extra-button',

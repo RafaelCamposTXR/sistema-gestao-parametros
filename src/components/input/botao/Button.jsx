@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import './Button.scss';
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import TuneIcon from '@mui/icons-material/TuneSharp';
@@ -10,6 +10,7 @@ import CloseIcon from '@mui/icons-material/CloseSharp';
 import SearchIcon from '@mui/icons-material/SearchSharp';
 import FileDownloadIcon from '@mui/icons-material/FileDownload';
 import PersonIcon from '@mui/icons-material/Person';
+import Modal from '../../modal/Modal';
 
 export function Button({
   className,
@@ -19,10 +20,23 @@ export function Button({
   path
 }) {
 
-  //botões disponíveis: add, delete, delete-edit, settings, back, save, cancel
+  //botões disponíveis: add, delete, delete-edit, settings, back, save, cancel, export, demand
+
+
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const close = () => setModalOpen(false);  
+  const open = () => setModalOpen(true);
+
+  const handleClick = (event) => {
+    if (onClick) {
+      onClick(event);  // Chama o onClick genérico
+    }
+    open();  // Abre o modal
+  }
 
   return <Link to={path} style={{ textDecoration: 'none' }}>
-    <button className={className} data-tooltip={dataTooltip} onClick={onClick}> 
+    <button className={className} data-tooltip={dataTooltip} onClick={handleClick}> 
       <>
         {className === "search-button" && 
           <>
@@ -53,9 +67,14 @@ export function Button({
         {className === "save-button" && 
           <SaveIcon sx={{ fontSize: 16 }}/>}
         {className === "export-button" && 
-          <FileDownloadIcon sx={{ fontSize: 13 }}/>}
+          <FileDownloadIcon sx={{ fontSize: 13 }}/>
+        }
         {className === "demand-button" && 
-          <PersonIcon sx={{ fontSize: 13 }}/>}
+          <>
+            <PersonIcon sx={{ fontSize: 13 }}/>
+            {modalOpen && <Modal modalOpen={modalOpen} handleClose={close} />}
+          </>
+        }
         {children}
     </>
   </button>

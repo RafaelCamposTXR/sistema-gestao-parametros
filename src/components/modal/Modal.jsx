@@ -6,6 +6,8 @@ import {motion} from 'framer-motion';
 import Titulo from '../titulos/titulo/Titulo';
 import SaveIcon from '@mui/icons-material/SaveSharp';
 import CloseIcon from '@mui/icons-material/CloseSharp';
+import {Button} from '../input/botao/Button';
+import {Textbox} from '../input/text-box/Textbox';
 
 const dropIn = {
   hidden: {
@@ -37,24 +39,33 @@ const Modal = ({handleClose}) => {
       <>
       <div className="area-superior-modal">
       <Titulo 
-      nomeSecao="Gestão de Campos" 
-      nomeSubSecao= "Criar Novo"
+      nomeSecao="Sistema de Gestão" 
+      nomeSubSecao= "Fila de Demandas"
       style={{position: "relative",
               display: "inline",
               margin: "0.8vh 0 0 0.3vw",
               height: "5vh"}}/>
       <div className="area-botoes">
-        <button className="save-button" data-tooltip="Salvar" onClick={() => {}}> 
-          <SaveIcon sx={{ fontSize: 16 }}/>
-        </button>
-        <button className="save-button" data-tooltip="Fechar" onClick={() => {}}> 
-          <CloseIcon sx={{ fontSize: 16 }}/>
-        </button>
+        <Button className="cancel-button" dataTooltip="Cancelar"  onClick={handleClose}/>
+        <Button className="save-button" dataTooltip="Salvar" onClick={handleClose}/>
       </div>
       </div>
       <div className="corpo-modal">
-        <ModalInput label={"Prioridade"} isShort={true}/>
-        <ModalInput label={"Serviço"} isShort={false}/>
+      <Textbox
+                  label = "Outro Filtro"
+                  tamanho = ""
+                  tipoInput = "numero"
+                />
+      <Textbox
+                  label = "Outro Filtro"
+                  tamanho = ""
+                  tipoInput = "texto"
+                />
+      <Textbox
+                  label = "Outro Filtro"
+                  tamanho = ""
+                  tipoInput = "texto"
+                />
       </div>
       </>
     </motion.div>

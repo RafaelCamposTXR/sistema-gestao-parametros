@@ -3,6 +3,7 @@ import './ProdutosErro.scss';
 import Filtros from '../../../components/input/Filtros';
 import { useOutletContext } from 'react-router-dom';
 import GestaoConteudo from '../../gestao-conteudo/GestaoConteudo';
+import { motion, AnimatePresence } from "framer-motion";
 
 
 function ProdutosErro() {
@@ -55,6 +56,7 @@ function ProdutosErro() {
       tipo: 'textbox',
       label: 'Descrição Produto',
       tamanho: '',
+      tipoInput: "texto",
       inputFocused: input2Focused,
       setInputFocused: setInput2Focused,
       inputValue: input2Value,
@@ -97,6 +99,15 @@ function ProdutosErro() {
     },
   ]
 
+
+  const routeVariants = {
+    initial: {
+        y: '100vh'
+    },
+    final: {
+        y: '0vh'
+    }
+}
 
   return (
     <>

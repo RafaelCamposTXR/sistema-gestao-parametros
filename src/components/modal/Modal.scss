@@ -86,12 +86,14 @@
   border: 3px outset rgba(137, 138, 144, 0.059);
   border-radius: 4px;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  flex-direction: row;
   justify-content: center;
   align-items: start;
-  width: 93%;
+  width: 73%;
   height: 50%;
-  padding-bottom: 10vh;
+  gap: 2.3vw;
+  padding: 3vh 5vw 3vh 5vw;
 }
 
 .input-label-modal {

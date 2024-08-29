@@ -2,14 +2,13 @@ import React, {useState, useEffect} from 'react'
 import InputEditar from '../InputEditar.jsx';
 import { useOutletContext } from 'react-router-dom';
 
-function EdicaoInfo(
-) {
+function EdicaoCampos() {
 
   const [subSecao, setSubSecao, modoEdicao, setModoEdicao] = useOutletContext();
 
   const FiltrosInfo = [
-    { label: "Tipo de Informação", content: modoEdicao[2], type: "textbox", tamanho:"longo" },
-    { label: "Script", content: "", type: "textbox", tamanho:"longo" }
+    { label: "Tipo de Informação", content: modoEdicao[2], type: "textbox", tamanho:"30vw" },
+    { label: "Script", content: "", type: "textbox", tamanho:"30vw" }
   ];
 
 
@@ -35,4 +34,4 @@ function EdicaoInfo(
   )
 }
 
-export default EdicaoInfo
+export default EdicaoCampos

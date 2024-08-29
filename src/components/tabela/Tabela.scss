@@ -3,7 +3,7 @@
   border-collapse: collapse;
   font-family: "Fira Sans", sans-serif;
   font-weight: 400;
-  margin: 20px 0;
+  margin: 0vh 0;
   font-size: 0.9rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -147,7 +147,6 @@
 }
 
 .table-container-sistema {
-  display: flex;
   justify-content: center;
   width: 90.5%;
   overflow-x: scroll;  
@@ -171,13 +170,14 @@
 }
 
 .tabela-sistema {
-  width: 100% !important;
+  width: 100% ;
   border-collapse: collapse;
   font-family: "Fira Sans", sans-serif;
   font-weight: 400;
   margin: 20px 0;
   font-size: 0.9rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  table-layout: auto;
 }
 
 .tabela-sistema th,
