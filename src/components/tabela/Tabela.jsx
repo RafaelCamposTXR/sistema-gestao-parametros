@@ -46,10 +46,12 @@ function Tabela({ columns, data, area }) {
   const navigate = useNavigate();
 
   const setEdicao = (row) => {
+    console.log('setEdicao foi chamado');
     // alert(row.original.data); 
     // console.log(JSON.stringify(row.original, null, 2))
     const tipo = row.original.tipo;
     setModoEdicao([modoEdicao[0], "Editar valor da tabela", tipo]); 
+    console.log(JSON.stringify(modoEdicao, null, 2));
   };
   
   const onClick = (row) => {

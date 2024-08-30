@@ -10,6 +10,7 @@ import InputEditar from './InputEditar.jsx';
 import EdicaoInfo from './edicao-views/EdicaoInfo.jsx';
 import EdicaoFornecedores from './edicao-views/EdicaoFornecedores.jsx';
 import EdicaoCampos from './edicao-views/EdicaoCampos.jsx';
+import EdicaoErro from './edicao-views/EdicaoErro';
 
 function JanelaEditar() {
 
@@ -101,11 +102,11 @@ function JanelaEditar() {
       />
     } 
     {modoEdicao[0] == "Gestão de Campos" && 
-      <EdicaoFornecedores
+      <EdicaoCampos
       />
     } 
-    {modoEdicao[0] == "Erro" && 
-      <EdicaoCampos
+    {modoEdicao[0] == "Produtos com erro" && 
+      <EdicaoErro
       />
     } 
     {modoEdicao[1] == ["Mais Filtros e Configurações"] && 

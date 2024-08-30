@@ -6,7 +6,7 @@ function EdicaoInfo() {
 
   const [subSecao, setSubSecao, modoEdicao, setModoEdicao] = useOutletContext();
 
-  const FiltrosInfo = [
+  const FiltrosErro = [
     { label: "Tipo de Informação", content: modoEdicao[2], type: "textbox", tamanho:"30vw" },
     { label: "Script", content: "", type: "textbox", tamanho:"30vw" }
   ];
@@ -19,7 +19,7 @@ function EdicaoInfo() {
       {modoEdicao[1] == ["Editar valor da tabela"] && 
         <>
         {console.log(modoEdicao, modoEdicao[2])}
-        {FiltrosInfo.map((field, index) => (
+        {FiltrosErro.map((field, index) => (
           <InputEditar 
             key={index}
             type={field.type}

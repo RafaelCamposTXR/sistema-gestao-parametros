@@ -6,9 +6,10 @@ function EdicaoCampos() {
 
   const [subSecao, setSubSecao, modoEdicao, setModoEdicao] = useOutletContext();
 
-  const FiltrosInfo = [
-    { label: "Tipo de Informação", content: modoEdicao[2], type: "textbox", tamanho:"30vw" },
-    { label: "Script", content: "", type: "textbox", tamanho:"30vw" }
+  const FiltrosCampos = [
+    { label: "Prioridade", content: modoEdicao[2], type: "textbox", tamanho:"30vw", marginRight: "5vw" },
+    { label: "Serviço", content: "", type: "textbox", tamanho:"30vw" },
+    { label: "Data de Desativação", content: "", type: "textbox", tamanho:"30vw" },
   ];
 
 
@@ -19,13 +20,14 @@ function EdicaoCampos() {
       {modoEdicao[1] == ["Editar valor da tabela"] && 
         <>
         {console.log(modoEdicao, modoEdicao[2])}
-        {FiltrosInfo.map((field, index) => (
+        {FiltrosCampos.map((field, index) => (
           <InputEditar 
             key={index}
             type={field.type}
             label={field.label}
             content={field.content}
             tamanho={field.tamanho}
+            marginRight={field.marginRight}
       />
     ))}
         </>
