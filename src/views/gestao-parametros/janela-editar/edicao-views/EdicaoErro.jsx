@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import InputEditar from './InputEditar.jsx';
+import InputEditar from '../InputEditar.jsx';
 import { useOutletContext } from 'react-router-dom';
 
 function EdicaoInfo() {
