@@ -47,6 +47,7 @@ function Filtros({ ListaComponentes, tamanho}) {
                     dataTooltip={item.dataTooltip}
                     onClick={item.onClick}
                     path={item.path}
+                    contentModal={item.contentModal}
                   />
                 );
               default:
@@ -67,6 +68,7 @@ function Filtros({ ListaComponentes, tamanho}) {
                     onClick={item.onClick}
                     path={item.path}
                     children={item.children}
+                    contentModal={item.contentModal}
                   />
                 );
               default:

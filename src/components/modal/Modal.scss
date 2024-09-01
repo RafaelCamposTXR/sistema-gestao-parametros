@@ -81,20 +81,7 @@
   display: none;
 }
 
-.corpo-modal {
-  margin: 1vw;
-  border: 3px outset rgba(137, 138, 144, 0.059);
-  border-radius: 4px;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: center;
-  align-items: start;
-  width: 73%;
-  height: 50%;
-  gap: 2.3vw;
-  padding: 3vh 5vw 3vh 5vw;
-}
+
 
 .input-label-modal {
   position: relative;
@@ -139,5 +126,40 @@
   width: 40vw;
   height: 11px;
   transition: border 0.3s ;
+}
+
+
+.corpo-modal {
+  margin: 1vw;
+  border: 3px outset rgba(137, 138, 144, 0.059);
+  border-radius: 4px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: start;
+  align-content: start;
+  width: 73%;
+  height: 50%;
+  gap: 2.3vw;
+  padding: 3vh 5vw 3vh 5vw;
+}
+
+.area-checkbox-pai {
+  width: 50vw;
+  position: relative;
+  left: 0.56vw;
+  border: 2px solid rgba(0, 0, 0, 0.342);
+}
+
+.area-checkbox-modal {
+  width: calc(100% - 4vw);
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+  background-color: rgba(73, 74, 78, 0.207);
+  
+  min-height: 2vh;
+  max-height: 10vh;
+  padding: 1vh 2vw;
 }
 

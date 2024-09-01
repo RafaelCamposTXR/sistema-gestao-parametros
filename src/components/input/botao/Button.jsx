@@ -17,7 +17,8 @@ export function Button({
   dataTooltip,
   onClick,
   children,
-  path
+  path,
+  contentModal
 }) {
 
   //botões disponíveis: add, delete, delete-edit, settings, back, save, cancel, export, demand
@@ -72,7 +73,7 @@ export function Button({
         {className === "demand-button" && 
           <>
             <PersonIcon sx={{ fontSize: 13 }}/>
-            {modalOpen && <Modal modalOpen={modalOpen} handleClose={close} />}
+            {modalOpen && <Modal modalOpen={modalOpen} handleClose={close} content={contentModal} />}
           </>
         }
         {children}

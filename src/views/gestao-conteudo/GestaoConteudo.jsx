@@ -1,5 +1,6 @@
 import React from 'react';
 import Tabela from '../../components/tabela/Tabela';
+import TabelaCheckbox from '../../components/tabela/TabelaCheckbox';
 import './GestaoConteudo.scss';
 
 
@@ -421,12 +422,12 @@ function GestaoConteudo({ view, activeTab }) {
       )}
       {view === "sistema-demanda" && (
         <>
-          <Tabela columns={colunasDemanda} data={dataDemanda} area="sistema"/>
+          <TabelaCheckbox columns={colunasDemanda} data={dataDemanda} area="sistema"/>
         </>
       )}
     </div>
   )
-  //renderiza apenas o componente da tab selecionada
+  //renderiza apenas o componente da view e tab selecionada
 }
 
 export default GestaoConteudo

@@ -79,16 +79,24 @@ function FilaDemandas() {
     },
     {
       tipo: 'button',
+      className: 'settings-button',
+      dataTooltip: 'Mais Filtros',
+      onClick: () => {},
+
+    },
+    {
+      tipo: 'button',
       className: 'delete-button',
       dataTooltip: 'Limpar Filtros',
       onClick: () => {LimpaCampos()},
-
     },
     {
       tipo: 'extra-button',
       className: 'demand-button',
       dataTooltip: 'Exportar Tabelas',
+      contentModal: "teste \n teste \n teste",
       onClick: () => {LimpaCampos()},
+      
     },
     {
       tipo: 'extra-button',

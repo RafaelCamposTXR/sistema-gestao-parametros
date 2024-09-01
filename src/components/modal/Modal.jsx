@@ -28,47 +28,71 @@ const dropIn = {
   },
 };
 
-const Modal = ({handleClose}) => {
+const Modal = ({handleClose, content}) => {
   return (
     <Backdrop onClick={handleClose}> 
-    <motion.div onClick={(e) => e.stopPropagation()} className="modal" 
-    variants={dropIn}
-    initial="hidden"
-    animate="visible"
-    exit="exit">
-      <>
-      <div className="area-superior-modal">
-      <Titulo 
-      nomeSecao="Sistema de Gestão" 
-      nomeSubSecao= "Fila de Demandas"
-      style={{position: "relative",
-              display: "inline",
-              margin: "0.8vh 0 0 0.3vw",
-              height: "5vh"}}/>
-      <div className="area-botoes">
-        <Button className="cancel-button" dataTooltip="Cancelar"  onClick={handleClose}/>
-        <Button className="save-button" dataTooltip="Salvar" onClick={handleClose}/>
-      </div>
-      </div>
-      <div className="corpo-modal">
-      <Textbox
-                  label = "Outro Filtro"
-                  tamanho = ""
-                  tipoInput = "numero"
-                />
-      <Textbox
-                  label = "Outro Filtro"
-                  tamanho = ""
-                  tipoInput = "texto"
-                />
-      <Textbox
-                  label = "Outro Filtro"
-                  tamanho = ""
-                  tipoInput = "texto"
-                />
-      </div>
-      </>
-    </motion.div>
+      <motion.div onClick={(e) => e.stopPropagation()} className="modal" 
+        variants={dropIn}
+        initial="hidden"
+        animate="visible"
+        exit="exit"
+      >
+        <>
+          <div className="area-superior-modal">
+            <Titulo 
+              nomeSecao="Sistema de Gestão" 
+              nomeSubSecao= "Fila de Demandas"
+              style={{position: "relative",
+                      display: "inline",
+                      margin: "0.8vh 0 0 0.3vw",
+                      height: "5vh"}}/>
+            <div className="area-botoes">
+              <Button className="cancel-button" dataTooltip="Cancelar"  onClick={handleClose}/>
+              <Button className="save-button" dataTooltip="Salvar" onClick={handleClose}/>
+            </div>
+          </div>
+          <div className="corpo-modal">
+            <Textbox
+              label = "Exemplo"
+              tamanho = ""
+              tipoInput = "numero"
+            />
+            <Textbox
+              label = "Exemplo"
+              tamanho = ""
+              tipoInput = "texto"
+            />
+            <div className="area-checkbox-pai">
+              <div className='area-checkbox-modal'>
+                <p style={{width: "100%", height: "2vh"}}>
+                  teste
+                </p>
+                <p style={{width: "100%", height: "2vh"}}>
+                  teste
+                </p>
+                <p style={{width: "100%", height: "2vh"}}>
+                  teste
+                </p>
+                <p style={{width: "100%", height: "2vh"}}>
+                  teste
+                </p>
+                <p style={{width: "100%", height: "2vh"}}>
+                  teste
+                </p><p style={{width: "100%", height: "2vh"}}>
+                  teste
+                </p>
+                <p style={{width: "100%", height: "2vh"}}>
+                  teste
+                </p>
+                <p style={{width: "100%", height: "2vh"}}>
+                  teste
+                </p>
+                {/* {content} */}
+              </div>
+            </div>
+          </div>
+        </>
+      </motion.div>
     </Backdrop>
   )
 }
