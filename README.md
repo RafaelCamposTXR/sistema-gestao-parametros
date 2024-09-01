@@ -2,7 +2,7 @@
   Site de administração de estoque fictício para uma rede de supermercados
 
 ### Tecnologias utilizadas:
-  Node.js runtime
+  Node.js runtime\n
   ReactJs
     ReactRouter
     ReactTable
