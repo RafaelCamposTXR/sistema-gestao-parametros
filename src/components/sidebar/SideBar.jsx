@@ -40,7 +40,6 @@ function Sidebar() {
 
   return (
     <HotKeys keyMap={keyMap} handlers={handlers}>
-      <IconContext.Provider value={{ color: '#fff' }}>
         <div className='navbar'>
           <Link to='#' className='menu-bars'>
             <MenuIcon sx={{ fontSize: "1.8rem" }} onClick={showSidebar} />
@@ -101,7 +100,6 @@ function Sidebar() {
             </div>
           </ul>
         </nav>
-      </IconContext.Provider>
       </HotKeys>
   );
 }

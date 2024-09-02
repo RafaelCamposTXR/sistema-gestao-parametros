@@ -1,9 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import './ProdutosErro.scss';
-import Filtros from '../../../components/input/Filtros';
+import Filtros from '../../../components/input/filtros/Filtros';
 import { useOutletContext } from 'react-router-dom';
 import GestaoConteudo from '../../gestao-conteudo/GestaoConteudo';
-import { motion, AnimatePresence } from "framer-motion";
 
 
 function ProdutosErro() {

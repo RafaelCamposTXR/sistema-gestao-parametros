@@ -1,8 +1,9 @@
 import React, {useEffect, useState} from 'react'
 import { useOutletContext } from 'react-router-dom';
 import GestaoConteudo from '../../gestao-conteudo/GestaoConteudo';
-import Filtros from '../../../components/input/Filtros';
+import Filtros from '../../../components/input/filtros/Filtros';
 import Modal from '../../../components/modal/Modal';
+import FiltrosSidebar from '../../../components/filtros-sidebar/FiltrosSidebar';
 import './FilaDemandas.scss';
 
 function FilaDemandas() {
@@ -14,7 +15,11 @@ function FilaDemandas() {
     setModoEdicao(["Fila de Demandas",'','']);
   }, [setSubSecao, setModoEdicao]);
 
-  
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const close = () => setModalOpen(false);  
+  const open = () => setModalOpen(true);
+
 
   const [input0Focused, setInput0Focused] = useState(false);
   const [input0Value, setInput0Value] = useState('');
@@ -81,7 +86,12 @@ function FilaDemandas() {
       tipo: 'button',
       className: 'settings-button',
       dataTooltip: 'Mais Filtros',
-      onClick: () => {},
+      onClick: () => {open()},
+      children: (
+        <>
+        {modalOpen && <FiltrosSidebar modalOpen={modalOpen} handleClose={close} content="" title={["Fila de Demandas","Definição de Atendente"]}/>}
+        </>
+      )
 
     },
     {

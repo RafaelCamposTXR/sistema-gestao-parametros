@@ -1,7 +1,7 @@
 import { Button } from '../../../components/input/botao/Button';
 import { Textbox } from '../../../components/input/text-box/Textbox';
 import React, { useState, useEffect } from 'react';
-import '../../../components/input/Filtros.scss';
+import '../../../components/input/input.scss';
 import Modal from '../../../components/modal/Modal';
 import { Link } from 'react-router-dom';
 

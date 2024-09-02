@@ -11,6 +11,7 @@ import SearchIcon from '@mui/icons-material/SearchSharp';
 import FileDownloadIcon from '@mui/icons-material/FileDownload';
 import PersonIcon from '@mui/icons-material/Person';
 import Modal from '../../modal/Modal';
+import FiltrosSidebar from '../../filtros-sidebar/FiltrosSidebar';
 
 export function Button({
   className,
@@ -56,17 +57,27 @@ export function Button({
           </>
         }
         {className === "delete-button" && 
-          <DeleteForeverIcon sx={{ fontSize: 18 }}/>}
+          <DeleteForeverIcon sx={{ fontSize: 18 }}/>
+        }
         {className === "delete-edit-button" && 
-          <DeleteForeverIcon sx={{ fontSize: 18 }}/>}
+          <DeleteForeverIcon sx={{ fontSize: 18 }}/>
+        }
         {className === "settings-button" && 
-          <TuneIcon sx={{ fontSize: 18 }}/>}
+          <>
+            <TuneIcon sx={{ fontSize: 18 }}/>
+            
+
+          </>
+        }
         {className === "back-button" && 
-          <ArrowBackIosIcon/>}
+          <ArrowBackIosIcon/>
+        }
         {className === "cancel-button" && 
-          <CloseIcon sx={{ fontSize: 16 }}/>}
+          <CloseIcon sx={{ fontSize: 16 }}/>
+        }
         {className === "save-button" && 
-          <SaveIcon sx={{ fontSize: 16 }}/>}
+          <SaveIcon sx={{ fontSize: 16 }}/>
+        }
         {className === "export-button" && 
           <FileDownloadIcon sx={{ fontSize: 13 }}/>
         }

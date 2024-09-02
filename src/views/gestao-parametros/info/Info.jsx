@@ -5,7 +5,7 @@ import { Button } from '../../../components/input/botao/Button';
 import SelectBox from '../../../components/input/select/Select';
 import GestaoConteudo from '../../gestao-conteudo/GestaoConteudo';
 import './Info.scss';
-import Filtros from '../../../components/input/Filtros'
+import Filtros from '../../../components/input/filtros/Filtros'
 
 function Info() {
 

@@ -1,7 +1,7 @@
-import { ModalInput } from './ModalInput';
+import { ModalInput } from '../modal/ModalInput';
 import React from 'react';
-import './Modal.scss';
-import Backdrop from './backdrop/Backdrop';
+import './FiltrosSidebar.scss';
+import Backdrop from '../modal/backdrop/Backdrop';
 import {motion} from 'framer-motion';
 import Titulo from '../titulos/titulo/Titulo';
 import SaveIcon from '@mui/icons-material/SaveSharp';
@@ -31,12 +31,12 @@ const dropIn = {
   },
 };
 
-const Modal = ({modalOpen, handleClose, title, content}) => {
 
-  if (!modalOpen) return null;
+const FiltrosSidebar = ({handleClose, title, content}) => {
   return (
-    <Backdrop onClick={handleClose}> 
-      <motion.div onClick={(e) => e.stopPropagation()} className="modal" 
+    <Backdrop onClick={(handleClose)}> 
+      <motion.div onClick={(e) => e.stopPropagation()} 
+        className="modal-filtros" 
         variants={dropIn}
         initial="hidden"
         animate="visible"
@@ -110,4 +110,4 @@ const Modal = ({modalOpen, handleClose, title, content}) => {
   )
 }
 
-export default Modal
+export default FiltrosSidebar

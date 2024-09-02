@@ -1,8 +1,8 @@
 import React from 'react';
-import './Filtros.scss';
-import SelectBox from './select/Select'; 
-import {Textbox} from './text-box/Textbox'; 
-import {Button} from './botao/Button'; 
+import '../input.scss';
+import SelectBox from '../select/Select'; 
+import {Textbox} from '../text-box/Textbox'; 
+import {Button} from '../botao/Button'; 
 
 function Filtros({ ListaComponentes, tamanho}) {
   return (
@@ -47,6 +47,7 @@ function Filtros({ ListaComponentes, tamanho}) {
                     dataTooltip={item.dataTooltip}
                     onClick={item.onClick}
                     path={item.path}
+                    children={item.children}
                     contentModal={item.contentModal}
                   />
                 );
