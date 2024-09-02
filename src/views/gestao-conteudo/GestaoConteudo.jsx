@@ -309,6 +309,10 @@ function GestaoConteudo({ view, activeTab }) {
     () => [
       {
         Header: 'ID',
+        accessor: 'id0',
+      },
+      {
+        Header: 'ID',
         accessor: 'id',
       },
       {

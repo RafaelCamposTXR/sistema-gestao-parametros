@@ -8,6 +8,7 @@ import SaveIcon from '@mui/icons-material/SaveSharp';
 import CloseIcon from '@mui/icons-material/CloseSharp';
 import {Button} from '../input/botao/Button';
 import {Textbox} from '../input/text-box/Textbox';
+import SelectBox from '../input/select/Select';
 
 const dropIn = {
   hidden: {
@@ -28,7 +29,7 @@ const dropIn = {
   },
 };
 
-const Modal = ({handleClose, content}) => {
+const Modal = ({handleClose, title, content}) => {
   return (
     <Backdrop onClick={handleClose}> 
       <motion.div onClick={(e) => e.stopPropagation()} className="modal" 
@@ -40,8 +41,8 @@ const Modal = ({handleClose, content}) => {
         <>
           <div className="area-superior-modal">
             <Titulo 
-              nomeSecao="Sistema de Gestão" 
-              nomeSubSecao= "Fila de Demandas"
+              nomeSecao={title[0]} 
+              nomeSubSecao={title[1]} 
               style={{position: "relative",
                       display: "inline",
                       margin: "0.8vh 0 0 0.3vw",
@@ -52,43 +53,13 @@ const Modal = ({handleClose, content}) => {
             </div>
           </div>
           <div className="corpo-modal">
-            <Textbox
-              label = "Exemplo"
-              tamanho = ""
-              tipoInput = "numero"
-            />
-            <Textbox
-              label = "Exemplo"
-              tamanho = ""
-              tipoInput = "texto"
-            />
+            Alteração para os itens:
             <div className="area-checkbox-pai">
               <div className='area-checkbox-modal'>
-                <p style={{width: "100%", height: "2vh"}}>
-                  teste
-                </p>
-                <p style={{width: "100%", height: "2vh"}}>
-                  teste
-                </p>
-                <p style={{width: "100%", height: "2vh"}}>
-                  teste
-                </p>
-                <p style={{width: "100%", height: "2vh"}}>
-                  teste
-                </p>
-                <p style={{width: "100%", height: "2vh"}}>
-                  teste
-                </p><p style={{width: "100%", height: "2vh"}}>
-                  teste
-                </p>
-                <p style={{width: "100%", height: "2vh"}}>
-                  teste
-                </p>
-                <p style={{width: "100%", height: "2vh"}}>
-                  teste
-                </p>
                 {/* {content} */}
               </div>
+            <SelectBox
+              placeholder="Selecione o Usuário"/>
             </div>
           </div>
         </>

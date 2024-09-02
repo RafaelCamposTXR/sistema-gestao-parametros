@@ -73,7 +73,7 @@ export function Button({
         {className === "demand-button" && 
           <>
             <PersonIcon sx={{ fontSize: 13 }}/>
-            {modalOpen && <Modal modalOpen={modalOpen} handleClose={close} content={contentModal} />}
+            {modalOpen && <Modal modalOpen={modalOpen} handleClose={close} content={contentModal} title={["Fila de Demandas","Definição de Atendente"]}/>}
           </>
         }
         {children}
