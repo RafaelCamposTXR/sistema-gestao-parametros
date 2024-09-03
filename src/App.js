@@ -3,7 +3,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import Sidebar from './components/sidebar/SideBar';
-
+import FiltrosSidebar from './components/filtros-sidebar/FiltrosSidebar';
 import GestaoParametros from './views/gestao-parametros/GestaoParametros';
 import SistemaGestao from './views/sistema-gestao/SistemaGestao';
 import { GestaoCampos } from './views/gestao-parametros/gestaoCampos/GestaoCampos';
@@ -24,6 +24,7 @@ function App() {
       <div className="App">
         <div className="layout">
           <Sidebar />
+          <FiltrosSidebar modalOpen={true}  content="" title={["Fila de Demandas","Definição de Atendente"]}/>
           <div className="content">
           <Routes >
             <Route path="gestaoparametros" element={<GestaoParametros />}>
