@@ -3,7 +3,7 @@ import {Textbox} from '../../../components/input/text-box/Textbox';
 import SelectBox from '../../../components/input/select/Select';
 import './JanelaEditar.scss';
 
-function InputEditar({ label, content, type, tamanho, marginRight}) {
+function InputEditar({ label, content, type, tamanho, placeholder, marginRight}) {
 
   const [input0Focused, setInput0Focused] = useState(false);
   const [input0Value, setInput0Value] = useState('');
@@ -29,6 +29,7 @@ function InputEditar({ label, content, type, tamanho, marginRight}) {
         {type === "select" && 
           <SelectBox
             label={content}
+            placeholder={placeholder}
             tamanho={tamanho}
           />
         }

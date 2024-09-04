@@ -24,7 +24,7 @@ function App() {
       <div className="App">
         <div className="layout">
           <Sidebar />
-          <FiltrosSidebar modalOpen={true}  content="" title={["Fila de Demandas","Definição de Atendente"]}/>
+          {/* <FiltrosSidebar modalOpen={true}  content="" title={["Fila de Demandas","Definição de Atendente"]}/> */}
           <div className="content">
           <Routes >
             <Route path="gestaoparametros" element={<GestaoParametros />}>

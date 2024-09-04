@@ -19,7 +19,7 @@ function JanelaEditar() {
   const [subSecao, setSubSecao, modoEdicao, setModoEdicao] = useOutletContext();
 
   const FiltrosFornecedor = [
-    { label: "Fornecedor", content: "", type: "textbox", tamanho: "" },
+    { label: "Fornecedor", content: "", type: "textbox", tamanho: "", placeholder: "Insira o fornecedor" },
     { label: "Nome do Contato", content: "", type: "textbox", tamanho: "" },
     { label: "Email", content: "", type: "textbox", tamanho: "" },
     { label: "Site (download de conteúdo)", content: "", type: "textbox", tamanho: "" },
@@ -77,7 +77,7 @@ function JanelaEditar() {
             onClick={() => {navigate(-1)}}
           />
         
-        {modoEdicao[1] == ["Editar valor da tabela"] && 
+        {modoEdicao[1] == ["Editar valor da tabela"] || modoEdicao[1] == "Inserir Novo" && 
         <Button 
             className="delete-edit-button"
             dataTooltip="Apagar"

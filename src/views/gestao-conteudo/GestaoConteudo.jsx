@@ -6,7 +6,7 @@ import './GestaoConteudo.scss';
 
 function GestaoConteudo({ view, activeTab }) {
 
-  const colunasCampos = React.useMemo(
+  const colunasCamposServico = React.useMemo(
     () => [
       {
         Header: 'Prioridade',
@@ -15,6 +15,38 @@ function GestaoConteudo({ view, activeTab }) {
       {
         Header: 'Serviço',
         accessor: 'servico',
+      },
+      {
+        Header: 'Data de Desativação',
+        accessor: 'data',
+      },
+    ],
+    []
+  );
+
+  const colunasCamposAcao = React.useMemo(
+    () => [
+      {
+        Header: 'Ação',
+        accessor: 'acao',
+      },
+      {
+        Header: 'Data de Desativação',
+        accessor: 'data',
+      },
+    ],
+    []
+  );
+
+  const colunasCamposStatus = React.useMemo(
+    () => [
+      {
+        Header: 'Status da Ação',
+        accessor: 'status',
+      },
+      {
+        Header: 'Rótulo',
+        accessor: 'rotulo',
       },
       {
         Header: 'Data de Desativação',
@@ -404,9 +436,9 @@ function GestaoConteudo({ view, activeTab }) {
     <div className='gestao-conteudo'>
       {view === "gestao-campos" && (
     <>
-      {activeTab === 0 && <Tabela columns={colunasCampos} data={dataCampos} />}
-      {activeTab === 1 && <Tabela columns={colunasCampos} data={dataCampos} />}
-      {activeTab === 2 && <Tabela columns={colunasCampos} data={dataCampos} />}
+      {activeTab === 0 && <Tabela columns={colunasCamposServico} data={dataCampos} />}
+      {activeTab === 1 && <Tabela columns={colunasCamposAcao} data={dataCampos} />}
+      {activeTab === 2 && <Tabela columns={colunasCamposStatus} data={dataCampos} />}
     </>
       )}
       {view === "info" && (

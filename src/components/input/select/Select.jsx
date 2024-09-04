@@ -6,9 +6,9 @@ function SelectBox({options, placeholder, tamanho}) {
   const getWidth = (tamanho) => {
     switch (tamanho) {
       case 'curto':
-        return '14vw';
+        return '14.9vw';
       case 'longo':
-        return '18vw';
+        return '31vw';
       default:
         return '16vw';
     }
@@ -18,8 +18,8 @@ function SelectBox({options, placeholder, tamanho}) {
     control: (provided, state) => (
       {
       ...provided,
-      // width: getWidth(tamanho),
-      width: 'calc(100% + 3.2vw)',
+      width: getWidth(tamanho),
+      //width: 'calc(100% + 3.2vw)',
       fontSize: "0.96rem",
       minHeight: "2px",
       height: "34px",
