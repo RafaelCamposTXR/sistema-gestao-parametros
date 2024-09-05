@@ -19,7 +19,8 @@ export function Button({
   onClick,
   children,
   path,
-  contentModal
+  contentModal,
+  color
 }) {
 
   //botões disponíveis: add, delete, delete-edit, settings, back, save, cancel, export, demand
@@ -38,7 +39,7 @@ export function Button({
   }
 
   return <Link to={path} style={{ textDecoration: 'none' }}>
-    <button className={className} data-tooltip={dataTooltip} onClick={handleClick}> 
+    <button className={className} data-tooltip={dataTooltip} onClick={handleClick} style={{color: color}}> 
       <>
         {className === "search-button" && 
           <>

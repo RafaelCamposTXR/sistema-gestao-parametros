@@ -18,8 +18,8 @@ function SelectBox({options, placeholder, tamanho}) {
     control: (provided, state) => (
       {
       ...provided,
-      width: getWidth(tamanho),
-      //width: 'calc(100% + 3.2vw)',
+      //width: getWidth(tamanho),
+      width: 'calc(100% + 3.2vw)',
       fontSize: "0.96rem",
       minHeight: "2px",
       height: "34px",

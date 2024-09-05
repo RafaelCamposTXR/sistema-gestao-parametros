@@ -11,6 +11,7 @@ import {Textbox} from '../input/text-box/Textbox';
 import SelectBox from '../input/select/Select';
 import ChangeCircleIcon from '@mui/icons-material/ChangeCircleSharp';
 import AutorenewIcon from '@mui/icons-material/AutorenewSharp';
+import TuneIcon from '@mui/icons-material/Tune';
 
 const dropIn = {
   hidden: {
@@ -44,12 +45,22 @@ const FiltrosSidebar = ({handleClose, title, content}) => {
       >
         <>
           <div className="area-superior-modal">
-            <div className="area-titulo-modal">
-              <Button className="back-button"  onClick={handleClose} style={{position: "relative", top: "0vh"}}/>
+            <div className="area-titulo-modal-filtros">
+              <Button className="back-button"  onClick={handleClose} style={{position: "relative", top: "0vh"}} color="white"/>
+              <TuneIcon sx={{fontSize: "24px", color: "white"}}/>
+              <p style={{color: "white"}}>
+                Filtros
+              </p>
             </div>
           </div>
           <div className="corpo-modal-filtros">
-            <Textbox/>
+            <div style={{width: "10vw", display: "flex", flexDirection: "column", gap: "5vh"}}>
+              <Textbox/>
+              <Textbox/>
+              <Textbox/>
+              <Textbox/>
+            </div>
+            
             
           </div>
         </>

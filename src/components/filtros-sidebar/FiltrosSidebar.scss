@@ -15,6 +15,14 @@
   z-index: 200;
 }
 
+
+.area-titulo-modal-filtros {
+   display: flex;
+   gap: 0.5vw;
+   align-content: center;
+   align-items: center;
+
+}
 .input-label-modal {
   position: relative;
   text-align: start;
@@ -67,13 +75,13 @@
   border-radius: 4px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   align-content: center;
   width: 90.2%;
   height: 90%;
   gap: 1vw;
-  padding: 3vh 0.1vw 3vh 0.1vw;
+  padding: 0.1rem;
 }
 
 .texto-corpo-modal {

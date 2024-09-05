@@ -18,7 +18,7 @@ function EdicaoFornecedores() {
 
   return (
     <>
-      {modoEdicao[1] == ["Editar valor da tabela"] || modoEdicao[1] == "Inserir Novo" && 
+      {modoEdicao[1] == (["Editar valor da tabela"] || modoEdicao[1] == "Inserir Novo") && 
         <>
         {console.log("chamando fornecedores")}
         {FiltrosFornecedor.map((field, index) => (
