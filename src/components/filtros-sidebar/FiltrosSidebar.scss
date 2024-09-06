@@ -1,13 +1,13 @@
 
 .modal-filtros {
-  width:15vw;
+  width:16vw;
   height: 100vh;
   margin: auto;
   padding: 1.6vh 1vw;
   border-radius: 4px;
   position: fixed;
   top: 0;
-  left: 83vw;
+  left: 82vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -70,18 +70,19 @@
 
 
 .corpo-modal-filtros {
-  margin: 1vw;
+  margin: 2.1vh;
   border: 3px outset rgba(137, 138, 144, 0.059);
+  border-top: 1px outset white;
   border-radius: 4px;
   display: flex;
   flex-wrap: wrap;
   justify-content: start;
   align-items: center;
   align-content: center;
-  width: 90.2%;
+  width: 80%;
   height: 90%;
   gap: 1vw;
-  padding: 0.1rem;
+  padding: 1vh 1vw;
 }
 
 .texto-corpo-modal {

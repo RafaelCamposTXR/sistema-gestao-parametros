@@ -11,7 +11,6 @@ import SearchIcon from '@mui/icons-material/SearchSharp';
 import FileDownloadIcon from '@mui/icons-material/FileDownload';
 import PersonIcon from '@mui/icons-material/Person';
 import Modal from '../../modal/Modal';
-import FiltrosSidebar from '../../filtros-sidebar/FiltrosSidebar';
 
 export function Button({
   className,
@@ -33,12 +32,12 @@ export function Button({
 
   const handleClick = (event) => {
     if (onClick) {
-      onClick(event);  // Chama o onClick genérico
+      onClick(event);  
     }
-    open();  // Abre o modal
+    open();  
   }
 
-  return <Link to={path} style={{ textDecoration: 'none' }}>
+  return <Link to={path} style={{ textDecoration: 'none', height: "max-content ", padding: 0 }}>
     <button className={className} data-tooltip={dataTooltip} onClick={handleClick} style={{color: color}}> 
       <>
         {className === "search-button" && 
@@ -71,7 +70,7 @@ export function Button({
           </>
         }
         {className === "back-button" && 
-          <ArrowBackIosIcon/>
+          <ArrowBackIosIcon sx={{ fontSize: 16 }}/>
         }
         {className === "cancel-button" && 
           <CloseIcon sx={{ fontSize: 16 }}/>

@@ -4,11 +4,14 @@ import GestaoConteudo from '../../gestao-conteudo/GestaoConteudo';
 import Filtros from '../../../components/input/filtros/Filtros';
 import Modal from '../../../components/modal/Modal';
 import FiltrosSidebar from '../../../components/filtros-sidebar/FiltrosSidebar';
+import { useSidebar } from '../../../context/SidebarContext';
 import './FilaDemandas.scss';
 
 function FilaDemandas() {
 
   const [subSecao, setSubSecao, modoEdicao, setModoEdicao] = useOutletContext();
+
+  const { setIsSidebarOpen, setSidebarContent } = useSidebar();
 
   useEffect(() => {
     setSubSecao('Fila de Demandas');
@@ -84,21 +87,15 @@ function FilaDemandas() {
     },
     {
       tipo: 'button',
-      className: 'settings-button',
-      dataTooltip: 'Mais Filtros',
-      onClick: () => {open()},
-      children: (
-        <>
-        {modalOpen && <FiltrosSidebar modalOpen={modalOpen} handleClose={close} content="" title={["Fila de Demandas","Definição de Atendente"]}/>}
-        </>
-      )
-
-    },
-    {
-      tipo: 'button',
       className: 'delete-button',
       dataTooltip: 'Limpar Filtros',
       onClick: () => {LimpaCampos()},
+    },
+    {
+      tipo: 'button',
+      className: 'settings-button',
+      dataTooltip: 'Mais Filtros',
+      onClick: () => {setIsSidebarOpen(true)},
     },
     {
       tipo: 'extra-button',

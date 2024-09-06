@@ -161,24 +161,29 @@
   
 }
 
-
+@mixin botao-editar(){
+  cursor: pointer;
+  width: 2vw !important;
+  height: 1.4vw !important;
+}
 
 .back-button {
   position: relative;
   border: none;
   background-color: transparent;
   box-shadow: none;
+  height: max-content;
   cursor: pointer;
+  height: 1vh;
 }
 
 .save-button {
   padding: 5px 10px;
   background-color: var(--blue) !important;
-  width: 2.3vw !important;
-  height: 1.6vw !important;
   border: 2px outset var(--light-blue) !important;
   border-radius: 3px !important;
   margin-left: 0.65vw !important;
+  @include botao-editar;
   @include tooltip(4.9vh);
 }
 
@@ -188,13 +193,11 @@
   background-color: red;
   color: white;
   border-radius: 3px;
-  cursor: pointer;
   margin-left: 0.5vw;
   align-items: center;
   justify-content: center;
   border: 2px outset red;
-  width: 2.3vw;
-  height: 1.6vw;
+  @include botao-editar;
   @include tooltip(4.9vh);
 }
 
@@ -202,13 +205,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
   padding: 0;
   background-color: white !important;
-  width: 2.3vw !important;
-  height: 1.6vw !important;
   border: 2.1px outset var(--blue) !important;
   border-radius: 3px !important;
+  @include botao-editar;
   @include tooltip(4.9vh);
 }
 

@@ -52,7 +52,7 @@ function JanelaEditar() {
   return (
     <>
     <div className="area-superior-editar">
-      <div>
+      <div className="area-superior-texto-editar">
       <Button 
         className="back-button"
         onClick={() => {navigate(-1)}}
@@ -64,8 +64,9 @@ function JanelaEditar() {
               position: "relative",
               display: "inline",
               margin: "0vh 0 0 0.5vw",
-              top: "-0.75vh",
-              height: "5vh"
+              padding: "0",
+              top: "-0.3vh",
+              height: "3vh"
             }}  
       />
       </div>

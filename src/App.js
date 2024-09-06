@@ -1,5 +1,7 @@
 import './App.scss';
-import React from 'react';
+import React, {createContext, useContext} from 'react';
+
+import { useSidebar } from './context/SidebarContext';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import Sidebar from './components/sidebar/SideBar';
@@ -16,34 +18,37 @@ import ValidacaoConteudo from './views/sistema-gestao/validacao-conteudo/Validac
 import FilaDemandas from './views/sistema-gestao/fila-demandas/FilaDemandas';
 
 
-
-
 function App() {
+
+  const { isSidebarOpen, setIsSidebarOpen, setSidebarContent } = useSidebar();
+
   return (
-    <Router>
-      <div className="App">
-        <div className="layout">
-          <Sidebar />
-          <FiltrosSidebar modalOpen={true}  content="" title={["Fila de Demandas","Definição de Atendente"]}/>
-          <div className="content">
-          <Routes >
-            <Route path="gestaoparametros" element={<GestaoParametros />}>
-                  <Route path="gestaocampos" element={<GestaoCampos />} />
-                  <Route path="info" element={<Info />} />
-                  <Route path="gestaousuarios" element={<GestaoUsuarios />} />
-                  <Route path="gestaofornecedores" element={<GestaoFornecedores />} />
-                  <Route path="edicao" element={<JanelaEditar />} />
-                </Route>
-                <Route path="sistemagestao" element={<SistemaGestao />}>
-                  <Route path="validacaoconteudo" element={<ValidacaoConteudo />} />
-                  <Route path="filademandas" element={<FilaDemandas />} />
-                  <Route path="produtoserro" element={<ProdutosErro />} />
-                </Route>
-            </Routes>
+    
+      <Router>
+        <div className="App">
+          <div className="layout">
+            <Sidebar />
+            <FiltrosSidebar modalOpen={isSidebarOpen}  content="" title={["Fila de Demandas","Definição de Atendente"]}/>
+            <div className="content">
+            <Routes >
+              <Route path="gestaoparametros" element={<GestaoParametros />}>
+                    <Route path="gestaocampos" element={<GestaoCampos />} />
+                    <Route path="info" element={<Info />} />
+                    <Route path="gestaousuarios" element={<GestaoUsuarios />} />
+                    <Route path="gestaofornecedores" element={<GestaoFornecedores />} />
+                    <Route path="edicao" element={<JanelaEditar />} />
+                  </Route>
+                  <Route path="sistemagestao" element={<SistemaGestao />}>
+                    <Route path="validacaoconteudo" element={<ValidacaoConteudo />} />
+                    <Route path="filademandas" element={<FilaDemandas />} />
+                    <Route path="produtoserro" element={<ProdutosErro />} />
+                  </Route>
+              </Routes>
+            </div>
           </div>
         </div>
-      </div>
-    </Router>
+      </Router>
+
   );
 }
 

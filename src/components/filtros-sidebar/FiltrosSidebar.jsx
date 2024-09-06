@@ -3,39 +3,46 @@ import React from 'react';
 import './FiltrosSidebar.scss';
 import Backdrop from '../modal/backdrop/Backdrop';
 import {motion} from 'framer-motion';
-import Titulo from '../titulos/titulo/Titulo';
-import SaveIcon from '@mui/icons-material/SaveSharp';
-import CloseIcon from '@mui/icons-material/CloseSharp';
 import {Button} from '../input/botao/Button';
 import {Textbox} from '../input/text-box/Textbox';
-import SelectBox from '../input/select/Select';
-import ChangeCircleIcon from '@mui/icons-material/ChangeCircleSharp';
-import AutorenewIcon from '@mui/icons-material/AutorenewSharp';
 import TuneIcon from '@mui/icons-material/Tune';
+import { useSidebar } from '../../context/SidebarContext'; 
+
+
 
 const dropIn = {
   hidden: {
-    y:"-100vh",
-    opacity: 0
+    x:"100vh",
+    opacity: 0.7
   },
   visible: {
-    y:"0",
+    x:"0",
     opacity: 1,
     transition:{
-      duration: 0.15,
+      duration: 0.18,
       type:"easeinout",
     }
     
   },
   exit: {
-    y: "100vh",
+    x: "100vh",
   },
 };
 
 
-const FiltrosSidebar = ({handleClose, title, content}) => {
+const FiltrosSidebar = ({modalOpen, handleClose, title, content}) => {
+
+  const { setIsSidebarOpen } = useSidebar(); 
+
+  const closeSidebar = () => {
+    setIsSidebarOpen(false);
+  };
+
+
   return (
-    <Backdrop onClick={(handleClose)}>
+    <>
+    { modalOpen && 
+    <Backdrop onClick={(closeSidebar)}>
       <motion.div onClick={(e) => e.stopPropagation()} 
         className="modal-filtros" 
         variants={dropIn}
@@ -46,11 +53,13 @@ const FiltrosSidebar = ({handleClose, title, content}) => {
         <>
           <div className="area-superior-modal">
             <div className="area-titulo-modal-filtros">
-              <Button className="back-button"  onClick={handleClose} style={{position: "relative", top: "0vh"}} color="white"/>
-              <TuneIcon sx={{fontSize: "24px", color: "white"}}/>
-              <p style={{color: "white"}}>
-                Filtros
-              </p>
+              <Button className="back-button"  onClick={closeSidebar} style={{position: "relative", top: "0vh"}} color="white"/>
+              <div style={{width: "4.5vw", display: "flex", flexWrap: "no-wrap", justifyContent: "space-around", alignItems: "center"}}>
+                <p style={{color: "white"}}>
+                  Filtros
+                </p>
+                <TuneIcon sx={{fontSize: "16px", color: "white"}}/>
+                </div>
             </div>
           </div>
           <div className="corpo-modal-filtros">
@@ -66,6 +75,8 @@ const FiltrosSidebar = ({handleClose, title, content}) => {
         </>
       </motion.div>
       </Backdrop>
+      }
+      </>
   )
 }
 

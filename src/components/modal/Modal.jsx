@@ -4,13 +4,9 @@ import './Modal.scss';
 import Backdrop from './backdrop/Backdrop';
 import {motion} from 'framer-motion';
 import Titulo from '../titulos/titulo/Titulo';
-import SaveIcon from '@mui/icons-material/SaveSharp';
-import CloseIcon from '@mui/icons-material/CloseSharp';
 import {Button} from '../input/botao/Button';
-import {Textbox} from '../input/text-box/Textbox';
 import SelectBox from '../input/select/Select';
 import ChangeCircleIcon from '@mui/icons-material/ChangeCircleSharp';
-import AutorenewIcon from '@mui/icons-material/AutorenewSharp';
 
 const dropIn = {
   hidden: {
