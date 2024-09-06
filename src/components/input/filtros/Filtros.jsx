@@ -69,6 +69,7 @@ function Filtros({ ListaComponentes, tamanho}) {
                     onClick={item.onClick}
                     path={item.path}
                     children={item.children}
+                    modalTitle={item.modalTitle}
                     contentModal={item.contentModal}
                   />
                 );

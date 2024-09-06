@@ -19,11 +19,6 @@ function FiltrosCampos({
   const close = () => setModalOpen(false);  
   const open = () => setModalOpen(true);
 
-  // const [input0Focused, setInput0Focused] = useState(false);
-  // const [input0Value, setInput0Value] = useState('');
-  // const [input1Focused, setInput1Focused] = useState(false);
-  // const [input1Value, setInput1Value] = useState('');
-
   const [input0Focused, setInput0Focused] = useState(false);
   const [input0Value, setInput0Value] = useState('');
   const [input1Focused, setInput1Focused] = useState(false);

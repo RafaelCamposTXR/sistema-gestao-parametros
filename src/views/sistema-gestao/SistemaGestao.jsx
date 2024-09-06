@@ -11,7 +11,7 @@ function SistemaGestao() {
   const [modoEdicao, setModoEdicao] = useState(["Edição", "Teste", ""])
 
   const location = useLocation();
-  const semBordaTopo = location.pathname ===  "/gestaoparametros/gestaocampos";
+  const semBordaTopo = location.pathname ===  "";
 
   return (
     <div className="conteiner-gestao">

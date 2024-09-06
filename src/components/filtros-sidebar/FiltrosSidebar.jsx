@@ -30,7 +30,7 @@ const dropIn = {
 };
 
 
-const FiltrosSidebar = ({modalOpen, handleClose, title, content}) => {
+const FiltrosSidebar = ({inputList, modalOpen, handleClose, title, content}) => {
 
   const { setIsSidebarOpen } = useSidebar(); 
 
@@ -63,20 +63,27 @@ const FiltrosSidebar = ({modalOpen, handleClose, title, content}) => {
             </div>
           </div>
           <div className="corpo-modal-filtros">
-            <div style={{width: "10vw", display: "flex", flexDirection: "column", gap: "5vh"}}>
-              <Textbox/>
-              <Textbox/>
-              <Textbox/>
-              <Textbox/>
-            </div>
-            
-            
+            {inputList.map((inputProps, index) => (
+              <div key={index} className="input-group-filtros">
+              <label className="texto-input-filtros">{inputProps.label}</label>
+                <div style={{width: "12.5vw", display: "flex", flexDirection: "column", gap: "5vh"}}>
+                  <Textbox 
+                    label={inputProps.labelTextbox}
+                    tipoInput={inputProps.tipoInput}
+                    inputFocused={inputProps.inputFocused}
+                    setInputFocused={inputProps.setInputFocused}
+                    inputValue={inputProps.inputValue}
+                    setInputValue={inputProps.setInputValue}
+                  />
+                </div>
+              </div>
+              ))}
           </div>
         </>
       </motion.div>
-      </Backdrop>
-      }
-      </>
+    </Backdrop>
+    }
+    </>
   )
 }
 

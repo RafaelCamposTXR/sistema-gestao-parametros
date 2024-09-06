@@ -18,36 +18,7 @@ function JanelaEditar() {
 
   const [subSecao, setSubSecao, modoEdicao, setModoEdicao] = useOutletContext();
 
-  const FiltrosFornecedor = [
-    { label: "Fornecedor", content: "", type: "textbox", tamanho: "", placeholder: "Insira o fornecedor" },
-    { label: "Nome do Contato", content: "", type: "textbox", tamanho: "" },
-    { label: "Email", content: "", type: "textbox", tamanho: "" },
-    { label: "Site (download de conteúdo)", content: "", type: "textbox", tamanho: "" },
-    { label: "Cargo", content: "", type: "textbox", tamanho: "longo" },
-    { label: "Telefone", content: "", type: "textbox", tamanho: "longo" },
-    { label: "Diretoria", content: "", type: "textbox", tamanho: "" },
-  ];
 
-  const FiltrosInfo = [
-    { label: "Tipo de Informação", content: "" },
-    { label: "Script", content: "" }
-  ];
-
-  const RenderInputs = () => {
-    let selectedList;
-
-    switch (modoEdicao[0]) {
-      case "Fornecedores":
-        selectedList = FiltrosFornecedor;
-        break;
-      case "Info":
-        selectedList = FiltrosInfo;
-        break;
-      default:
-        selectedList = []; 
-        break;
-    }
-  }
 
   return (
     <>

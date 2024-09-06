@@ -20,7 +20,7 @@ import FilaDemandas from './views/sistema-gestao/fila-demandas/FilaDemandas';
 
 function App() {
 
-  const { isSidebarOpen, setIsSidebarOpen, setSidebarContent } = useSidebar();
+  const { isSidebarOpen, setIsSidebarOpen, sidebarContent, setSidebarContent } = useSidebar();
 
   return (
     
@@ -28,7 +28,7 @@ function App() {
         <div className="App">
           <div className="layout">
             <Sidebar />
-            <FiltrosSidebar modalOpen={isSidebarOpen}  content="" title={["Fila de Demandas","Definição de Atendente"]}/>
+            <FiltrosSidebar inputList = {sidebarContent }modalOpen={isSidebarOpen}  content="" title={["Fila de Demandas","Definição de Atendente"]}/>
             <div className="content">
             <Routes >
               <Route path="gestaoparametros" element={<GestaoParametros />}>

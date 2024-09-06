@@ -2,8 +2,6 @@ import React, {useEffect, useState} from 'react'
 import { useOutletContext } from 'react-router-dom';
 import GestaoConteudo from '../../gestao-conteudo/GestaoConteudo';
 import Filtros from '../../../components/input/filtros/Filtros';
-import Modal from '../../../components/modal/Modal';
-import FiltrosSidebar from '../../../components/filtros-sidebar/FiltrosSidebar';
 import { useSidebar } from '../../../context/SidebarContext';
 import './FilaDemandas.scss';
 
@@ -16,13 +14,13 @@ function FilaDemandas() {
   useEffect(() => {
     setSubSecao('Fila de Demandas');
     setModoEdicao(["Fila de Demandas",'','']);
+    setSidebarContent(inputList)
   }, [setSubSecao, setModoEdicao]);
 
   const [modalOpen, setModalOpen] = useState(false);
 
   const close = () => setModalOpen(false);  
   const open = () => setModalOpen(true);
-
 
   const [input0Focused, setInput0Focused] = useState(false);
   const [input0Value, setInput0Value] = useState('');
@@ -36,6 +34,101 @@ function FilaDemandas() {
     setInput1Value("");
     setInput2Value("");
   }
+
+
+  const inputList = [
+    {
+      label: 'Soliticação',
+      labelTextbox: 'Insira uma solicitação',
+      tamanho: '20vw',
+      tipoInput: 'text',
+      inputFocused: "",
+      setInputFocused: "",
+      inputValue: "",
+      setInputValue: "",
+    },
+    {
+      label: 'Atendimento',
+      labelTextbox: 'Insira um atendimento',
+      tamanho: '10vw',
+      tipoInput: 'number',
+      inputFocused: "",
+      setInputFocused: "",
+      inputValue: "",
+      setInputValue: "",
+    },
+    {
+      label: 'Conclusão',
+      labelTextbox: 'Insira uma conclusão',
+      tamanho: '10vw',
+      tipoInput: 'number',
+      inputFocused: "",
+      setInputFocused: "",
+      inputValue: "",
+      setInputValue: "",
+    },
+    {
+      label: 'Autor',
+      labelTextbox: 'Insira um autor',
+      tamanho: '10vw',
+      tipoInput: 'number',
+      inputFocused: "",
+      setInputFocused: "",
+      inputValue: "",
+      setInputValue: "",
+    },
+    {
+      label: 'Atendente',
+      labelTextbox: 'Insira um atendente',
+      tamanho: '10vw',
+      tipoInput: 'number',
+      inputFocused: "",
+      setInputFocused: "",
+      inputValue: "",
+      setInputValue: "",
+    },
+    {
+      label: 'Estoque',
+      labelTextbox: 'Insira um estoque',
+      tamanho: '10vw',
+      tipoInput: 'number',
+      inputFocused: "",
+      setInputFocused: "",
+      inputValue: "",
+      setInputValue: "",
+    },
+    {
+      label: 'Diretoria',
+      labelTextbox: 'Insira uma diretoria',
+      tamanho: '10vw',
+      tipoInput: 'number',
+      inputFocused: "",
+      setInputFocused: "",
+      inputValue: "",
+      setInputValue: "",
+    },
+    {
+      label: 'Tipo de Demanda',
+      labelTextbox: 'Insira um tipo de demanda',
+      tamanho: '11vw',
+      tipoInput: 'number',
+      inputFocused: "",
+      setInputFocused: "",
+      inputValue: "",
+      setInputValue: "",
+    },
+    {
+      label: 'Conclusão',
+      labelTextbox: 'Insira uma conclusão',
+      tamanho: '10vw',
+      tipoInput: 'number',
+      inputFocused: "",
+      setInputFocused: "",
+      inputValue: "",
+      setInputValue: "",
+    },
+  ];
+
 
   const ListaFiltros = [
     { 
@@ -101,6 +194,7 @@ function FilaDemandas() {
       tipo: 'extra-button',
       className: 'demand-button',
       dataTooltip: 'Exportar Tabelas',
+      modalTitle: ["Fila de Demandas","Definição de Atendente"],
       contentModal: "teste \n teste \n teste",
       onClick: () => {LimpaCampos()},
       

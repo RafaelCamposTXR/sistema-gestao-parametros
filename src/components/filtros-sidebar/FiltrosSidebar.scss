@@ -71,28 +71,58 @@
 
 .corpo-modal-filtros {
   margin: 2.1vh;
-  border: 3px outset rgba(137, 138, 144, 0.059);
-  border-top: 1px outset white;
+  border: 2px outset rgba(137, 138, 144, 0.043);
+  // border-top: 1px outset rgb(255, 255, 255);
   border-radius: 4px;
   display: flex;
   flex-wrap: wrap;
   justify-content: start;
-  align-items: center;
-  align-content: center;
-  width: 80%;
-  height: 90%;
-  gap: 1vw;
-  padding: 1vh 1vw;
+  align-items: start;
+  align-content: start;
+  width: 86%;
+  height: 87%;
+  gap: 1.6vw;
+  padding: 1.8vh 1vw;
+  overflow-y: scroll;
 }
 
-.texto-corpo-modal {
-  gap: 0.2vw;
-  font-size: 0.97rem;
+.texto-input-filtros {
+  color: white;
+  font-size: 0.91rem;
   font-weight: 400;
-  width: 100%;
+  gap: 0.2vw;
+  width: max-content;
   display: flex;
   align-items: center;  
   text-align: start;
-  padding: 0 0vw;
+  padding: 0.8vh 0vw;
 }
 
+.input-group-filtros {
+  display: flex;
+  flex-direction: column;
+  height: max-content;
+  width: 18vw;
+}
+
+
+.corpo-modal-filtros::-webkit-scrollbar {
+  width: 2px; 
+}
+
+
+.corpo-modal-filtros::-webkit-scrollbar-thumb {
+  background-color: #c9c5c536; 
+  border-radius: 10px; 
+}
+
+
+.corpo-modal-filtros::-webkit-scrollbar-track {
+  background-color: #f0f0f000; 
+}
+
+
+.corpo-modal-filtros::-webkit-scrollbar-thumb:hover {
+  width: 4px;
+  background-color: #A0A0A0; 
+}

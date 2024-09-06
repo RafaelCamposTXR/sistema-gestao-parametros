@@ -86,6 +86,7 @@ function ProdutosErro() {
       tipo: 'extra-button',
       className: 'demand-button',
       dataTooltip: 'Exportar Tabelas',
+      modalTitle: ["Produtos com Erro","Definição de Atendente"],
       onClick: () => {LimpaCampos()},
 
     },
