@@ -39,11 +39,12 @@
 }
 
 .corpo-editar {
-  padding: 6.4vh 2vw 2vw 4.5vw;
+  padding: 6.4vh 2vw 2vh 3.4vw;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  height: 50vh;
+  min-height: 50vh;
+  height: max-content;
   display: flex;
   font-size: 1.2rem;
   align-content: start;
@@ -55,13 +56,14 @@
   align-items: start;
   width: max-content;
   height: 22%;
+  margin: 0 0 1.7vh 0;
 }
 
 .texto-input {
   padding: 0 0 0 0.2vw;
   text-align: start;
   font-size: 1.05rem;
-  margin: 0 0 0.85vh 0.1vw;
+  margin: 0 0 0.3vh 0.1vw;
   color: var(--blue);
   width: 98%;
   text-wrap: nowrap;
@@ -69,4 +71,22 @@
 
 .box-input {
   margin: 0.6vh 0 0 0;
+}
+
+.area-permissoes{
+  width: 80vw;
+  margin: 0 30vw 5vh 0;
+  padding: 0 2vw 0 0;
+}
+
+.area-usuarios{
+  width: 80vw;
+}
+
+.area-usuarios-titulo{
+  display: flex;
+  width: 80vw;
+  gap: 1vw;
+  align-items: center;
+  // height: 10vh;
 }

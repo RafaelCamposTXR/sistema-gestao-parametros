@@ -27,11 +27,13 @@ function InputEditar({ label, content, type, tamanho, placeholder, marginRight})
           </div>
         }
         {type === "select" && 
-          <SelectBox
-            label={content}
-            placeholder={placeholder}
-            tamanho={tamanho}
-          />
+        <div style={{width:`${tamanho}`, }}>
+            <SelectBox
+              label={content}
+              placeholder={content}
+              tamanho={tamanho}
+            />
+        </div>
         }
       
       </div>

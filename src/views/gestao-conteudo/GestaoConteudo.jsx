@@ -430,6 +430,46 @@ function GestaoConteudo({ view, activeTab }) {
     []
   );
 
+  const colunasUsuarios = React.useMemo(
+    () => [
+      {
+        Header: 'Código do Perfil',
+        accessor: 'cod',
+      },
+      {
+        Header: 'Perfil',
+        accessor: 'perfil',
+      },
+      {
+        Header: 'Permissões',
+        accessor: 'permissoes',
+      },
+    ],
+    []
+  );
+  
+
+  const dataUsuarios = React.useMemo(
+    () => [
+      {
+        cod: 1,
+        perfil: 'Administrador',
+        permissoes: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet facilisis felis. Duis sit amet dolor justo. In id tortor vel lacus sodales suscipit a nec libero. Phasellus nec lacinia lacus. Curabitur ultrices purus et lectus lacinia, a egestas nisi varius. Maecenas egestas hendrerit arcu, nec laoreet felis sagittis at. Proin mollis, metus nec dapibus faucibus, ligula eros pharetra risus, eget malesuada eros ligula eget sapien.'
+      },
+      {
+        cod: 2,
+        perfil: 'Editor',
+        permissoes: 'Suspendisse potenti. Quisque ultricies magna id odio laoreet, at tristique odio malesuada. Fusce ac velit risus. Praesent aliquam convallis turpis, in volutpat risus tristique nec. Nam dapibus eros non ante blandit interdum.'
+      },
+      {
+        cod: 3,
+        perfil: 'Visitante',
+        permissoes: 'at tristique odio'
+      },
+    ],
+    []
+  );
+
 
 
   return (
@@ -439,6 +479,11 @@ function GestaoConteudo({ view, activeTab }) {
       {activeTab === 0 && <Tabela columns={colunasCamposServico} data={dataCampos} />}
       {activeTab === 1 && <Tabela columns={colunasCamposAcao} data={dataCampos} />}
       {activeTab === 2 && <Tabela columns={colunasCamposStatus} data={dataCampos} />}
+    </>
+      )}
+      {view === "usuarios" && (
+    <>
+      <Tabela columns={colunasUsuarios} data={dataUsuarios} />
     </>
       )}
       {view === "info" && (
@@ -463,7 +508,7 @@ function GestaoConteudo({ view, activeTab }) {
       )}
     </div>
   )
-  //renderiza apenas o componente da view e tab selecionada
+  //renderiza apenas o componente da page e tab selecionada
 }
 
 export default GestaoConteudo

@@ -11,6 +11,7 @@ import SearchIcon from '@mui/icons-material/SearchSharp';
 import FileDownloadIcon from '@mui/icons-material/FileDownload';
 import PersonIcon from '@mui/icons-material/Person';
 import Modal from '../../modal/Modal';
+import HistoryIcon from '@mui/icons-material/History';
 
 export function Button({
   className,
@@ -23,7 +24,7 @@ export function Button({
   color
 }) {
 
-  //botões disponíveis: add, delete, delete-edit, settings, back, save, cancel, export, demand
+  //botões disponíveis: add, delete, delete-edit, settings, back, save, cancel, export, demand, historico
 
 
   const [modalOpen, setModalOpen] = useState(false);
@@ -87,6 +88,9 @@ export function Button({
             <PersonIcon sx={{ fontSize: 13 }}/>
             {modalOpen && <Modal modalOpen={modalOpen} handleClose={close} content={contentModal} title={modalTitle}/>}
           </>
+        }
+        {className === "history-button" && 
+          <HistoryIcon sx={{ fontSize: 16 }}/>
         }
         {children}
     </>

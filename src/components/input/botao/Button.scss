@@ -213,6 +213,20 @@
   @include tooltip(4.9vh);
 }
 
+.history-button {
+  display: flex;
+  padding: 5px 10px;
+  background-color: var(--blue);
+  color: white;
+  border-radius: 3px;
+  margin-left: 0.5vw;
+  align-items: center;
+  justify-content: center;
+  border: 2px outset var(--blue);
+  @include botao-editar;
+  @include tooltip(4.9vh);
+}
+
 .export-button {
   display: flex;
   justify-content: center;

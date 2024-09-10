@@ -3,23 +3,14 @@ import Select, {components} from 'react-select';
 
 function SelectBox({options, placeholder, tamanho}) {
 
-  const getWidth = (tamanho) => {
-    switch (tamanho) {
-      case 'curto':
-        return '14.9vw';
-      case 'longo':
-        return '31vw';
-      default:
-        return '16vw';
-    }
-  };
+
 
   const Styles = {
     control: (provided, state) => (
       {
       ...provided,
       //width: getWidth(tamanho),
-      width: 'calc(100% + 3.2vw)',
+      width: 'calc(100% + 3.3vw)',
       fontSize: "0.96rem",
       minHeight: "2px",
       height: "34px",

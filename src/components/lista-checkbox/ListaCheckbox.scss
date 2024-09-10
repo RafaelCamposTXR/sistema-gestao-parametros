@@ -1,0 +1,31 @@
+.checkbox-lista{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-height: 30vh;
+  background-color: rgba(213, 211, 211, 0.028);
+  border: 2px outset rgba(0, 0, 0, 0.191);
+  padding: 2vh 2vw 2vh 1.6vw;
+  gap: 0.8vw;
+  margin: 1vh 0 2vh 0;
+  user-select: none; 
+  -webkit-user-select: none; 
+  -moz-user-select: none; 
+  -ms-user-select: none; 
+}
+
+.checkbox-item{
+  display: flex;
+  justify-content: start;
+  padding: 0 1.5vw 0 0;
+}
+
+.checkbox-texto{
+  font-size: 0.89rem;
+  padding: 0 0 0 0.4vw;
+  color: var(--blue);
+}
+
+.checkbox-texto:hover{
+  color: black;
+}

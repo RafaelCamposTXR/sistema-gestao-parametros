@@ -17,10 +17,11 @@
 
 
 .area-titulo-modal-filtros {
-   display: flex;
-   gap: 0.5vw;
-   align-content: center;
-   align-items: center;
+  padding: 1vh 0 0 0;
+  display: flex;
+  gap: 0.5vw;
+  align-content: center;
+  align-items: center;
 
 }
 .input-label-modal {
@@ -80,8 +81,8 @@
   align-items: start;
   align-content: start;
   width: 86%;
-  height: 87%;
-  gap: 1.6vw;
+  height: 88%;
+  gap: 1.2vw;
   padding: 1.8vh 1vw;
   overflow-y: scroll;
 }

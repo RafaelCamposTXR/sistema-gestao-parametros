@@ -55,10 +55,10 @@ const FiltrosSidebar = ({inputList, modalOpen, handleClose, title, content}) => 
             <div className="area-titulo-modal-filtros">
               <Button className="back-button"  onClick={closeSidebar} style={{position: "relative", top: "0vh"}} color="white"/>
               <div style={{width: "4.5vw", display: "flex", flexWrap: "no-wrap", justifyContent: "space-around", alignItems: "center"}}>
-                <p style={{color: "white"}}>
+                <p style={{color: "white", position: "relative", top: "-0.3vh"}}>
                   Filtros
                 </p>
-                <TuneIcon sx={{fontSize: "16px", color: "white"}}/>
+                <TuneIcon sx={{fontSize: "16px", color: "white", position: "relative", top: "-0.25vh"}}/>
                 </div>
             </div>
           </div>
