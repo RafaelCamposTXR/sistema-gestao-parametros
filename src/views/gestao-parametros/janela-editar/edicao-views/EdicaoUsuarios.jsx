@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import InputEditar from '../InputEditar.jsx';
 import { useOutletContext } from 'react-router-dom';
 import ListaCheckbox from '../../../../components/lista-checkbox/ListaCheckbox';
-import {Button} from '../../../../components/input/botao/Button';
+import {Button} from '../../../../components/input/button/Button';
 
 function EdicaoUsuarios() {
 

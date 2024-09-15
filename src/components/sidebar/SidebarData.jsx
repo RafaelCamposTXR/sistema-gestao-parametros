@@ -18,7 +18,7 @@ import WarehouseIcon from '@mui/icons-material/Warehouse';
 export const SidebarData = [
   {
     title: 'DashBoard',
-    path: '/gestaoparametros/info',
+    path: '/dashboard',
     icon: <HomeIcon sx={{fontSize:"16px", color: "white"}}/>,
     cName: 'nav-text',
   },

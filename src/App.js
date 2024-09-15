@@ -16,6 +16,7 @@ import Info from './views/gestao-parametros/info/Info';
 import ProdutosErro from './views/sistema-gestao/produtos-erro/ProdutosErro';
 import ValidacaoConteudo from './views/sistema-gestao/validacao-conteudo/ValidacaoConteudo';
 import FilaDemandas from './views/sistema-gestao/fila-demandas/FilaDemandas';
+import Dashboard from './views/dashboard/Dashboard';
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
             <FiltrosSidebar inputList = {sidebarContent }modalOpen={isSidebarOpen}  content="" title={["Fila de Demandas","Definição de Atendente"]}/>
             <div className="content">
             <Routes >
+              <Route path="dashboard" element={<Dashboard />} />
               <Route path="gestaoparametros" element={<GestaoParametros />}>
                     <Route path="gestaocampos" element={<GestaoCampos />} />
                     <Route path="info" element={<Info />} />

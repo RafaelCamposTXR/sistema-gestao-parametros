@@ -8,7 +8,7 @@ import { useLocation } from 'react-router-dom';
 function GestaoParametros() {  
 
   const [subSecao, setSubSecao] = useState("")
-  const [modoEdicao, setModoEdicao] = useState(["Edição", "Teste", ""])
+  const [modoEdicao, setModoEdicao] = useState(["Edição", "Rota não reconhecida", ""])
   const location = useLocation();
 
  

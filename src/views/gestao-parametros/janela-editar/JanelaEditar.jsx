@@ -3,7 +3,7 @@ import { useOutletContext } from 'react-router-dom';
 import Titulo from '../../../components/titulos/titulo/Titulo';
 import "./JanelaEditar.scss";
 import {useNavigate} from 'react-router-dom';
-import { Button } from '../../../components/input/botao/Button';
+import { Button } from '../../../components/input/button/Button';
 import EdicaoInfo from './edicao-views/EdicaoInfo.jsx';
 import EdicaoFornecedores from './edicao-views/EdicaoFornecedores.jsx';
 import EdicaoCampos from './edicao-views/EdicaoCampos.jsx';

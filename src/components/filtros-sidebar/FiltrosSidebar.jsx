@@ -1,9 +1,9 @@
-import { ModalInput } from '../modal/ModalInput';
+
 import React from 'react';
 import './FiltrosSidebar.scss';
 import Backdrop from '../modal/backdrop/Backdrop';
 import {motion} from 'framer-motion';
-import {Button} from '../input/botao/Button';
+import {Button} from '../input/button/Button';
 import {Textbox} from '../input/text-box/Textbox';
 import TuneIcon from '@mui/icons-material/Tune';
 import { useSidebar } from '../../context/SidebarContext'; 

@@ -1,8 +1,5 @@
 import {React, useState, useEffect} from 'react';
 import {Link,useOutletContext} from 'react-router-dom';
-import { Textbox } from '../../../components/input/text-box/Textbox';
-import { Button } from '../../../components/input/botao/Button';
-import SelectBox from '../../../components/input/select/Select';
 import GestaoConteudo from '../../gestao-conteudo/GestaoConteudo';
 import './Info.scss';
 import Filtros from '../../../components/input/filtros/Filtros'

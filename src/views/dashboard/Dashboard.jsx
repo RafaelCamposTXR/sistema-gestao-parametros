@@ -1,13 +1,13 @@
 import {React, useState} from 'react';
-import './SistemaGestao.scss';
+import './Dashboard.scss';
 import TituloSecao from '../../components/titulos/tituloSecao/TituloSecao';
 import {Link, Outlet} from "react-router-dom";
 import { useLocation } from 'react-router-dom';
 
 
-function SistemaGestao() {  
+function Dashboard() {  
 
-  const [subSecao, setSubSecao] = useState("")
+  const [subSecao, setSubSecao] = useState("Home")
   const [modoEdicao, setModoEdicao] = useState(["Edição", "Rota não reconhecida", ""])
 
   const location = useLocation();
@@ -15,7 +15,7 @@ function SistemaGestao() {
 
   return (
     <div className="conteiner-gestao">
-      <TituloSecao nomeSecao="Sistema de Gestão" nomeSubSecao= {subSecao} />
+      <TituloSecao nomeSecao="DashBoard" nomeSubSecao= {subSecao} />
       <div className="gestao" style={{borderTop: semBordaTopo ? "none" : "2px solid rgba(171, 167, 167, 0.299)"}}>
         <Outlet context={[subSecao, setSubSecao, modoEdicao, setModoEdicao]}/>
       </div>
@@ -24,4 +24,4 @@ function SistemaGestao() {
   )
 }
 
-export default SistemaGestao
+export default Dashboard

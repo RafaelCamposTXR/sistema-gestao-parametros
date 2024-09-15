@@ -1,10 +1,9 @@
-import { ModalInput } from './ModalInput';
 import React from 'react';
 import './Modal.scss';
 import Backdrop from './backdrop/Backdrop';
 import {motion} from 'framer-motion';
 import Titulo from '../titulos/titulo/Titulo';
-import {Button} from '../input/botao/Button';
+import {Button} from '../input/button/Button';
 import SelectBox from '../input/select/Select';
 import ChangeCircleIcon from '@mui/icons-material/ChangeCircleSharp';
 
@@ -90,7 +89,6 @@ const Modal = ({modalOpen, handleClose, title, content}) => {
                 <p style={{width: "100%"}}>
                   teste
                 </p>
-
                 {/* {content} */}
               </div>
             </div>

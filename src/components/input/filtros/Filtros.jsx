@@ -1,8 +1,8 @@
 import React from 'react';
-import '../input.scss';
+import './Filtros.scss';
 import SelectBox from '../select/Select'; 
 import {Textbox} from '../text-box/Textbox'; 
-import {Button} from '../botao/Button'; 
+import {Button} from '../button/Button'; 
 
 function Filtros({ ListaComponentes, tamanho}) {
   return (
