@@ -38,6 +38,36 @@ function FilaDemandas() {
 
   const inputList = [
     {
+      label: 'Código Cliente',
+      labelTextbox: 'Insira um código de cliente',
+      tamanho: '20vw',
+      tipoInput: 'text',
+      inputFocused: "",
+      setInputFocused: "",
+      inputValue: "",
+      setInputValue: "",
+    },
+    {
+      label: 'Código Produto',
+      labelTextbox: 'Insira um código de produto',
+      tamanho: '20vw',
+      tipoInput: 'text',
+      inputFocused: "",
+      setInputFocused: "",
+      inputValue: "",
+      setInputValue: "",
+    },
+    {
+      label: 'Descrição Produto',
+      labelTextbox: 'Insira uma descrição',
+      tamanho: '20vw',
+      tipoInput: 'text',
+      inputFocused: "",
+      setInputFocused: "",
+      inputValue: "",
+      setInputValue: "",
+    },
+    {
       label: 'Soliticação',
       labelTextbox: 'Insira uma solicitação',
       tamanho: '20vw',
