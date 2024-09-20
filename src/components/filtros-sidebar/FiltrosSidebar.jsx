@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, {useEffect} from 'react';
 import './FiltrosSidebar.scss';
 import Backdrop from '../modal/backdrop/Backdrop';
 import {motion} from 'framer-motion';
@@ -32,11 +32,23 @@ const dropIn = {
 
 const FiltrosSidebar = ({inputList, modalOpen, handleClose, title, content}) => {
 
-  const { setIsSidebarOpen } = useSidebar(); 
+  const { isSidebarOpen, setIsSidebarOpen } = useSidebar(); 
 
   const closeSidebar = () => {
     setIsSidebarOpen(false);
   };
+
+  useEffect(() => {
+    if (isSidebarOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [isSidebarOpen]);
 
 
   return (
@@ -78,8 +90,10 @@ const FiltrosSidebar = ({inputList, modalOpen, handleClose, title, content}) => 
                 </div>
               </div>
               ))}
-              <Button className="pesquisar-sidebar"  onClick={closeSidebar} style={{position: "relative", top: "0vh"}} color="white"/>
-
+              <div className="area-botoes-filtros">
+                <Button className="pesquisar-sidebar"  onClick={closeSidebar} style={{position: "relative", top: "0vh"}} color="white"/>
+                <Button className="fechar-sidebar"  onClick={closeSidebar} style={{position: "relative", top: "0vh"}} color="white"/>
+              </div>
           </div>
         </>
       </motion.div>

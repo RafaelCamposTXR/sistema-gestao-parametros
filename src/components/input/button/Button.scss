@@ -254,20 +254,30 @@
   @include tooltip(4.9vh);
 }
 
-.pesquisar-sidebar{
-  margin: 3vh 0 1vh 0;
+@mixin botao-sidebar(){
+  display: flex;
   font-weight: 500;
   font-size: 0.8rem;
-  display: flex;
+  cursor: pointer;
+  width: 13.75vw;
+  height: 4.4vh; 
+  gap: 0.2vw;
+  align-items: center;
+  border-radius: 5px;
   padding: 0vh 0.9vw;
+}
+.pesquisar-sidebar{
   background-color: var(--light-blue);
   color: white !important;
   border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  align-items: center;
-  width: 13.75vw;
-  height: 4.4vh; 
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-  gap: 0.2vw;
+  @include botao-sidebar();
+}
+
+.fechar-sidebar{
+  background-color: rgba(200, 18, 18, 0.842);
+  color: white !important;
+  border: none;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  @include botao-sidebar();
 }

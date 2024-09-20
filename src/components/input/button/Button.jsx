@@ -13,6 +13,7 @@ import PersonIcon from '@mui/icons-material/Person';
 import Modal from '../../modal/Modal';
 import HistoryIcon from '@mui/icons-material/History';
 
+
 export function Button({
   className,
   dataTooltip,
@@ -24,7 +25,7 @@ export function Button({
   color
 }) {
 
-  //botões disponíveis: add, delete, delete-edit, settings, back, save, cancel, export, demand, historico, pesquisar-sidebar
+  //botões disponíveis: add, delete, delete-edit, settings, back, save, cancel, export, demand, historico, pesquisar-sidebar, fechar-sidebar
 
 
   const [modalOpen, setModalOpen] = useState(false);
@@ -97,6 +98,14 @@ export function Button({
           <SearchIcon sx={{fontSize: 18}}/>
           <span style ={{margin: 0, paddingTop: "0.06vh"}}>
           Pesquisar
+          </span>
+        </>
+        }
+        {className === "fechar-sidebar" && 
+        <>
+          <CloseIcon sx={{fontSize: 18}}/>
+          <span style ={{margin: 0, paddingTop: "0.06vh"}}>
+          Cancelar
           </span>
         </>
         }
