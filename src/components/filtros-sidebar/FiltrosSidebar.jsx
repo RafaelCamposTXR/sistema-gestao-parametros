@@ -78,6 +78,8 @@ const FiltrosSidebar = ({inputList, modalOpen, handleClose, title, content}) => 
                 </div>
               </div>
               ))}
+              <Button className="pesquisar-sidebar"  onClick={closeSidebar} style={{position: "relative", top: "0vh"}} color="white"/>
+
           </div>
         </>
       </motion.div>

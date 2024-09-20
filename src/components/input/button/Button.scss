@@ -253,3 +253,21 @@
   border-radius: 3px !important;
   @include tooltip(4.9vh);
 }
+
+.pesquisar-sidebar{
+  margin: 3vh 0 1vh 0;
+  font-weight: 500;
+  font-size: 0.8rem;
+  display: flex;
+  padding: 0vh 0.9vw;
+  background-color: var(--light-blue);
+  color: white !important;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  align-items: center;
+  width: 13.75vw;
+  height: 4.4vh; 
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  gap: 0.2vw;
+}

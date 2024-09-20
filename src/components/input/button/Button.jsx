@@ -24,7 +24,7 @@ export function Button({
   color
 }) {
 
-  //botões disponíveis: add, delete, delete-edit, settings, back, save, cancel, export, demand, historico
+  //botões disponíveis: add, delete, delete-edit, settings, back, save, cancel, export, demand, historico, pesquisar-sidebar
 
 
   const [modalOpen, setModalOpen] = useState(false);
@@ -91,6 +91,14 @@ export function Button({
         }
         {className === "history-button" && 
           <HistoryIcon sx={{ fontSize: 16 }}/>
+        }
+        {className === "pesquisar-sidebar" && 
+        <>
+          <SearchIcon sx={{fontSize: 18}}/>
+          <span style ={{margin: 0, paddingTop: "0.06vh"}}>
+          Pesquisar
+          </span>
+        </>
         }
         {children}
     </>

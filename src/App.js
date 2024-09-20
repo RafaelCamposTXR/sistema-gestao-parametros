@@ -28,7 +28,7 @@ function App() {
       <Router>
         <div className="App">
           <div className="layout">
-            <Sidebar />
+            <Sidebar nomeUsuario="Rafael"/>
             <FiltrosSidebar inputList = {sidebarContent }modalOpen={isSidebarOpen}  content="" title={["Fila de Demandas","Definição de Atendente"]}/>
             <div className="content">
             <Routes >

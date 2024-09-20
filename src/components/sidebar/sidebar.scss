@@ -91,9 +91,9 @@ span {
   height: 5vh;
   display: flex;
   align-items: center;
-  padding: 0 0.6vw 0 0vw;
+  padding: 0 0.2vw 0 0vw;
   // border-bottom: 1px solid white;
-  cursor: default;
+  cursor: pointer;
   
   user-select: none; 
   -webkit-user-select: none; 
@@ -157,6 +157,7 @@ span {
   justify-content: start;
   padding: 2.3vh 0.5vw 2.2vh 0.6vw;
   gap: 0.1vw;
+  cursor: default;
   // border-bottom: 2px outset rgba(22, 22, 101, 0.118);
 
 }
