@@ -1,7 +1,7 @@
 import React from 'react';
 import Select, {components} from 'react-select';
 
-function SelectBox({options, placeholder, tamanho}) {
+function SelectBox({options, placeholder, tamanho, desativado}) {
 
 
 
@@ -75,6 +75,7 @@ function SelectBox({options, placeholder, tamanho}) {
         placeholder = {placeholder}
         className="input-wrapper"
         components={{ NoOptionsMessage }}
+        isDisabled= {desativado}
       />
     </div>
   )

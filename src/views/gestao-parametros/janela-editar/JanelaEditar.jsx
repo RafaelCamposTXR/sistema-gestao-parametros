@@ -46,7 +46,7 @@ function JanelaEditar() {
               onClick={() => {navigate(-1)}}
             />
           
-          {modoEdicao[1] == ["Editar valor da tabela"] || modoEdicao[1] == "Inserir Novo" && 
+          {(modoEdicao[1] == ["Editar valor da tabela"]) && 
           <Button 
               className="delete-edit-button"
               dataTooltip="Apagar"

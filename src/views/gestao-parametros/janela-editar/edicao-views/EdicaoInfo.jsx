@@ -7,7 +7,7 @@ function EdicaoInfo() {
   const [subSecao, setSubSecao, modoEdicao, setModoEdicao] = useOutletContext();
 
   const FiltrosInfo = [
-    { label: "Tipo de Informação", content: modoEdicao[2], type: "textbox", tamanho:"25vw", marginRight: "100vw" },
+    { label: "Tipo de Informação", content: modoEdicao[2], type: "select", tamanho:"25vw", marginRight: "100vw", desativado: true },
     { label: "Script", content: "", type: "textbox", tamanho:"25vw" }
   ];
 
@@ -27,6 +27,7 @@ function EdicaoInfo() {
             content={field.content}
             tamanho={field.tamanho}
             marginRight={field.marginRight}
+            desativado={field.desativado}
       />
     ))}
         </>

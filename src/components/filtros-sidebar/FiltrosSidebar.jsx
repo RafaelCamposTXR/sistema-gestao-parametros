@@ -93,6 +93,7 @@ const FiltrosSidebar = ({inputList, modalOpen, handleClose, title, content}) => 
               <div className="area-botoes-filtros">
                 <Button className="pesquisar-sidebar"  onClick={closeSidebar} style={{position: "relative", top: "0vh"}} color="white"/>
                 <Button className="fechar-sidebar"  onClick={closeSidebar} style={{position: "relative", top: "0vh"}} color="white"/>
+                <Button className="limpar-sidebar"  onClick={closeSidebar} style={{position: "relative", top: "0vh"}} color="white"/>
               </div>
           </div>
         </>

@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 import * as FaIcons from 'react-icons/fa';
-import * as AiIcons from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import { SidebarData } from './SidebarData';
 import './sidebar.scss';
-import { IconContext } from 'react-icons';
 import Backdrop from '../modal/backdrop/Backdrop';
 import MenuIcon from '@mui/icons-material/MenuSharp';
 import CloseIcon from '@mui/icons-material/Close';
@@ -60,9 +58,6 @@ function Sidebar(
               />
             </div>
             </li>
-            <li className="perfil-usuario">
-              <AccountBoxIcon sx={{ fontSize: "5rem", color: "white" }} />
-            </li>
             <div className="area-navegacao">
               {SidebarData.map((item, index) => (
                 <React.Fragment key={index}>
@@ -87,7 +82,6 @@ function Sidebar(
                       </li>
                     </Link>
                   )}
-
                   {/* Renderiza o subMenu caso exista */}
                   {item.subMenu && (
                     <motion.ul

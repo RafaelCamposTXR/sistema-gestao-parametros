@@ -7,7 +7,7 @@ function EdicaoFornecedores() {
   const [subSecao, setSubSecao, modoEdicao, setModoEdicao] = useOutletContext();
 
   const FiltrosFornecedor = [
-    { label: "Fornecedor", content: "", type: "select", tamanho: "30vw", placeholder: "Insira o fornecedor", marginRight: "7vw" },
+    { label: "Fornecedor", content: "", type: "select", tamanho: "30vw", placeholder: "Insira o fornecedor", marginRight: "7vw", desativado: true},
     { label: "Nome do Contato", content: "", type: "textbox", tamanho: "30vw", marginRight: "0vw" },
     { label: "Email", content: "", type: "textbox", tamanho: "30vw", marginRight: "7vw" },
     { label: "Cargo", content: "", type: "textbox", tamanho: "30vw", marginRight: "0vw" },
@@ -30,6 +30,7 @@ function EdicaoFornecedores() {
             tamanho={field.tamanho}
             marginRight={field.marginRight}
             placeholder={field.fornecedor}
+            desativado={field.desativado}
       />
       
     ))}

@@ -2,8 +2,10 @@ import React, {useEffect, useState} from 'react'
 import { useOutletContext } from 'react-router-dom';
 import GestaoConteudo from '../../gestao-conteudo/GestaoConteudo';
 import Filtros from '../../../components/input/filtros/Filtros';
+import SelectBox  from '../../../components/input/select/Select';
 import { useSidebar } from '../../../context/SidebarContext';
 import './FilaDemandas.scss';
+
 
 function FilaDemandas() {
 
@@ -225,7 +227,21 @@ function FilaDemandas() {
       className: 'demand-button',
       dataTooltip: 'Exportar Tabelas',
       modalTitle: ["Fila de Demandas","Definição de Atendente"],
-      contentModal: "teste \n teste \n teste",
+      contentModal: (
+        <div>
+          <div className="texto-corpo-modal">
+          </div>
+          <div className="area-checkbox-pai">
+            <div className="area-checkbox-modal">
+              <p>Checkbox 1</p>
+              <p>Checkbox 2</p>
+            </div>
+          </div>
+          <div style={{ width: "98%", position: "relative", left: "-0.5vw", marginTop: "1vh" }}>
+            <SelectBox placeholder="Selecione o Usuário" />
+          </div>
+        </div>
+      ),
       onClick: () => {LimpaCampos()},
       
     },

@@ -128,16 +128,17 @@ span {
 
 
 .area-navegacao {
+  display: flex;
+  flex-direction: column;
   position: relative;
   top: 3vh;
   background-color: var(--blue);
   padding: 0 0 0 1.5vw;
-  margin: 0 0 0 0vw;
+  margin: 1.8vh 0 0 0vw;
   width: 16.7vw;
   min-height: 25vh;
   height: max-content;
-  // border-top: 3px solid rgba(255, 255, 255, 0.358);
-  // border-left: 3px solid rgba(255, 255, 255, 0.358);
+  gap: 0.7vh;
 }
 .submenu {
   margin: 0.2vh 0 0vh 1.5vw;

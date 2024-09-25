@@ -109,6 +109,14 @@ export function Button({
           </span>
         </>
         }
+        {className === "limpar-sidebar" && 
+        <>
+          <CloseIcon sx={{fontSize: 18}}/>
+          <span style ={{margin: 0, paddingTop: "0.06vh"}}>
+          Limpar
+          </span>
+        </>
+        }
         {children}
     </>
   </button>
